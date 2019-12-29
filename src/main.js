@@ -7,6 +7,7 @@ import dayjs from 'dayjs'
 import Vant from 'vant';
 import 'vant/lib/index.css';
 import './globalComponent/index'
+// import './Api.js'
 
 Vue.use(Vant);
 

@@ -10,7 +10,7 @@ module.exports = {
     // 2.cors:跨域资源共享 不需要前端配合,只需要后端配置指定端口可以访问接口
     // 3.代理(webpack提供的devServer): 把要跨域的路径代理到本地
     devServer: {
-        host: '0.0.0.0',
+        host: '',
         proxy: {
             '/api': {
                 ws: false,
@@ -18,7 +18,7 @@ module.exports = {
                 // 修改了vue.config.js文件 一定要重启项目
                 // http://localhost:3000
                 // 接口的根路径就被代理成了/api
-                target: 'localhost:7001/v1',
+                target: 'http://localhost:7001/v1',
                 changeOrigin: true,
                 pathRewrite: {
                     '^/api': ''

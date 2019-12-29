@@ -5,9 +5,11 @@
         <van-icon name="arrow-left" size="22" @click="back"/>
       </div>
       <div class="title">
-        <slot></slot>
+        <slot name="search"></slot>
       </div>
-      <div></div>
+      <div>
+          <slot name="right"></slot>
+      </div>
     </div>
   </div>
 </template>
@@ -33,7 +35,6 @@ export default {
 .topBar {
   width: 100%;
   height: 44px;
-  background: rgb(129, 58, 58);
   z-index: 2;
   position: fixed;
   top: 0;

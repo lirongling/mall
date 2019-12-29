@@ -79,6 +79,24 @@ const routes = [{
         }
     },
     {
+        path: '/phoneLogin',
+        name: 'phoneLogin',
+        component: () =>
+            import ( /* webpackChunkName: "about" */ '../views/Login/PhoneLogin'),
+        meta: {
+            title: '手机号登录'
+        }
+    },
+    {
+        path: '/register',
+        name: 'register',
+        component: () =>
+            import ( /* webpackChunkName: "about" */ '../views/Login/Register'),
+        meta: {
+            title: '手机号登录'
+        }
+    },
+    {
         path: '/details',
         name: 'details',
         component: () =>
