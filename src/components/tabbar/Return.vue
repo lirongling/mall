@@ -2,10 +2,10 @@
   <div>
     <div class="topBar flex">
       <div class="return flex">
-        <van-icon name="arrow-left" size="22" @click="back"/>
+        <slot name="left"><van-icon name="arrow-left" size="22" @click="back"/></slot>
       </div>
       <div class="title">
-        <slot name="search"></slot>
+        <slot name="title"></slot>
       </div>
       <div>
           <slot name="right"></slot>
@@ -44,9 +44,11 @@ export default {
   flex: 1;
   display: flex;
   justify-content: center;
+  font-size: 18px;
+
 }
 .topBar > div:nth-child(2) {
-  flex: 3;
+  flex: 4;
   text-align: center;
   font-size: 17px;
   color: rgb(18, 18, 19)

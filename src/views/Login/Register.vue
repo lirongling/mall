@@ -57,7 +57,7 @@
 </template>
 
 <script>
-import ThirdParty from "../../components//login//ThirdParty";
+import ThirdParty from "../../components/login/ThirdParty";
 export default {
   data() {
     return {
@@ -159,7 +159,7 @@ export default {
     //调取接口验证注册
     getRegister() {
       this.$axios
-        .req("register", {
+       this.$api.register({
           nickname: this.user.username,
           password: this.user.password,
           verify: this.user.code

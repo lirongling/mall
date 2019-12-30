@@ -51,7 +51,7 @@
 </template>
 
 <script>
-import ThirdParty from "../../components//login//ThirdParty";
+import ThirdParty from "../../components/login/ThirdParty";
 export default {
   data() {
     return {
@@ -146,9 +146,10 @@ export default {
     },
     // 获取验证码
     getCode() {
-      this.$axios
-        .req("verify")
+      this.$api.getAverify
+      
         .then(res => {
+          console.log(res);
           this.codeImg = res;
         })
         .catch(err => {
@@ -157,12 +158,12 @@ export default {
     },
     //获取接口验证用户信息
     getLogin() {
-      this.$axios
-        .req("login", {
+      this.$api.login({
           nickname: this.user.username,
           password: this.user.password,
-          verify: this.user.code
+          verify: this.user.code,
         })
+       
         .then(res => {
           console.log(res);
           if (res.code === -2) {
@@ -188,7 +189,7 @@ export default {
     }
   },
   mounted() {
- 
+//  this.getCode()
   },
   watch: {},
   computed: {}

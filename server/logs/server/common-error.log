@@ -16,3 +16,21 @@ name: "unhandledExceptionError"
 pid: 15136
 hostname: LAPTOP-FKOQDFD9
 
+2019-12-29 21:04:03,665 ERROR 15136 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:201:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 15136
+hostname: LAPTOP-FKOQDFD9
+
+2019-12-30 10:45:31,407 ERROR 4796 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:201:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 4796
+hostname: LAPTOP-FKOQDFD9
+

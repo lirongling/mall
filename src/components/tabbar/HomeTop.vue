@@ -2,9 +2,9 @@
   <div>
     <div class="topBar flex">
       <div class="return flex">
-         {{city}}
         <div slot="left">
-         
+          {{city}}
+          <span class="iconfont icon-xiala ico"></span>
         </div>
       </div>
       <div class="title">
@@ -36,33 +36,21 @@ export default {
       this.$router.history.go(-1);
     },
     // 搜索
-    onInput(){
-
-    },
+    onInput() {},
     // 获取城市
     getCity() {
       let _this = this;
-      var map = new AMap.Map("container", {
-        resizeEnable: true
-      });
-      AMap.plugin("AMap.Geolocation", function() {
-        var geolocation = new AMap.Geolocation({
-          enableHighAccuracy: true, //是否使用高精度定位，默认:true
-          timeout: 10000, //超过10秒后停止定位，默认：5s
-          buttonPosition: "RB", //定位按钮的停靠位置
-          buttonOffset: new AMap.Pixel(10, 20), //定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
-          zoomToAccuracy: true //定位成功后是否自动调整地图视野到定位点
+      AMap.plugin("AMap.CitySearch", function() {
+        var citySearch = new AMap.CitySearch();
+        citySearch.getLocalCity(function(status, result) {
+          if (status === "complete" && result.info === "OK") {
+            // 查询成功，result即为当前所在城市信息
+            _this.city=result.city
+          }else{
+            _this.city='查询失败'
+          }
         });
-        map.addControl(geolocation);
-        geolocation.getCurrentPosition();
-        AMap.event.addListener(geolocation, "complete", onComplete);
-        AMap.event.addListener(geolocation, "err", onError);
       });
-      //解析定位结果
-      function onComplete(data) {
-        _this.city = data.addressComponent.city;
-        console.log(data);
-      }
     }
   },
   mounted() {
@@ -76,17 +64,21 @@ export default {
 <style scoped lang='scss'>
 .topBar {
   width: 100%;
-
   z-index: 2;
   position: fixed;
   background: white;
+  height: 10vh;
   top: 0;
+}
+.ico {
+  font-size: 14px;
 }
 .topBar > div:nth-child(1),
 .topBar > div:nth-child(3) {
-  flex: 1;
+  flex: 1.5;
   display: flex;
   justify-content: center;
+  font-size: 14px;
 }
 .topBar > div:nth-child(2) {
   flex: 6;
