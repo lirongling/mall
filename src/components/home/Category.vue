@@ -1,6 +1,6 @@
 <template>
   <div class="category">
-    <div v-for="(categorys,index) in category" :key="index" >
+    <div v-for="(categorys,index) in category" :key="index" @click="jumpCate(categorys)">
       <div><img :src="categorys.image" class="img"></div>
       <div class="title">{{categorys.mallCategoryName}}</div>
     </div>
@@ -19,7 +19,12 @@ export default {
     }
   },
   components: {},
-  methods: {},
+  methods: {
+    jumpCate(categorys){
+     
+      this.$router.push({name:'category',query:{mallCategoryId:categorys.mallCategoryId}})
+    }
+  },
   mounted() {},
   watch: {},
   computed: {}

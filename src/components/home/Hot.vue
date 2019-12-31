@@ -2,11 +2,11 @@
   <div>
     <div class="top">热销商品</div>
     <div class="contior">
-      <div class="contior-item" v-for="(hotGood,index) in hotGoods" :key="index">
+      <div class="contior-item" v-for="(hotGood,index) in hotGoods" :key="index" @click="jumpDeta(hotGood)">
         <img :src="hotGood.image" />
         <div class="goodName">{{hotGood.name}}</div>
         <div class="goodPrice">
-          <div>${{hotGood.mallPrice}}</div>
+          <div>￥{{hotGood.mallPrice}}</div>
           <div>{{hotGood.price}}</div>
         </div>
       </div>
@@ -27,7 +27,12 @@ export default {
     }
   },
   components: {},
-  methods: {},
+  methods: {
+        // 跳转到详情页
+    jumpDeta(item){
+      this.$router.push({name:'details',query:{goodsId:item.goodsId}})
+    }
+  },
   mounted() {},
   watch: {},
   computed: {}

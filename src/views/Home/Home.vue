@@ -1,17 +1,16 @@
 <template>
   <div class="home">
-      <!-- 顶部搜索 -->
-      <div class="topSearch">
-        <HomeTop></HomeTop>
-      </div>
+    <!-- 顶部搜索 -->
+    <div class="topSearch">
+      <HomeTop></HomeTop>
+    </div>
     <div>
-    
-      <!-- 刷新 -->
-      <van-pull-refresh v-model="isLoading" @refresh="onRefresh">
-        <!-- 滚动 -->
-        <Scroll>
-          
+      <!-- 滚动 -->
+      <Scroll>
+        <!-- 刷新 -->
+        <van-pull-refresh v-model="isLoading" @refresh="onRefresh">
           <!-- 轮播图 -->
+
           <div class="wheel">
             <Wheel :slides.sync="recommend.slides"></Wheel>
           </div>
@@ -19,6 +18,7 @@
           <div class="category">
             <Category :category.sync="recommend.category"></Category>
           </div>
+
           <!-- 广告 -->
           <div class="advertising flex" v-if="recommend.advertesPicture">
             <img :src="recommend.advertesPicture.PICTURE_ADDRESS" class="advertising-img" />
@@ -27,33 +27,21 @@
           <div class="recommend">
             <Recommend :recommend.sync="recommend.recommend"></Recommend>
           </div>
-          <!-- 楼层 -->
-          <div v-if="recommend.floorName">
-            <Floor
-              :floor.sync="recommend.floor1"
-              :num="'1'"
-              :floorName="recommend.floorName.floor1"
-            ></Floor>
-          </div>
-          <div v-if="recommend.floorName">
-            <Floor
-              :floor.sync="recommend.floor2"
-              :num="'2'"
-              :floorName="recommend.floorName.floor2"
-            ></Floor>
-          </div>
-          <div v-if="recommend.floorName" class>
-            <Floor
-              :floor.sync="recommend.floor3"
-              :num="'3'"
-              :floorName="recommend.floorName.floor3"
-            ></Floor>
-          </div>
-          <div class="hot recommend-bottom">
-            <Hot :hotGoods.sync="recommend.hotGoods"></Hot>
-          </div>
-        </Scroll>
-      </van-pull-refresh>
+        </van-pull-refresh>
+        <!-- 楼层 -->
+        <div v-if="recommend.floorName">
+          <Floor :floor.sync="recommend.floor1" :num="'1'" :floorName="recommend.floorName.floor1"></Floor>
+        </div>
+        <div v-if="recommend.floorName">
+          <Floor :floor.sync="recommend.floor2" :num="'2'" :floorName="recommend.floorName.floor2"></Floor>
+        </div>
+        <div v-if="recommend.floorName" class>
+          <Floor :floor.sync="recommend.floor3" :num="'3'" :floorName="recommend.floorName.floor3"></Floor>
+        </div>
+        <div class="hot recommend-bottom">
+          <Hot :hotGoods.sync="recommend.hotGoods"></Hot>
+        </div>
+      </Scroll>
     </div>
   </div>
   <!-- <p>刷新次数: {{ count }}</p> -->
@@ -131,7 +119,7 @@ export default {
   height: 100%;
   background: #eeeeee;
   .wheel {
-    margin-top: 54px;
+    // margin-top: 54px;
     width: 100%;
     height: auto;
   }

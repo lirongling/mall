@@ -1,9 +1,7 @@
 <template>
-
     <transition name="fade">
       <router-view class="rou" />
     </transition>
-
 </template>
 <script>
 import BScroll from 'better-scroll'

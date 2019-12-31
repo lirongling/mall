@@ -22,12 +22,11 @@ export default {
         click: true,
         probeType: 3 // listening scroll hook
       });
-      
     }
   },
   mounted() {
     this.init();
-     const options = {
+    const options = {
       click: true,
       tap: true
     };
@@ -40,10 +39,18 @@ export default {
 </script>
 
 <style lang='scss'>
+/deep/ .scroll-content {
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1)!important;
+  transition-duration: 0ms!important;
+  transform: translate(0px, -14px) scale(1) translateZ(0px) !important;
+}
 .core-container {
+
+
+  // padding-top: -50px;
   .wrapper {
     padding-top: 54px;
-    height: 84vh;
+    height: 70vh;
     overflow: hidden;
   }
 }

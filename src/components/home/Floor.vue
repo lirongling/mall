@@ -18,21 +18,21 @@
       <div class="bottom">
         <div class="left">
           <div>
-            <img :src="floor[0].image" />
+            <img :src="floor[0].image" @click="jumpDeta(floor[0])"/>
           </div>
           <div>
-            <img :src="floor[1].image" />
+            <img :src="floor[1].image" @click="jumpDeta(floor[1])"/>
           </div>
         </div>
         <div class="right">
           <div>
-            <img :src="floor[2].image" />
+            <img :src="floor[2].image" @click="jumpDeta(floor[2])"/>
           </div>
           <div>
-            <img :src="floor[3].image" />
+            <img :src="floor[3].image" @click="jumpDeta(floor[3])"/>
           </div>
           <div>
-            <img :src="floor[4].image" />
+            <img :src="floor[4].image" @click="jumpDeta(floor[4])"/>
           </div>
         </div>
       </div>
@@ -41,6 +41,7 @@
 </template>
 
 <script>
+import Scroll from "../../components/scroll/Scroll";
 export default {
   data() {
     return {};
@@ -60,7 +61,12 @@ export default {
     }
   },
   components: {},
-  methods: {},
+  methods: {
+        // 跳转到详情页
+    jumpDeta(item){
+      this.$router.push({name:'details',query:{goodsId:item.goodsId}})
+    }
+  },
   mounted() {},
   watch: {},
   computed: {}
@@ -107,7 +113,19 @@ export default {
   .left {
     flex: 1;
     border-right: rgb(199, 199, 199) 1px solid;
+    display: flex;
+    flex-direction: column;
+    
   }
+  .left > div:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex:2
+  }
+   .left > div:nth-child(2){
+     flex: 1;
+   }
   .left > div:nth-child(1) img {
     width: 100%;
     border-bottom: rgb(199, 199, 199) 1px solid;

@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- 底部导航 -->
-  <router-view></router-view>
+    <router-view></router-view>
     <div class="bottom-bar">
       <van-tabbar v-model="active" @change="onChange">
         <van-tabbar-item icon="home-o" replace to="/">首页</van-tabbar-item>
@@ -10,7 +10,6 @@
         <van-tabbar-item icon="user-o" replace to="/my">我的</van-tabbar-item>
       </van-tabbar>
     </div>
-  
   </div>
 </template>
 
@@ -20,7 +19,7 @@ export default {
   data() {
     return {
       active: 0,
-      mount: 0,
+      mount: 0
     };
   },
   components: {
@@ -29,22 +28,21 @@ export default {
   methods: {
     onChange(index) {
       // Notify({ type: "primary", message: index });
-     
     },
-    change(){
-       if (this.$route.name === 'home') {
-        this.active=0
-      } else if (this.$route.name === 'category') {
-        this.active=1
-      } else if (this.$route.name === 'shoppingCar') {
-       this.active=2
-      } else if (this.$route.name === 'my') {
-        this.active=3
+    change() {
+      if (this.$route.name === "home") {
+        this.active = 0;
+      } else if (this.$route.name === "category") {
+        this.active = 1;
+      } else if (this.$route.name === "shoppingCar") {
+        this.active = 2;
+      } else if (this.$route.name === "my") {
+        this.active = 3;
       }
     }
   },
   mounted() {
-    this.change()
+    this.change();
   },
   watch: {},
   computed: {}
@@ -52,11 +50,11 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-.bottom-bar{
-  display: flex!important;
+.bottom-bar {
+  display: flex !important;
   bottom: 0;
-  // width: 100vw!important;
-  position:fixed;
-  bottom: 0;
+  width: 100vw !important;
+  // position:fixed;
+  // bottom: 0;
 }
 </style>

@@ -3,19 +3,19 @@
     <div class="title">商品推荐</div>
     <ScrollLeft>
       <div class="recommend-content">
-        <div v-for="(recommends,index) in recommend" :key="index" class="recommend-item">
+        <div v-for="(recommends,index) in recommend" :key="index" class="recommend-item" >
           <div class="recommend-img">
             <img :src="recommends.image" class="img" />
           </div>
           <div class="goodPrice">
-            <div>${{recommends.mallPrice}}</div>
+            <div>￥{{recommends.mallPrice}}</div>
             <div>{{recommends.price}}</div>
           </div>
           <div class="recommends-bottom">
             <div class="flex">
               <van-icon name="shopping-cart-o" />
             </div>
-            <div class="flex">查看详情</div>
+            <div class="flex" @click="jumpDeta(recommends)">查看详情</div>
           </div>
         </div>
       </div>
@@ -39,7 +39,12 @@ export default {
       default: () => []
     }
   },
-  methods: {},
+  methods: {
+    // 跳转到详情页
+    jumpDeta(item){
+      this.$router.push({name:'details',query:{goodsId:item.goodsId}})
+    }
+  },
   mounted() {},
   watch: {},
   computed: {}
