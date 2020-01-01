@@ -19,7 +19,7 @@ export default {
       this.bs = new BScroll(".wrappers", {
         scrollX: true,
          scrollY: true,
-        click: true,
+        // click: true,
         probeType: 3 // listening scroll hook
       });
     }
@@ -33,7 +33,7 @@ export default {
 };
 </script>
 
-<style lang='scss'>
+<style lang='scss' >
 .core-containers {
   display：inline
   .wrappers {

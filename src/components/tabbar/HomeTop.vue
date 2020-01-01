@@ -45,9 +45,9 @@ export default {
         citySearch.getLocalCity(function(status, result) {
           if (status === "complete" && result.info === "OK") {
             // 查询成功，result即为当前所在城市信息
-            _this.city=result.city
-          }else{
-            _this.city='查询失败'
+            _this.city = result.city;
+          } else {
+            _this.city = "查询失败";
           }
         });
       });
@@ -62,6 +62,9 @@ export default {
 </script>
 
 <style scoped lang='scss'>
+/deep/ .van-search--show-action {
+  height: 10vh !important;
+}
 .topBar {
   width: 100%;
   z-index: 2;
@@ -79,11 +82,13 @@ export default {
   display: flex;
   justify-content: center;
   font-size: 14px;
+  height: 10vh;
 }
 .topBar > div:nth-child(2) {
   flex: 6;
   text-align: center;
   font-size: 17px;
   color: rgb(18, 18, 19);
+  height: 10vh;
 }
 </style>

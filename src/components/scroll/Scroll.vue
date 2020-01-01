@@ -19,7 +19,7 @@ export default {
     init() {
       this.bs = new BScroll(".wrapper", {
         scrollY: true,
-        click: true,
+   
         probeType: 3 // listening scroll hook
       });
       
@@ -39,7 +39,7 @@ export default {
 };
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
 .core-container {
   .wrapper {
     padding-top: 54px;

@@ -27,7 +27,7 @@ export default {
   mounted() {
     this.init();
     const options = {
-      click: true,
+      // click: true,
       tap: true
     };
     this.scroll = new BScroll(this.$refs.wrapper, options);
@@ -38,12 +38,12 @@ export default {
 };
 </script>
 
-<style lang='scss'>
-/deep/ .scroll-content {
-  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1)!important;
-  transition-duration: 0ms!important;
-  transform: translate(0px, -14px) scale(1) translateZ(0px) !important;
-}
+<style lang='scss' scoped>
+// /deep/ .scroll-content {
+//   transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1)!important;
+//   transition-duration: 0ms!important;
+//   transform: translate(0px, -14px) scale(1) translateZ(0px) !important;
+// }
 .core-container {
 
 
