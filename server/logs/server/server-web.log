@@ -1,0 +1,400 @@
+2020-01-02 10:44:47,336 ERROR 18376 [-/127.0.0.1/-/4ms POST /v1/isCollection] nodejs.CastError: Cast to string failed for value "{ id: '238bc2e023844769a6b67d9a4c04b2ea' }" at path "cid" for model "Collection"
+    at new CastError (D:\前端\project\mall\server\node_modules\mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1358:15)
+    at cast (D:\前端\project\mall\server\node_modules\mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:2131:8)
+    at model.Query._wrappedThunk [as _findOne] (D:\前端\project\mall\server\node_modules\mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{ id: '238bc2e023844769a6b67d9a4c04b2ea' }\""
+kind: "string"
+value: {"id":"238bc2e023844769a6b67d9a4c04b2ea"}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{ id: '238bc2e023844769a6b67d9a4c04b2ea' }\" at path \"cid\" for model \"Collection\""
+name: "CastError"
+model: undefined
+pid: 18376
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-02 10:44:50,366 ERROR 18376 [-/127.0.0.1/-/1ms POST /v1/isCollection] nodejs.CastError: Cast to string failed for value "{}" at path "cid" for model "Collection"
+    at new CastError (D:\前端\project\mall\server\node_modules\mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1358:15)
+    at cast (D:\前端\project\mall\server\node_modules\mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:2131:8)
+    at model.Query._wrappedThunk [as _findOne] (D:\前端\project\mall\server\node_modules\mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{}\""
+kind: "string"
+value: {}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{}\" at path \"cid\" for model \"Collection\""
+name: "CastError"
+model: undefined
+pid: 18376
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-02 10:44:51,810 ERROR 18376 [-/127.0.0.1/-/2ms POST /v1/isCollection] nodejs.CastError: Cast to string failed for value "{ id: '238bc2e023844769a6b67d9a4c04b2ea' }" at path "cid" for model "Collection"
+    at new CastError (D:\前端\project\mall\server\node_modules\mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1358:15)
+    at cast (D:\前端\project\mall\server\node_modules\mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:2131:8)
+    at model.Query._wrappedThunk [as _findOne] (D:\前端\project\mall\server\node_modules\mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{ id: '238bc2e023844769a6b67d9a4c04b2ea' }\""
+kind: "string"
+value: {"id":"238bc2e023844769a6b67d9a4c04b2ea"}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{ id: '238bc2e023844769a6b67d9a4c04b2ea' }\" at path \"cid\" for model \"Collection\""
+name: "CastError"
+model: undefined
+pid: 18376
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-02 10:44:59,720 ERROR 18376 [-/127.0.0.1/-/1ms POST /v1/isCollection] nodejs.CastError: Cast to string failed for value "{}" at path "cid" for model "Collection"
+    at new CastError (D:\前端\project\mall\server\node_modules\mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1358:15)
+    at cast (D:\前端\project\mall\server\node_modules\mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:2131:8)
+    at model.Query._wrappedThunk [as _findOne] (D:\前端\project\mall\server\node_modules\mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{}\""
+kind: "string"
+value: {}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{}\" at path \"cid\" for model \"Collection\""
+name: "CastError"
+model: undefined
+pid: 18376
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-02 10:45:02,072 ERROR 18376 [-/127.0.0.1/-/1ms POST /v1/isCollection] nodejs.CastError: Cast to string failed for value "{ id: '238bc2e023844769a6b67d9a4c04b2ea' }" at path "cid" for model "Collection"
+    at new CastError (D:\前端\project\mall\server\node_modules\mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1358:15)
+    at cast (D:\前端\project\mall\server\node_modules\mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:2131:8)
+    at model.Query._wrappedThunk [as _findOne] (D:\前端\project\mall\server\node_modules\mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{ id: '238bc2e023844769a6b67d9a4c04b2ea' }\""
+kind: "string"
+value: {"id":"238bc2e023844769a6b67d9a4c04b2ea"}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{ id: '238bc2e023844769a6b67d9a4c04b2ea' }\" at path \"cid\" for model \"Collection\""
+name: "CastError"
+model: undefined
+pid: 18376
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-02 10:47:28,655 ERROR 18376 [-/127.0.0.1/-/1ms POST /v1/isCollection] nodejs.CastError: Cast to string failed for value "{ id: '238bc2e023844769a6b67d9a4c04b2ea' }" at path "cid" for model "Collection"
+    at new CastError (D:\前端\project\mall\server\node_modules\mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1358:15)
+    at cast (D:\前端\project\mall\server\node_modules\mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:2131:8)
+    at model.Query._wrappedThunk [as _findOne] (D:\前端\project\mall\server\node_modules\mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{ id: '238bc2e023844769a6b67d9a4c04b2ea' }\""
+kind: "string"
+value: {"id":"238bc2e023844769a6b67d9a4c04b2ea"}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{ id: '238bc2e023844769a6b67d9a4c04b2ea' }\" at path \"cid\" for model \"Collection\""
+name: "CastError"
+model: undefined
+pid: 18376
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-02 10:47:37,755 ERROR 18376 [-/127.0.0.1/-/1ms POST /v1/isCollection] nodejs.CastError: Cast to string failed for value "{}" at path "cid" for model "Collection"
+    at new CastError (D:\前端\project\mall\server\node_modules\mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1358:15)
+    at cast (D:\前端\project\mall\server\node_modules\mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:2131:8)
+    at model.Query._wrappedThunk [as _findOne] (D:\前端\project\mall\server\node_modules\mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{}\""
+kind: "string"
+value: {}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{}\" at path \"cid\" for model \"Collection\""
+name: "CastError"
+model: undefined
+pid: 18376
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-02 10:47:54,473 ERROR 18376 [-/127.0.0.1/-/1ms POST /v1/isCollection] nodejs.CastError: Cast to string failed for value "{ id: '238bc2e023844769a6b67d9a4c04b2ea' }" at path "cid" for model "Collection"
+    at new CastError (D:\前端\project\mall\server\node_modules\mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1358:15)
+    at cast (D:\前端\project\mall\server\node_modules\mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:2131:8)
+    at model.Query._wrappedThunk [as _findOne] (D:\前端\project\mall\server\node_modules\mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{ id: '238bc2e023844769a6b67d9a4c04b2ea' }\""
+kind: "string"
+value: {"id":"238bc2e023844769a6b67d9a4c04b2ea"}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{ id: '238bc2e023844769a6b67d9a4c04b2ea' }\" at path \"cid\" for model \"Collection\""
+name: "CastError"
+model: undefined
+pid: 18376
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-02 11:00:50,721 ERROR 18376 [-/127.0.0.1/-/1ms POST /v1/isCollection] nodejs.CastError: Cast to string failed for value "{ id: '238bc2e023844769a6b67d9a4c04b2ea' }" at path "cid" for model "Collection"
+    at new CastError (D:\前端\project\mall\server\node_modules\mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1358:15)
+    at cast (D:\前端\project\mall\server\node_modules\mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:2131:8)
+    at model.Query._wrappedThunk [as _findOne] (D:\前端\project\mall\server\node_modules\mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{ id: '238bc2e023844769a6b67d9a4c04b2ea' }\""
+kind: "string"
+value: {"id":"238bc2e023844769a6b67d9a4c04b2ea"}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{ id: '238bc2e023844769a6b67d9a4c04b2ea' }\" at path \"cid\" for model \"Collection\""
+name: "CastError"
+model: undefined
+pid: 18376
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-02 11:00:52,872 ERROR 18376 [-/127.0.0.1/-/1ms POST /v1/isCollection] nodejs.CastError: Cast to string failed for value "{ id: '238bc2e023844769a6b67d9a4c04b2ea' }" at path "cid" for model "Collection"
+    at new CastError (D:\前端\project\mall\server\node_modules\mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1358:15)
+    at cast (D:\前端\project\mall\server\node_modules\mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:2131:8)
+    at model.Query._wrappedThunk [as _findOne] (D:\前端\project\mall\server\node_modules\mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{ id: '238bc2e023844769a6b67d9a4c04b2ea' }\""
+kind: "string"
+value: {"id":"238bc2e023844769a6b67d9a4c04b2ea"}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{ id: '238bc2e023844769a6b67d9a4c04b2ea' }\" at path \"cid\" for model \"Collection\""
+name: "CastError"
+model: undefined
+pid: 18376
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-02 11:00:53,095 ERROR 18376 [-/127.0.0.1/-/2ms POST /v1/isCollection] nodejs.CastError: Cast to string failed for value "{ id: '238bc2e023844769a6b67d9a4c04b2ea' }" at path "cid" for model "Collection"
+    at new CastError (D:\前端\project\mall\server\node_modules\mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1358:15)
+    at cast (D:\前端\project\mall\server\node_modules\mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:2131:8)
+    at model.Query._wrappedThunk [as _findOne] (D:\前端\project\mall\server\node_modules\mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{ id: '238bc2e023844769a6b67d9a4c04b2ea' }\""
+kind: "string"
+value: {"id":"238bc2e023844769a6b67d9a4c04b2ea"}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{ id: '238bc2e023844769a6b67d9a4c04b2ea' }\" at path \"cid\" for model \"Collection\""
+name: "CastError"
+model: undefined
+pid: 18376
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-02 11:00:53,333 ERROR 18376 [-/127.0.0.1/-/1ms POST /v1/isCollection] nodejs.CastError: Cast to string failed for value "{ id: '238bc2e023844769a6b67d9a4c04b2ea' }" at path "cid" for model "Collection"
+    at new CastError (D:\前端\project\mall\server\node_modules\mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1358:15)
+    at cast (D:\前端\project\mall\server\node_modules\mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:2131:8)
+    at model.Query._wrappedThunk [as _findOne] (D:\前端\project\mall\server\node_modules\mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{ id: '238bc2e023844769a6b67d9a4c04b2ea' }\""
+kind: "string"
+value: {"id":"238bc2e023844769a6b67d9a4c04b2ea"}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{ id: '238bc2e023844769a6b67d9a4c04b2ea' }\" at path \"cid\" for model \"Collection\""
+name: "CastError"
+model: undefined
+pid: 18376
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-02 11:00:53,872 ERROR 18376 [-/127.0.0.1/-/1ms POST /v1/isCollection] nodejs.CastError: Cast to string failed for value "{ id: '238bc2e023844769a6b67d9a4c04b2ea' }" at path "cid" for model "Collection"
+    at new CastError (D:\前端\project\mall\server\node_modules\mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1358:15)
+    at cast (D:\前端\project\mall\server\node_modules\mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:2131:8)
+    at model.Query._wrappedThunk [as _findOne] (D:\前端\project\mall\server\node_modules\mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{ id: '238bc2e023844769a6b67d9a4c04b2ea' }\""
+kind: "string"
+value: {"id":"238bc2e023844769a6b67d9a4c04b2ea"}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{ id: '238bc2e023844769a6b67d9a4c04b2ea' }\" at path \"cid\" for model \"Collection\""
+name: "CastError"
+model: undefined
+pid: 18376
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-02 11:00:54,091 ERROR 18376 [-/127.0.0.1/-/2ms POST /v1/isCollection] nodejs.CastError: Cast to string failed for value "{ id: '238bc2e023844769a6b67d9a4c04b2ea' }" at path "cid" for model "Collection"
+    at new CastError (D:\前端\project\mall\server\node_modules\mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1358:15)
+    at cast (D:\前端\project\mall\server\node_modules\mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:2131:8)
+    at model.Query._wrappedThunk [as _findOne] (D:\前端\project\mall\server\node_modules\mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{ id: '238bc2e023844769a6b67d9a4c04b2ea' }\""
+kind: "string"
+value: {"id":"238bc2e023844769a6b67d9a4c04b2ea"}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{ id: '238bc2e023844769a6b67d9a4c04b2ea' }\" at path \"cid\" for model \"Collection\""
+name: "CastError"
+model: undefined
+pid: 18376
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-02 11:00:54,124 ERROR 18376 [-/127.0.0.1/-/1ms POST /v1/isCollection] nodejs.CastError: Cast to string failed for value "{ id: '238bc2e023844769a6b67d9a4c04b2ea' }" at path "cid" for model "Collection"
+    at new CastError (D:\前端\project\mall\server\node_modules\mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1358:15)
+    at cast (D:\前端\project\mall\server\node_modules\mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:2131:8)
+    at model.Query._wrappedThunk [as _findOne] (D:\前端\project\mall\server\node_modules\mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{ id: '238bc2e023844769a6b67d9a4c04b2ea' }\""
+kind: "string"
+value: {"id":"238bc2e023844769a6b67d9a4c04b2ea"}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{ id: '238bc2e023844769a6b67d9a4c04b2ea' }\" at path \"cid\" for model \"Collection\""
+name: "CastError"
+model: undefined
+pid: 18376
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-02 11:00:54,327 ERROR 18376 [-/127.0.0.1/-/2ms POST /v1/isCollection] nodejs.CastError: Cast to string failed for value "{ id: '238bc2e023844769a6b67d9a4c04b2ea' }" at path "cid" for model "Collection"
+    at new CastError (D:\前端\project\mall\server\node_modules\mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\前端\project\mall\server\node_modules\mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\mongoose\lib\schematype.js:1358:15)
+    at cast (D:\前端\project\mall\server\node_modules\mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\mongoose\lib\query.js:2131:8)
+    at model.Query._wrappedThunk [as _findOne] (D:\前端\project\mall\server\node_modules\mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{ id: '238bc2e023844769a6b67d9a4c04b2ea' }\""
+kind: "string"
+value: {"id":"238bc2e023844769a6b67d9a4c04b2ea"}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{ id: '238bc2e023844769a6b67d9a4c04b2ea' }\" at path \"cid\" for model \"Collection\""
+name: "CastError"
+model: undefined
+pid: 18376
+hostname: LAPTOP-FKOQDFD9
+

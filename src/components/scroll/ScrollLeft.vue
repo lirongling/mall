@@ -37,7 +37,8 @@ export default {
 .core-containers {
   display：inline
   .wrappers {
-    height: 200px;
+    // height: 200px;
+    width: 110%;
     overflow: hidden;
   }
 }

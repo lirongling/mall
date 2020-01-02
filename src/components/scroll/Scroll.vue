@@ -1,11 +1,10 @@
 <template>
-  <div class="core-container">
-    <div class="wrapper" ref="wrapper">
+    <div  ref="wrapper">
       <div class="scroll-content">
         <slot class="height"></slot>
       </div>
     </div>
-  </div>
+ 
 </template>
 <script>
 import BScroll from "better-scroll";
@@ -19,6 +18,7 @@ export default {
     init() {
       this.bs = new BScroll(".wrapper", {
         scrollY: true,
+        scrollX: true,
    
         probeType: 3 // listening scroll hook
       });
@@ -34,17 +34,19 @@ export default {
     this.scroll = new BScroll(this.$refs.wrapper, options);
   },
   beforeDestroy() {},
-  watch: {},
+  watch: {
+    
+  },
   computed: {}
 };
 </script>
 
 <style lang='scss' scoped>
-.core-container {
-  .wrapper {
-    padding-top: 54px;
-    height: 84vh;
-    overflow: hidden;
-  }
-}
+// .core-container {
+//   .wrapper {
+//     padding-top: 54px;
+//     height: 84vh;
+//     overflow: hidden;
+//   }
+// }
 </style>

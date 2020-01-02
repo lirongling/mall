@@ -17,9 +17,9 @@
         <!-- 插槽 -->
         <template slot="content">
           <!-- 右侧导航 -->
-          <van-tabs animated swipeable scrollspy sticky @change="changeSubName">
+          <van-tabs  v-model="activeName" animated swipeable scrollspy sticky @change="changeSubName">
             <van-tab v-for="item in bxMallSubDto" :title="item.mallSubName">
-              <ScrollCate>
+              <ScrollCate class="wrapper">
                 <div class="good-content">
                   <div class="goods flex" v-for="(good,index) in goods" :key="index" >
                     <div class="goodss" @click="jumpDeta(good)">
@@ -52,7 +52,7 @@
 </template>
 
 <script>
-import ScrollCate from "../../components/scroll/ScrollCate";
+import ScrollCate from "../../components/scroll/Scroll";
 export default {
   data() {
     return {
@@ -62,7 +62,8 @@ export default {
       id: null,
       bxMallSubDto: [],
       index: 0,
-      goods: []
+      goods: [],
+      activeName:0
     };
   },
   components: {
@@ -72,6 +73,7 @@ export default {
     // 左侧点击
     clickNav(index) {
       this.index = index;
+      this.activeName=0;
       this.bxMallSubDto = this.items[index].bxMallSubDto;
       this.id = this.items[this.index].bxMallSubDto[0].mallSubId;
       this.getCategotyId();
@@ -191,9 +193,9 @@ export default {
     }
     .good-content {
       // height: 100%;
-      margin-bottom: 50px;
-      margin-top: -50px;
-      height: 90vh;
+      padding-bottom: 80px;
+      // margin-top: 50px;
+      // height: auto;
       .goodss {
         width: 95%;
         margin: 10px auto;
@@ -242,5 +244,9 @@ export default {
       }
     }
   }
+}
+.wrapper {
+  // margin-bottom: 65px;
+  height: 76vh;
 }
 </style>

@@ -62,7 +62,7 @@ export default {
   .recommend-content {
     // overflow: auto;
     display: flex;
-    width: 2200px;
+    width: 2140px;
     .recommend-item {
       width: 124px;
       border-right: rgb(199, 199, 199) 1px solid;

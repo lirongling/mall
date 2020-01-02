@@ -1,19 +1,46 @@
 <template>
-    <transition name="fade">
-      <router-view class="rou" />
-    </transition>
+  <transition name="fade">
+    <router-view class="rou" />
+  </transition>
 </template>
 <script>
-import BScroll from 'better-scroll'
+import BScroll from "better-scroll";
 export default {
-   mounted() {
-      
+  name: "",
+  components: {},
+  props: {},
+  data() {
+    return {};
+  },
+  methods: {
+    // 请求购物车数据
+    getCar() {
+      this.$api
+        .getCard()
+        .then(res => {
+          if (res.code === 200) {
+            console.log(res);
+             this.$store.state.shopListNumber = res.shopList.length;
+          }
+        })
+        .catch(err => {
+          console.log(err);
+        });
     }
-}
+  },
+  mounted() {
+    this.getCar()
+  },
+  created() {},
+  filters: {},
+  computed: {},
+  watch: {},
+  directives: {}
+};
 </script>
 <style lang="scss">
-@import url('//at.alicdn.com/t/font_1588350_mxr36r1eji.css');
-*{
+@import url("//at.alicdn.com/t/font_1588350_one4iihmo0d.css");
+* {
   margin: 0;
   padding: 0;
 }
@@ -23,10 +50,12 @@ export default {
   align-items: center;
   flex-wrap: wrap;
 }
-.fade-enter-active, .fade-leave-avtive {
-    transition: opacity .8s
+.fade-enter-active,
+.fade-leave-avtive {
+  transition: opacity 0.8s;
 }
-.fade-enter, .fade-leave-to {
-    opacity: 0
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

@@ -56,10 +56,11 @@ const routes = [{
             component: () =>
                 import ( /* webpackChunkName: "about" */ '../views/ShoppingCar/ShoppingCar'),
             meta: {
-                title: '分类'
+                title: '购物车'
             }
         }],
     },
+
     {
         path: '*',
         name: 'err',
@@ -94,6 +95,15 @@ const routes = [{
             import ( /* webpackChunkName: "about" */ '../views/Login/Register'),
         meta: {
             title: '手机号登录'
+        }
+    },
+    {
+        path: '/city',
+        name: 'city',
+        component: () =>
+            import ( /* webpackChunkName: "about" */ '../views/City/City'),
+        meta: {
+            title: '城市'
         }
     },
     {

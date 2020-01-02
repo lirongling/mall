@@ -5,9 +5,16 @@
         <img src="../../assets/img/shop.png" />
       </div>
     </div>
-    <div class="prompt">请先登录哟~~</div>
+    <div class="prompt">
+      <span v-if="loginMsg===null"> 请先登录哟~~</span>
+      <span v-else>你的购物车还是空空的哟</span>
+     
+    </div>
     <div class="login">
-      <van-button round  plain hairline type="primary" @click="goLogin">立即登录</van-button>
+      <van-button round plain hairline type="primary" @click="goLogin">
+        <span v-if="loginMsg===null">立即登录</span>
+        <span v-else>立即购物</span>
+      </van-button>
     </div>
   </div>
 </template>
@@ -17,10 +24,24 @@ export default {
   data() {
     return {};
   },
+  props: {
+    shopList: {
+      type: Array,
+      default: () => []
+    },
+    loginMsg: {
+      type: Object,
+      default: () => {}
+    }
+  },
   components: {},
   methods: {
-    goLogin(){
-      this.$router.push('/login')
+    goLogin() {
+      if (this.loginMsg === null) {
+        this.$router.push("/login");
+      } else {
+        this.$router.push("/");
+      }
     }
   },
   mounted() {},
@@ -30,7 +51,7 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-/deep/ .van-button{
+/deep/ .van-button {
   width: 120px;
   height: 40px;
 }
@@ -53,8 +74,8 @@ export default {
   text-align: center;
   font-size: 15px;
 }
-.login{
-  display:flex;
+.login {
+  display: flex;
   justify-content: center;
   margin-top: 20px;
 }

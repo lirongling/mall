@@ -1,9 +1,11 @@
 <template>
   <div>
+    {{this.$store.state.city}}
     <div class="topBar flex">
       <div class="return flex">
-        <div slot="left">
-          {{city}}
+        <div slot="left" @click="changeCity">
+          <span v-if="this.$store.state.city!==0"> {{this.$store.state.city}}</span>
+          <span v-else>{{this.$store.state.cityLoad}}</span>
           <span class="iconfont icon-xiala ico"></span>
         </div>
       </div>
@@ -27,13 +29,17 @@ export default {
   data() {
     return {
       searchText: "",
-      city: ""
+      city: "定位中..."
     };
   },
   components: {},
   methods: {
     back() {
       this.$router.history.go(-1);
+    },
+    // 切换城市
+    changeCity(){
+      this.$router.push('/city')
     },
     // 搜索
     onInput() {},
@@ -46,6 +52,7 @@ export default {
           if (status === "complete" && result.info === "OK") {
             // 查询成功，result即为当前所在城市信息
             _this.city = result.city;
+            _this.$store.state.cityLoad=result.city;
           } else {
             _this.city = "查询失败";
           }
@@ -71,6 +78,7 @@ export default {
   position: fixed;
   background: white;
   height: 10vh;
+  // border:forestgreen 1px solid; 
   top: 0;
 }
 .ico {

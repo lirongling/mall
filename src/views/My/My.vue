@@ -17,6 +17,7 @@
         <!-- {{loginMsg}} -->
       </div>
     </div>
+    <van-button type="warning" @click="loginOut">警告按钮</van-button>
   </div>
 </template>
 
@@ -28,7 +29,16 @@ export default {
     };
   },
   components: {},
-  methods: {},
+  methods: {
+    // 退出登录
+    loginOut(){
+      this.$api.loginOut().then(res=>{
+        console.log(res);
+      }).catch(err=>{
+        console.log(err);
+      })
+    }
+  },
   mounted() {
     this.loginMsg = JSON.parse(localStorage.getItem("loginMsg"));
   },

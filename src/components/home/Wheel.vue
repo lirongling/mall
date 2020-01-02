@@ -32,7 +32,7 @@ export default {
 
 <style scoped lang='scss'>
 .wheel {
-  padding-top: 54px;
+  margin-top: 54px;
   width: 100%;
   
   .img{

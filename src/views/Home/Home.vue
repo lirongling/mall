@@ -4,13 +4,12 @@
     <div class="topSearch">
       <HomeTop></HomeTop>
     </div>
-    <div>
+    <!-- 刷新 -->
+    <van-pull-refresh v-model="isLoading" success-text="刷新成功" @refresh="onRefresh">
       <!-- 滚动 -->
-      <Scroll>
-        <!-- 刷新 -->
-        <van-pull-refresh v-model="isLoading" @refresh="onRefresh">
+      <Scroll class="wrapper">
+        <div>
           <!-- 轮播图 -->
-
           <div class="wheel">
             <Wheel :slides.sync="recommend.slides"></Wheel>
           </div>
@@ -27,22 +26,35 @@
           <div class="recommend">
             <Recommend :recommend.sync="recommend.recommend"></Recommend>
           </div>
-        </van-pull-refresh>
-        <!-- 楼层 -->
-        <div v-if="recommend.floorName">
-          <Floor :floor.sync="recommend.floor1" :num="'1'" :floorName="recommend.floorName.floor1"></Floor>
-        </div>
-        <div v-if="recommend.floorName">
-          <Floor :floor.sync="recommend.floor2" :num="'2'" :floorName="recommend.floorName.floor2"></Floor>
-        </div>
-        <div v-if="recommend.floorName" class>
-          <Floor :floor.sync="recommend.floor3" :num="'3'" :floorName="recommend.floorName.floor3"></Floor>
-        </div>
-        <div class="hot recommend-bottom">
-          <Hot :hotGoods.sync="recommend.hotGoods"></Hot>
+
+          <!-- 楼层 -->
+          <div v-if="recommend.floorName">
+            <Floor
+              :floor.sync="recommend.floor1"
+              :num="'1'"
+              :floorName="recommend.floorName.floor1"
+            ></Floor>
+          </div>
+          <div v-if="recommend.floorName">
+            <Floor
+              :floor.sync="recommend.floor2"
+              :num="'2'"
+              :floorName="recommend.floorName.floor2"
+            ></Floor>
+          </div>
+          <div v-if="recommend.floorName" class>
+            <Floor
+              :floor.sync="recommend.floor3"
+              :num="'3'"
+              :floorName="recommend.floorName.floor3"
+            ></Floor>
+          </div>
+          <div class="hot recommend-bottom">
+            <Hot :hotGoods.sync="recommend.hotGoods"></Hot>
+          </div>
         </div>
       </Scroll>
-    </div>
+    </van-pull-refresh>
   </div>
   <!-- <p>刷新次数: {{ count }}</p> -->
 </template>
@@ -91,7 +103,7 @@ export default {
     },
     onRefresh() {
       setTimeout(() => {
-        this.$toast("刷新成功");
+        // this.$toast("刷新成功");
         this.isLoading = false;
         this.count++;
       }, 500);
@@ -144,6 +156,10 @@ export default {
   }
 }
 .recommend-bottom {
+  padding-bottom: 65px;
+}
+.wrapper {
   margin-bottom: 65px;
+  height: 80vh;
 }
 </style>
