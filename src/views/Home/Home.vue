@@ -2,8 +2,9 @@
   <div class="home">
     <!-- 顶部搜索 -->
     <div class="topSearch">
-      <HomeTop></HomeTop>
+      <HomeTop :showPop="showPop"></HomeTop>
     </div>
+  
     <!-- 刷新 -->
     <van-pull-refresh v-model="isLoading" success-text="刷新成功" @refresh="onRefresh">
       <!-- 滚动 -->
@@ -55,6 +56,12 @@
         </div>
       </Scroll>
     </van-pull-refresh>
+      <!-- pop弹出层 -->
+    <div>
+      <van-popup v-model="showPop" :overlay="isOverlay" position="right" :style="{ height: '93vh' ,width:'100%' ,marginTop:'5vh'}" >
+       <Search></Search>
+      </van-popup>
+    </div>
   </div>
   <!-- <p>刷新次数: {{ count }}</p> -->
 </template>
@@ -67,6 +74,7 @@ import Category from "../../components/home/Category";
 import Recommend from "../../components/home/Recommend";
 import Floor from "../../components/home/Floor";
 import Hot from "../../components/home/Hot";
+import Search from "../../components/home/Search";
 import Scroll from "../../components/scroll/Scroll";
 
 export default {
@@ -74,7 +82,10 @@ export default {
     return {
       recommend: {},
       count: 0,
-      isLoading: false
+      isLoading: false,
+      showPop:false,
+      isOverlay:false
+      
     };
   },
   components: {
@@ -85,7 +96,8 @@ export default {
     Refresh,
     Floor,
     Scroll,
-    Hot
+    Hot,
+    Search
   },
   methods: {
     getRecommend() {
@@ -160,6 +172,6 @@ export default {
 }
 .wrapper {
   margin-bottom: 65px;
-  height: 80vh;
+  height: 76vh;
 }
 </style>

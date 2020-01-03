@@ -10,6 +10,7 @@ import './globalComponent/index'
 import api from './http/api'
 
 
+
 Vue.use(Vant);
 
 
@@ -19,6 +20,7 @@ Vue.use(Vant);
 Vue.prototype.$api = api
 Vue.prototype.$axios = service
 Vue.prototype.$dayjs = dayjs
+
 
 Vue.config.productionTip = false
 

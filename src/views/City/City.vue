@@ -2,7 +2,7 @@
   <div class="city">
     <div class="top">
       <mallTop>
-        <div slot="toptitle">选择城市</div>
+        <div slot="title">选择城市</div>
       </mallTop>
     </div>
     <div class="split">
@@ -22,25 +22,39 @@
         </div>
       </div>
     </div>
-    <div class="hotCity">
-      <div class="cityTitle">热门城市</div>
-      <div class="cityNa">
-        <div class="nowCityName">
-          <div v-for="(item,index) in city.data.hotCities" :key="index">
-            <span class="cityItem" @click="selectCity(item.name)">{{item.name}}</span>
+    <div v-if="searchValue.length>0">
+      <div class="hotCity">
+        <div class="cityTitle">搜索结果</div>
+        <div class="cityNa">
+          <div class="nowCityName">
+            <div v-for="(item,index) in searchCitys" :key="index">
+              <span class="cityItem" @click="selectCity(item.name)">{{item.name}}</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div>
-      <van-index-bar>
-        <div v-for="(item,index) in city.data.cities" :key="index">
-          <van-index-anchor :index="index" />
-          <div v-for="(citys,index) in item" :key="index">
-            <van-cell :title="citys.name" @click="selectCity(citys.name)" />
+    <div v-else>
+      <div class="hotCity">
+        <div class="cityTitle">热门城市</div>
+        <div class="cityNa">
+          <div class="nowCityName">
+            <div v-for="(item,index) in city.data.hotCities" :key="index">
+              <span class="cityItem" @click="selectCity(item.name)">{{item.name}}</span>
+            </div>
           </div>
         </div>
-      </van-index-bar>
+      </div>
+      <div>
+        <van-index-bar>
+          <div v-for="(item,index) in city.data.cities" :key="index">
+            <van-index-anchor :index="index" />
+            <div v-for="(citys,index) in item" :key="index">
+              <van-cell :title="citys.name" @click="selectCity(citys.name)" />
+            </div>
+          </div>
+        </van-index-bar>
+      </div>
     </div>
   </div>
 </template>
@@ -66,14 +80,14 @@ export default {
   },
   mounted() {
     for (let i in this.city.data.cities) {
-      // console.log(this.city.data.cities[i]); 
-      this.searchCity=this.searchCity.concat(this.city.data.cities[i])
+      // console.log(this.city.data.cities[i]);
+      this.searchCity = this.searchCity.concat(this.city.data.cities[i]);
     }
   },
   watch: {
     searchValue(val) {
-      this.searchCitys =this.searchCity.filter(item=>{
-        return JSON.stringify(item.name).includes(val)
+      this.searchCitys = this.searchCity.filter(item => {
+        return JSON.stringify(item.name).includes(val);
       });
       console.log(this.searchCitys);
     }
@@ -83,15 +97,20 @@ export default {
 </script>
 
 <style scoped lang='scss'>
+/deep/ .van-index-anchor--sticky {
+  top: 44px;
+}
 .top {
   background: white;
-  z-index: 1.5;
+  z-index: 5;
   width: 100%;
   height: 44px;
   position: fixed;
   top: 0;
 }
 .city {
+  width: 100vw;
+  height: 93.3vh;
   background: #f2f2f2;
 }
 .split {
@@ -100,10 +119,10 @@ export default {
 .search {
   margin-top: -16px;
 }
-.nowCity {
-  // width: 90%;
-  // margin: 10px auto;
-}
+// .nowCity {
+//   // width: 90%;
+//   // margin: 10px auto;
+// }
 
 .cityItem {
   display: block;
@@ -119,9 +138,9 @@ export default {
   display: flex;
   flex-wrap: wrap;
 }
-.hotCity {
-  // background: white;
-}
+// .hotCity {
+//   // background: white;
+// }
 .cityTitle {
   width: 90%;
   margin: 10px auto;

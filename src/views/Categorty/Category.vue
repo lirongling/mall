@@ -18,7 +18,7 @@
         <template slot="content">
           <!-- 右侧导航 -->
           <van-tabs  v-model="activeName" animated swipeable scrollspy sticky @change="changeSubName">
-            <van-tab v-for="item in bxMallSubDto" :title="item.mallSubName">
+            <van-tab v-for="(item,index) in bxMallSubDto" :title="item.mallSubName" :key="index">
               <ScrollCate class="wrapper">
                 <div class="good-content">
                   <div class="goods flex" v-for="(good,index) in goods" :key="index" >

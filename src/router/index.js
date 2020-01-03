@@ -115,6 +115,42 @@ const routes = [{
             title: '商品详情'
         }
     },
+    {
+        path: '/address',
+        name: 'address',
+        component: () =>
+            import ( /* webpackChunkName: "about" */ '../views/My/Address'),
+        meta: {
+            title: '地址管理'
+        }
+    },
+    {
+        path: '/allOrder',
+        name: 'allOrder',
+        component: () =>
+            import ( /* webpackChunkName: "about" */ '../views/My/AllOrder'),
+        meta: {
+            title: '全部订单'
+        }
+    },
+    {
+        path: '/favorite',
+        name: 'favorite',
+        component: () =>
+            import ( /* webpackChunkName: "about" */ '../views/My/Favorite'),
+        meta: {
+            title: '我的收藏'
+        }
+    },
+    {
+        path: '/history',
+        name: 'history',
+        component: () =>
+            import ( /* webpackChunkName: "about" */ '../views/My/History'),
+        meta: {
+            title: '历史浏览'
+        }
+    },
 ]
 
 const router = new VueRouter({

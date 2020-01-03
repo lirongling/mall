@@ -39,7 +39,7 @@ export default {
 };
 </script>
 <style lang="scss">
-@import url("//at.alicdn.com/t/font_1588350_one4iihmo0d.css");
+@import url("//at.alicdn.com/t/font_1588350_1n56ce5ze0y.css");
 * {
   margin: 0;
   padding: 0;
