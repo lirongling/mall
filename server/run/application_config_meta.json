@@ -12,10 +12,10 @@
     "mapping": {
       ".html": "D:\\前端\\project\\mall\\server\\config\\config.default.js"
     },
-    "root": "D:\\前端\\project\\mall\\server\\node_modules\\egg-view\\config\\config.default.js",
-    "cache": "D:\\前端\\project\\mall\\server\\node_modules\\egg-view\\config\\config.local.js",
-    "defaultExtension": "D:\\前端\\project\\mall\\server\\node_modules\\egg-view\\config\\config.default.js",
-    "defaultViewEngine": "D:\\前端\\project\\mall\\server\\node_modules\\egg-view\\config\\config.default.js"
+    "root": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-view@2.1.2@egg-view\\config\\config.default.js",
+    "cache": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-view@2.1.2@egg-view\\config\\config.local.js",
+    "defaultExtension": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-view@2.1.2@egg-view\\config\\config.default.js",
+    "defaultViewEngine": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-view@2.1.2@egg-view\\config\\config.default.js"
   },
   "mongoose": {
     "client": {
@@ -23,54 +23,54 @@
       "options": "D:\\前端\\project\\mall\\server\\config\\config.default.js"
     },
     "open": "D:\\前端\\project\\mall\\server\\config\\config.default.js",
-    "url": "D:\\前端\\project\\mall\\server\\node_modules\\egg-mongoose\\config\\config.default.js",
-    "options": "D:\\前端\\project\\mall\\server\\node_modules\\egg-mongoose\\config\\config.default.js",
-    "plugins": "D:\\前端\\project\\mall\\server\\node_modules\\egg-mongoose\\config\\config.default.js",
-    "loadModel": "D:\\前端\\project\\mall\\server\\node_modules\\egg-mongoose\\config\\config.default.js",
-    "app": "D:\\前端\\project\\mall\\server\\node_modules\\egg-mongoose\\config\\config.default.js",
-    "agent": "D:\\前端\\project\\mall\\server\\node_modules\\egg-mongoose\\config\\config.default.js"
+    "url": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-mongoose@3.2.0@egg-mongoose\\config\\config.default.js",
+    "options": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-mongoose@3.2.0@egg-mongoose\\config\\config.default.js",
+    "plugins": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-mongoose@3.2.0@egg-mongoose\\config\\config.default.js",
+    "loadModel": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-mongoose@3.2.0@egg-mongoose\\config\\config.default.js",
+    "app": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-mongoose@3.2.0@egg-mongoose\\config\\config.default.js",
+    "agent": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-mongoose@3.2.0@egg-mongoose\\config\\config.default.js"
   },
   "security": {
     "csrf": "D:\\前端\\project\\mall\\server\\config\\config.default.js",
-    "domainWhiteList": "D:\\前端\\project\\mall\\server\\node_modules\\egg-security\\config\\config.default.js",
-    "protocolWhiteList": "D:\\前端\\project\\mall\\server\\node_modules\\egg-security\\config\\config.default.js",
-    "defaultMiddleware": "D:\\前端\\project\\mall\\server\\node_modules\\egg-security\\config\\config.default.js",
+    "domainWhiteList": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js",
+    "protocolWhiteList": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js",
+    "defaultMiddleware": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js",
     "xframe": {
-      "enable": "D:\\前端\\project\\mall\\server\\node_modules\\egg-security\\config\\config.default.js",
-      "value": "D:\\前端\\project\\mall\\server\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js",
+      "value": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js"
     },
     "hsts": {
-      "enable": "D:\\前端\\project\\mall\\server\\node_modules\\egg-security\\config\\config.local.js",
-      "maxAge": "D:\\前端\\project\\mall\\server\\node_modules\\egg-security\\config\\config.default.js",
-      "includeSubdomains": "D:\\前端\\project\\mall\\server\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.local.js",
+      "maxAge": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js",
+      "includeSubdomains": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js"
     },
     "dta": {
-      "enable": "D:\\前端\\project\\mall\\server\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js"
     },
     "methodnoallow": {
-      "enable": "D:\\前端\\project\\mall\\server\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js"
     },
     "noopen": {
-      "enable": "D:\\前端\\project\\mall\\server\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js"
     },
     "nosniff": {
-      "enable": "D:\\前端\\project\\mall\\server\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js"
     },
     "referrerPolicy": {
-      "enable": "D:\\前端\\project\\mall\\server\\node_modules\\egg-security\\config\\config.default.js",
-      "value": "D:\\前端\\project\\mall\\server\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js",
+      "value": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js"
     },
     "xssProtection": {
-      "enable": "D:\\前端\\project\\mall\\server\\node_modules\\egg-security\\config\\config.default.js",
-      "value": "D:\\前端\\project\\mall\\server\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js",
+      "value": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js"
     },
     "csp": {
-      "enable": "D:\\前端\\project\\mall\\server\\node_modules\\egg-security\\config\\config.default.js",
-      "policy": "D:\\前端\\project\\mall\\server\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js",
+      "policy": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js"
     },
     "ssrf": {
-      "ipBlackList": "D:\\前端\\project\\mall\\server\\node_modules\\egg-security\\config\\config.default.js",
-      "checkAddress": "D:\\前端\\project\\mall\\server\\node_modules\\egg-security\\config\\config.default.js"
+      "ipBlackList": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js",
+      "checkAddress": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js"
     }
   },
   "session": {
@@ -81,243 +81,243 @@
     "signed": "D:\\前端\\project\\mall\\server\\config\\config.default.js",
     "rolling": "D:\\前端\\project\\mall\\server\\config\\config.default.js",
     "renew": "D:\\前端\\project\\mall\\server\\config\\config.default.js",
-    "encrypt": "D:\\前端\\project\\mall\\server\\node_modules\\egg-session\\config\\config.default.js"
+    "encrypt": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-session@3.1.0@egg-session\\config\\config.default.js"
   },
   "bodyParser": {
     "jsonLimit": "D:\\前端\\project\\mall\\server\\config\\config.default.js",
-    "enable": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-    "encoding": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-    "formLimit": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-    "textLimit": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-    "strict": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
+    "enable": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "encoding": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "formLimit": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "textLimit": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "strict": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
     "queryString": {
-      "arrayLimit": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "depth": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "parameterLimit": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js"
+      "arrayLimit": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "depth": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "parameterLimit": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
     },
-    "onerror": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js"
+    "onerror": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
   },
   "jwt": {
     "secret": "D:\\前端\\project\\mall\\server\\config\\config.default.js",
-    "enable": "D:\\前端\\project\\mall\\server\\node_modules\\egg-jwt\\config\\config.default.js"
+    "enable": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-jwt@3.1.7@egg-jwt\\config\\config.default.js"
   },
   "url": "D:\\前端\\project\\mall\\server\\config\\config.default.js",
   "uploadDir": "D:\\前端\\project\\mall\\server\\config\\config.default.js",
   "secret": "D:\\前端\\project\\mall\\server\\config\\config.default.js",
   "helper": {
-    "shtml": "D:\\前端\\project\\mall\\server\\node_modules\\egg-security\\config\\config.default.js"
+    "shtml": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-security@2.7.1@egg-security\\config\\config.default.js"
   },
   "jsonp": {
-    "limit": "D:\\前端\\project\\mall\\server\\node_modules\\egg-jsonp\\config\\config.default.js",
-    "callback": "D:\\前端\\project\\mall\\server\\node_modules\\egg-jsonp\\config\\config.default.js",
-    "csrf": "D:\\前端\\project\\mall\\server\\node_modules\\egg-jsonp\\config\\config.default.js"
+    "limit": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-jsonp@2.0.0@egg-jsonp\\config\\config.default.js",
+    "callback": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-jsonp@2.0.0@egg-jsonp\\config\\config.default.js",
+    "csrf": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-jsonp@2.0.0@egg-jsonp\\config\\config.default.js"
   },
   "onerror": {
-    "errorPageUrl": "D:\\前端\\project\\mall\\server\\node_modules\\egg-onerror\\config\\config.default.js",
-    "appErrorFilter": "D:\\前端\\project\\mall\\server\\node_modules\\egg-onerror\\config\\config.default.js",
-    "templatePath": "D:\\前端\\project\\mall\\server\\node_modules\\egg-onerror\\config\\config.default.js"
+    "errorPageUrl": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-onerror@2.1.0@egg-onerror\\config\\config.default.js",
+    "appErrorFilter": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-onerror@2.1.0@egg-onerror\\config\\config.default.js",
+    "templatePath": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-onerror@2.1.0@egg-onerror\\config\\config.default.js"
   },
   "i18n": {
-    "defaultLocale": "D:\\前端\\project\\mall\\server\\node_modules\\egg-i18n\\config\\config.default.js",
-    "dirs": "D:\\前端\\project\\mall\\server\\node_modules\\egg-i18n\\config\\config.default.js",
-    "queryField": "D:\\前端\\project\\mall\\server\\node_modules\\egg-i18n\\config\\config.default.js",
-    "cookieField": "D:\\前端\\project\\mall\\server\\node_modules\\egg-i18n\\config\\config.default.js",
-    "cookieDomain": "D:\\前端\\project\\mall\\server\\node_modules\\egg-i18n\\config\\config.default.js",
-    "cookieMaxAge": "D:\\前端\\project\\mall\\server\\node_modules\\egg-i18n\\config\\config.default.js"
+    "defaultLocale": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-i18n@2.1.1@egg-i18n\\config\\config.default.js",
+    "dirs": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-i18n@2.1.1@egg-i18n\\config\\config.default.js",
+    "queryField": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-i18n@2.1.1@egg-i18n\\config\\config.default.js",
+    "cookieField": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-i18n@2.1.1@egg-i18n\\config\\config.default.js",
+    "cookieDomain": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-i18n@2.1.1@egg-i18n\\config\\config.default.js",
+    "cookieMaxAge": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-i18n@2.1.1@egg-i18n\\config\\config.default.js"
   },
   "watcher": {
-    "type": "D:\\前端\\project\\mall\\server\\node_modules\\egg-watcher\\config\\config.local.js",
+    "type": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-watcher@3.1.0@egg-watcher\\config\\config.local.js",
     "eventSources": {
-      "default": "D:\\前端\\project\\mall\\server\\node_modules\\egg-watcher\\config\\config.default.js",
-      "development": "D:\\前端\\project\\mall\\server\\node_modules\\egg-watcher\\config\\config.default.js"
+      "default": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-watcher@3.1.0@egg-watcher\\config\\config.default.js",
+      "development": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-watcher@3.1.0@egg-watcher\\config\\config.default.js"
     }
   },
   "customLogger": {
     "scheduleLogger": {
-      "consoleLevel": "D:\\前端\\project\\mall\\server\\node_modules\\egg-schedule\\config\\config.default.js",
-      "file": "D:\\前端\\project\\mall\\server\\node_modules\\egg-schedule\\config\\config.default.js"
+      "consoleLevel": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-schedule@3.6.4@egg-schedule\\config\\config.default.js",
+      "file": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-schedule@3.6.4@egg-schedule\\config\\config.default.js"
     }
   },
   "schedule": {
-    "directory": "D:\\前端\\project\\mall\\server\\node_modules\\egg-schedule\\config\\config.default.js"
+    "directory": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-schedule@3.6.4@egg-schedule\\config\\config.default.js"
   },
   "multipart": {
-    "mode": "D:\\前端\\project\\mall\\server\\node_modules\\egg-multipart\\config\\config.default.js",
-    "autoFields": "D:\\前端\\project\\mall\\server\\node_modules\\egg-multipart\\config\\config.default.js",
-    "defaultCharset": "D:\\前端\\project\\mall\\server\\node_modules\\egg-multipart\\config\\config.default.js",
-    "fieldNameSize": "D:\\前端\\project\\mall\\server\\node_modules\\egg-multipart\\config\\config.default.js",
-    "fieldSize": "D:\\前端\\project\\mall\\server\\node_modules\\egg-multipart\\config\\config.default.js",
-    "fields": "D:\\前端\\project\\mall\\server\\node_modules\\egg-multipart\\config\\config.default.js",
-    "fileSize": "D:\\前端\\project\\mall\\server\\node_modules\\egg-multipart\\config\\config.default.js",
-    "files": "D:\\前端\\project\\mall\\server\\node_modules\\egg-multipart\\config\\config.default.js",
-    "fileExtensions": "D:\\前端\\project\\mall\\server\\node_modules\\egg-multipart\\config\\config.default.js",
-    "whitelist": "D:\\前端\\project\\mall\\server\\node_modules\\egg-multipart\\config\\config.default.js",
-    "tmpdir": "D:\\前端\\project\\mall\\server\\node_modules\\egg-multipart\\config\\config.default.js",
+    "mode": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-multipart@2.10.1@egg-multipart\\config\\config.default.js",
+    "autoFields": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-multipart@2.10.1@egg-multipart\\config\\config.default.js",
+    "defaultCharset": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-multipart@2.10.1@egg-multipart\\config\\config.default.js",
+    "fieldNameSize": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-multipart@2.10.1@egg-multipart\\config\\config.default.js",
+    "fieldSize": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-multipart@2.10.1@egg-multipart\\config\\config.default.js",
+    "fields": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-multipart@2.10.1@egg-multipart\\config\\config.default.js",
+    "fileSize": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-multipart@2.10.1@egg-multipart\\config\\config.default.js",
+    "files": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-multipart@2.10.1@egg-multipart\\config\\config.default.js",
+    "fileExtensions": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-multipart@2.10.1@egg-multipart\\config\\config.default.js",
+    "whitelist": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-multipart@2.10.1@egg-multipart\\config\\config.default.js",
+    "tmpdir": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-multipart@2.10.1@egg-multipart\\config\\config.default.js",
     "cleanSchedule": {
-      "cron": "D:\\前端\\project\\mall\\server\\node_modules\\egg-multipart\\config\\config.default.js"
+      "cron": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-multipart@2.10.1@egg-multipart\\config\\config.default.js"
     }
   },
   "development": {
-    "watchDirs": "D:\\前端\\project\\mall\\server\\node_modules\\egg-development\\config\\config.default.js",
-    "ignoreDirs": "D:\\前端\\project\\mall\\server\\node_modules\\egg-development\\config\\config.default.js",
-    "fastReady": "D:\\前端\\project\\mall\\server\\node_modules\\egg-development\\config\\config.default.js",
-    "reloadOnDebug": "D:\\前端\\project\\mall\\server\\node_modules\\egg-development\\config\\config.default.js",
-    "overrideDefault": "D:\\前端\\project\\mall\\server\\node_modules\\egg-development\\config\\config.default.js"
+    "watchDirs": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-development@2.4.3@egg-development\\config\\config.default.js",
+    "ignoreDirs": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-development@2.4.3@egg-development\\config\\config.default.js",
+    "fastReady": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-development@2.4.3@egg-development\\config\\config.default.js",
+    "reloadOnDebug": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-development@2.4.3@egg-development\\config\\config.default.js",
+    "overrideDefault": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-development@2.4.3@egg-development\\config\\config.default.js"
   },
   "logrotator": {
-    "filesRotateByHour": "D:\\前端\\project\\mall\\server\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "hourDelimiter": "D:\\前端\\project\\mall\\server\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "filesRotateBySize": "D:\\前端\\project\\mall\\server\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "maxFileSize": "D:\\前端\\project\\mall\\server\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "maxFiles": "D:\\前端\\project\\mall\\server\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "rotateDuration": "D:\\前端\\project\\mall\\server\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "maxDays": "D:\\前端\\project\\mall\\server\\node_modules\\egg-logrotator\\config\\config.default.js"
+    "filesRotateByHour": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator\\config\\config.default.js",
+    "hourDelimiter": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator\\config\\config.default.js",
+    "filesRotateBySize": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator\\config\\config.default.js",
+    "maxFileSize": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator\\config\\config.default.js",
+    "maxFiles": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator\\config\\config.default.js",
+    "rotateDuration": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator\\config\\config.default.js",
+    "maxDays": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator\\config\\config.default.js"
   },
   "static": {
-    "prefix": "D:\\前端\\project\\mall\\server\\node_modules\\egg-static\\config\\config.default.js",
-    "dir": "D:\\前端\\project\\mall\\server\\node_modules\\egg-static\\config\\config.default.js",
-    "dynamic": "D:\\前端\\project\\mall\\server\\node_modules\\egg-static\\config\\config.default.js",
-    "preload": "D:\\前端\\project\\mall\\server\\node_modules\\egg-static\\config\\config.default.js",
-    "buffer": "D:\\前端\\project\\mall\\server\\node_modules\\egg-static\\config\\config.default.js",
-    "maxFiles": "D:\\前端\\project\\mall\\server\\node_modules\\egg-static\\config\\config.default.js"
+    "prefix": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-static@2.2.0@egg-static\\config\\config.default.js",
+    "dir": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-static@2.2.0@egg-static\\config\\config.default.js",
+    "dynamic": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-static@2.2.0@egg-static\\config\\config.default.js",
+    "preload": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-static@2.2.0@egg-static\\config\\config.default.js",
+    "buffer": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-static@2.2.0@egg-static\\config\\config.default.js",
+    "maxFiles": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-static@2.2.0@egg-static\\config\\config.default.js"
   },
   "ejs": {
-    "root": "D:\\前端\\project\\mall\\server\\node_modules\\egg-view-ejs\\config\\config.default.js",
-    "cache": "D:\\前端\\project\\mall\\server\\node_modules\\egg-view-ejs\\config\\config.local.js",
-    "debug": "D:\\前端\\project\\mall\\server\\node_modules\\egg-view-ejs\\config\\config.default.js",
-    "compileDebug": "D:\\前端\\project\\mall\\server\\node_modules\\egg-view-ejs\\config\\config.default.js",
-    "delimiter": "D:\\前端\\project\\mall\\server\\node_modules\\egg-view-ejs\\config\\config.default.js",
-    "strict": "D:\\前端\\project\\mall\\server\\node_modules\\egg-view-ejs\\config\\config.default.js"
+    "root": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-view-ejs@2.0.0@egg-view-ejs\\config\\config.default.js",
+    "cache": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-view-ejs@2.0.0@egg-view-ejs\\config\\config.local.js",
+    "debug": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-view-ejs@2.0.0@egg-view-ejs\\config\\config.default.js",
+    "compileDebug": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-view-ejs@2.0.0@egg-view-ejs\\config\\config.default.js",
+    "delimiter": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-view-ejs@2.0.0@egg-view-ejs\\config\\config.default.js",
+    "strict": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-view-ejs@2.0.0@egg-view-ejs\\config\\config.default.js"
   },
-  "env": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-  "name": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-  "cookies": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-  "proxy": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-  "maxIpsCount": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-  "maxProxyCount": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-  "protocolHeaders": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-  "ipHeaders": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-  "hostHeaders": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
+  "env": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+  "name": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+  "cookies": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+  "proxy": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+  "maxIpsCount": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+  "maxProxyCount": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+  "protocolHeaders": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+  "ipHeaders": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+  "hostHeaders": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
   "pkg": {
-    "name": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-    "version": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-    "description": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-    "private": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
+    "name": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "version": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "description": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "private": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
     "dependencies": {
-      "egg": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "egg-cors": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "egg-jwt": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "egg-mongoose": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "egg-scripts": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "egg-view-ejs": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "md5": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "mz-modules": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "request": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "silly-datetime": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "svg-captcha": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js"
+      "egg": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "egg-cors": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "egg-jwt": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "egg-mongoose": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "egg-scripts": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "egg-view-ejs": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "md5": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "mz-modules": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "request": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "silly-datetime": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "svg-captcha": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
     },
     "devDependencies": {
-      "autod": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "autod-egg": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "egg-bin": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "egg-ci": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "egg-mock": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "eslint": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "eslint-config-egg": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "webstorm-disable-index": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js"
+      "autod": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "autod-egg": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "egg-bin": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "egg-ci": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "egg-mock": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "eslint": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "eslint-config-egg": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "webstorm-disable-index": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
     },
     "engines": {
-      "node": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js"
+      "node": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
     },
     "scripts": {
-      "start": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "stop": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "dev": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "debug": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "test": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "test-local": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "cov": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "lint": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "ci": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "autod": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js"
+      "start": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "stop": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "dev": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "debug": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "test": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "test-local": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "cov": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "lint": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "ci": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "autod": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
     },
     "ci": {
-      "version": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js"
+      "version": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
     },
     "repository": {
-      "type": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "url": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js"
+      "type": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "url": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
     },
-    "author": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-    "license": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js"
+    "author": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "license": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
   },
-  "baseDir": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-  "HOME": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-  "rundir": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
+  "baseDir": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+  "HOME": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+  "rundir": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
   "dump": {
-    "ignore": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js"
+    "ignore": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
   },
   "confusedConfigurations": {
-    "bodyparser": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-    "notFound": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-    "sitefile": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-    "middlewares": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-    "httpClient": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js"
+    "bodyparser": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "notFound": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "sitefile": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "middlewares": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "httpClient": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
   },
   "notfound": {
-    "pageUrl": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js"
+    "pageUrl": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
   },
   "siteFile": {
-    "/favicon.ico": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js"
+    "/favicon.ico": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
   },
   "logger": {
-    "dir": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-    "encoding": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-    "env": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-    "level": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-    "consoleLevel": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-    "disableConsoleAfterReady": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-    "outputJSON": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-    "buffer": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-    "appLogName": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-    "coreLogName": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-    "agentLogName": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-    "errorLogName": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
+    "dir": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "encoding": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "env": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "level": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "consoleLevel": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "disableConsoleAfterReady": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "outputJSON": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "buffer": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "appLogName": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "coreLogName": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "agentLogName": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "errorLogName": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
     "coreLogger": {
-      "consoleLevel": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.local.js"
+      "consoleLevel": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.local.js"
     },
-    "allowDebugAtProd": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js"
+    "allowDebugAtProd": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
   },
   "httpclient": {
-    "enableDNSCache": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-    "dnsCacheLookupInterval": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-    "dnsCacheMaxLength": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
+    "enableDNSCache": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "dnsCacheLookupInterval": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "dnsCacheMaxLength": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
     "request": {
-      "timeout": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js"
+      "timeout": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
     },
     "httpAgent": {
-      "keepAlive": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "freeSocketTimeout": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "maxSockets": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "maxFreeSockets": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js"
+      "keepAlive": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "freeSocketTimeout": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "maxSockets": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "maxFreeSockets": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
     },
     "httpsAgent": {
-      "keepAlive": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "freeSocketTimeout": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "maxSockets": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-      "maxFreeSockets": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js"
+      "keepAlive": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "freeSocketTimeout": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "maxSockets": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+      "maxFreeSockets": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
     }
   },
   "meta": {
-    "enable": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-    "logging": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js"
+    "enable": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "logging": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
   },
-  "coreMiddleware": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-  "workerStartTimeout": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-  "serverTimeout": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
+  "coreMiddleware": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+  "workerStartTimeout": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+  "serverTimeout": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
   "clusterClient": {
-    "maxWaitTime": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js",
-    "responseTimeout": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js"
+    "maxWaitTime": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js",
+    "responseTimeout": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
   },
-  "onClientError": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\config.default.js"
+  "onClientError": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\config.default.js"
 }

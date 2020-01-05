@@ -68,7 +68,7 @@
     "onerror": {
       "errorPageUrl": "",
       "appErrorFilter": null,
-      "templatePath": "D:\\前端\\project\\mall\\server\\node_modules\\egg-onerror\\lib\\onerror_page.mustache"
+      "templatePath": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-onerror@2.1.0@egg-onerror\\lib\\onerror_page.mustache"
     },
     "i18n": {
       "defaultLocale": "en_US",
@@ -81,8 +81,8 @@
     "watcher": {
       "type": "development",
       "eventSources": {
-        "default": "D:\\前端\\project\\mall\\server\\node_modules\\egg-watcher\\lib\\event-sources\\default",
-        "development": "D:\\前端\\project\\mall\\server\\node_modules\\egg-watcher\\lib\\event-sources\\development"
+        "default": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-watcher@3.1.0@egg-watcher\\lib\\event-sources\\default",
+        "development": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-watcher@3.1.0@egg-watcher\\lib\\event-sources\\development"
       }
     },
     "customLogger": {
@@ -346,8 +346,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\前端\\project\\mall\\server\\node_modules\\egg-session",
+      "from": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
+      "path": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-session@3.1.0@egg-session",
       "version": "3.1.0"
     },
     "security": {
@@ -359,8 +359,8 @@
         "session"
       ],
       "env": [],
-      "from": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\前端\\project\\mall\\server\\node_modules\\egg-security",
+      "from": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
+      "path": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-security@2.7.1@egg-security",
       "version": "2.7.1"
     },
     "jsonp": {
@@ -372,8 +372,8 @@
         "security"
       ],
       "env": [],
-      "from": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\前端\\project\\mall\\server\\node_modules\\egg-jsonp",
+      "from": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
+      "path": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-jsonp@2.0.0@egg-jsonp",
       "version": "2.0.0"
     },
     "onerror": {
@@ -385,8 +385,8 @@
         "jsonp"
       ],
       "env": [],
-      "from": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\前端\\project\\mall\\server\\node_modules\\egg-onerror",
+      "from": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
+      "path": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-onerror@2.1.0@egg-onerror",
       "version": "2.1.0"
     },
     "i18n": {
@@ -396,8 +396,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\前端\\project\\mall\\server\\node_modules\\egg-i18n",
+      "from": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
+      "path": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-i18n@2.1.1@egg-i18n",
       "version": "2.1.1"
     },
     "watcher": {
@@ -407,8 +407,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\前端\\project\\mall\\server\\node_modules\\egg-watcher",
+      "from": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
+      "path": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-watcher@3.1.0@egg-watcher",
       "version": "3.1.0"
     },
     "schedule": {
@@ -418,8 +418,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\前端\\project\\mall\\server\\node_modules\\egg-schedule",
+      "from": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
+      "path": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-schedule@3.6.4@egg-schedule",
       "version": "3.6.4"
     },
     "multipart": {
@@ -431,8 +431,8 @@
         "schedule"
       ],
       "env": [],
-      "from": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\前端\\project\\mall\\server\\node_modules\\egg-multipart",
+      "from": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
+      "path": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-multipart@2.10.1@egg-multipart",
       "version": "2.10.1"
     },
     "development": {
@@ -446,8 +446,8 @@
       "env": [
         "local"
       ],
-      "from": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\前端\\project\\mall\\server\\node_modules\\egg-development",
+      "from": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
+      "path": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-development@2.4.3@egg-development",
       "version": "2.4.3"
     },
     "logrotator": {
@@ -459,8 +459,8 @@
       ],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\前端\\project\\mall\\server\\node_modules\\egg-logrotator",
+      "from": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
+      "path": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator",
       "version": "3.1.0"
     },
     "static": {
@@ -470,8 +470,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\前端\\project\\mall\\server\\node_modules\\egg-static",
+      "from": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
+      "path": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-static@2.2.0@egg-static",
       "version": "2.2.0"
     },
     "view": {
@@ -481,8 +481,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\前端\\project\\mall\\server\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\前端\\project\\mall\\server\\node_modules\\egg-view",
+      "from": "D:\\前端\\project\\mall\\server\\node_modules\\_egg@2.26.0@egg\\config\\plugin.js",
+      "path": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-view@2.1.2@egg-view",
       "version": "2.1.2"
     },
     "mongoose": {
@@ -493,7 +493,7 @@
       "optionalDependencies": [],
       "env": [],
       "from": "D:\\前端\\project\\mall\\server\\config\\plugin.js",
-      "path": "D:\\前端\\project\\mall\\server\\node_modules\\egg-mongoose",
+      "path": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-mongoose@3.2.0@egg-mongoose",
       "version": "3.2.0"
     },
     "ejs": {
@@ -506,7 +506,7 @@
       "optionalDependencies": [],
       "env": [],
       "from": "D:\\前端\\project\\mall\\server\\config\\plugin.js",
-      "path": "D:\\前端\\project\\mall\\server\\node_modules\\egg-view-ejs",
+      "path": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-view-ejs@2.0.0@egg-view-ejs",
       "version": "2.0.0"
     },
     "jwt": {
@@ -519,7 +519,7 @@
       ],
       "env": [],
       "from": "D:\\前端\\project\\mall\\server\\config\\plugin.js",
-      "path": "D:\\前端\\project\\mall\\server\\node_modules\\egg-jwt",
+      "path": "D:\\前端\\project\\mall\\server\\node_modules\\_egg-jwt@3.1.7@egg-jwt",
       "version": "3.1.7"
     }
   }

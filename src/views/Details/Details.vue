@@ -50,7 +50,7 @@ export default {
           if (res.code === 200) {
             this.good = res.goods.goodsOne;
 
-            console.log(this.good);
+            // console.log(this.good);
           }
         })
         .catch(err => {

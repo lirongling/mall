@@ -398,3 +398,423 @@ model: undefined
 pid: 18376
 hostname: LAPTOP-FKOQDFD9
 
+2020-01-05 15:37:43,403 ERROR 6648 [-/127.0.0.1/-/201ms POST /v1/editCart] nodejs.CastError: Cast to number failed for value "66074cd2d8464dcc9b2d7fbef5b417d9" at path "count"
+    at new CastError (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\error\cast.js:39:11)
+    at SchemaNumber.cast (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\number.js:361:11)
+    at SchemaNumber.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:975:12)
+    at SchemaNumber.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1389:15)
+    at SchemaNumber.castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\number.js:413:14)
+    at SchemaNumber.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1358:15)
+    at castUpdateVal (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:512:19)
+    at walkUpdatePath (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:339:22)
+    at castUpdate (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:96:18)
+    at model.Query._castUpdate (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:4480:10)
+    at castDoc (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:4508:18)
+    at model.Query.Query._findAndModify (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:3471:22)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:3021:8)
+    at model.Query._wrappedThunk [as _findOneAndUpdate] (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"66074cd2d8464dcc9b2d7fbef5b417d9\""
+kind: "number"
+value: "66074cd2d8464dcc9b2d7fbef5b417d9"
+path: "count"
+reason: {"generatedMessage":true,"code":"ERR_ASSERTION","actual":false,"expected":true,"operator":"=="}
+message: "Cast to number failed for value \"66074cd2d8464dcc9b2d7fbef5b417d9\" at path \"count\""
+name: "CastError"
+pid: 6648
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-05 15:38:01,132 ERROR 6648 [-/127.0.0.1/-/3ms POST /v1/editCart] nodejs.CastError: Cast to number failed for value "4cf7744443f94557b7c6ad37dca9c4db" at path "count"
+    at new CastError (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\error\cast.js:39:11)
+    at SchemaNumber.cast (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\number.js:361:11)
+    at SchemaNumber.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:975:12)
+    at SchemaNumber.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1389:15)
+    at SchemaNumber.castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\number.js:413:14)
+    at SchemaNumber.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1358:15)
+    at castUpdateVal (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:512:19)
+    at walkUpdatePath (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:339:22)
+    at castUpdate (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:96:18)
+    at model.Query._castUpdate (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:4480:10)
+    at castDoc (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:4508:18)
+    at model.Query.Query._findAndModify (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:3471:22)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:3021:8)
+    at model.Query._wrappedThunk [as _findOneAndUpdate] (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"4cf7744443f94557b7c6ad37dca9c4db\""
+kind: "number"
+value: "4cf7744443f94557b7c6ad37dca9c4db"
+path: "count"
+reason: {"generatedMessage":true,"code":"ERR_ASSERTION","actual":false,"expected":true,"operator":"=="}
+message: "Cast to number failed for value \"4cf7744443f94557b7c6ad37dca9c4db\" at path \"count\""
+name: "CastError"
+pid: 6648
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-05 15:38:01,940 ERROR 6648 [-/127.0.0.1/-/2ms POST /v1/editCart] nodejs.CastError: Cast to number failed for value "4cf7744443f94557b7c6ad37dca9c4db" at path "count"
+    at new CastError (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\error\cast.js:39:11)
+    at SchemaNumber.cast (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\number.js:361:11)
+    at SchemaNumber.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:975:12)
+    at SchemaNumber.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1389:15)
+    at SchemaNumber.castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\number.js:413:14)
+    at SchemaNumber.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1358:15)
+    at castUpdateVal (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:512:19)
+    at walkUpdatePath (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:339:22)
+    at castUpdate (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:96:18)
+    at model.Query._castUpdate (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:4480:10)
+    at castDoc (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:4508:18)
+    at model.Query.Query._findAndModify (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:3471:22)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:3021:8)
+    at model.Query._wrappedThunk [as _findOneAndUpdate] (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"4cf7744443f94557b7c6ad37dca9c4db\""
+kind: "number"
+value: "4cf7744443f94557b7c6ad37dca9c4db"
+path: "count"
+reason: {"generatedMessage":true,"code":"ERR_ASSERTION","actual":false,"expected":true,"operator":"=="}
+message: "Cast to number failed for value \"4cf7744443f94557b7c6ad37dca9c4db\" at path \"count\""
+name: "CastError"
+pid: 6648
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-05 15:38:57,437 ERROR 6648 [-/127.0.0.1/-/1ms POST /v1/editCart] nodejs.CastError: Cast to number failed for value "66074cd2d8464dcc9b2d7fbef5b417d9" at path "count"
+    at new CastError (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\error\cast.js:39:11)
+    at SchemaNumber.cast (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\number.js:361:11)
+    at SchemaNumber.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:975:12)
+    at SchemaNumber.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1389:15)
+    at SchemaNumber.castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\number.js:413:14)
+    at SchemaNumber.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1358:15)
+    at castUpdateVal (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:512:19)
+    at walkUpdatePath (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:339:22)
+    at castUpdate (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:96:18)
+    at model.Query._castUpdate (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:4480:10)
+    at castDoc (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:4508:18)
+    at model.Query.Query._findAndModify (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:3471:22)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:3021:8)
+    at model.Query._wrappedThunk [as _findOneAndUpdate] (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"66074cd2d8464dcc9b2d7fbef5b417d9\""
+kind: "number"
+value: "66074cd2d8464dcc9b2d7fbef5b417d9"
+path: "count"
+reason: {"generatedMessage":true,"code":"ERR_ASSERTION","actual":false,"expected":true,"operator":"=="}
+message: "Cast to number failed for value \"66074cd2d8464dcc9b2d7fbef5b417d9\" at path \"count\""
+name: "CastError"
+pid: 6648
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-05 15:39:38,024 ERROR 6648 [-/127.0.0.1/-/1ms POST /v1/editCart] nodejs.CastError: Cast to number failed for value "66074cd2d8464dcc9b2d7fbef5b417d9" at path "count"
+    at new CastError (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\error\cast.js:39:11)
+    at SchemaNumber.cast (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\number.js:361:11)
+    at SchemaNumber.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:975:12)
+    at SchemaNumber.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1389:15)
+    at SchemaNumber.castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\number.js:413:14)
+    at SchemaNumber.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1358:15)
+    at castUpdateVal (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:512:19)
+    at walkUpdatePath (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:339:22)
+    at castUpdate (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:96:18)
+    at model.Query._castUpdate (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:4480:10)
+    at castDoc (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:4508:18)
+    at model.Query.Query._findAndModify (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:3471:22)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:3021:8)
+    at model.Query._wrappedThunk [as _findOneAndUpdate] (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"66074cd2d8464dcc9b2d7fbef5b417d9\""
+kind: "number"
+value: "66074cd2d8464dcc9b2d7fbef5b417d9"
+path: "count"
+reason: {"generatedMessage":true,"code":"ERR_ASSERTION","actual":false,"expected":true,"operator":"=="}
+message: "Cast to number failed for value \"66074cd2d8464dcc9b2d7fbef5b417d9\" at path \"count\""
+name: "CastError"
+pid: 6648
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-05 15:40:08,401 ERROR 6648 [-/127.0.0.1/-/1ms POST /v1/editCart] nodejs.CastError: Cast to number failed for value "66074cd2d8464dcc9b2d7fbef5b417d9" at path "count"
+    at new CastError (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\error\cast.js:39:11)
+    at SchemaNumber.cast (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\number.js:361:11)
+    at SchemaNumber.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:975:12)
+    at SchemaNumber.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1389:15)
+    at SchemaNumber.castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\number.js:413:14)
+    at SchemaNumber.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1358:15)
+    at castUpdateVal (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:512:19)
+    at walkUpdatePath (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:339:22)
+    at castUpdate (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:96:18)
+    at model.Query._castUpdate (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:4480:10)
+    at castDoc (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:4508:18)
+    at model.Query.Query._findAndModify (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:3471:22)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:3021:8)
+    at model.Query._wrappedThunk [as _findOneAndUpdate] (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"66074cd2d8464dcc9b2d7fbef5b417d9\""
+kind: "number"
+value: "66074cd2d8464dcc9b2d7fbef5b417d9"
+path: "count"
+reason: {"generatedMessage":true,"code":"ERR_ASSERTION","actual":false,"expected":true,"operator":"=="}
+message: "Cast to number failed for value \"66074cd2d8464dcc9b2d7fbef5b417d9\" at path \"count\""
+name: "CastError"
+pid: 6648
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-05 15:40:09,495 ERROR 6648 [-/127.0.0.1/-/1ms POST /v1/editCart] nodejs.CastError: Cast to number failed for value "66074cd2d8464dcc9b2d7fbef5b417d9" at path "count"
+    at new CastError (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\error\cast.js:39:11)
+    at SchemaNumber.cast (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\number.js:361:11)
+    at SchemaNumber.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:975:12)
+    at SchemaNumber.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1389:15)
+    at SchemaNumber.castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\number.js:413:14)
+    at SchemaNumber.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1358:15)
+    at castUpdateVal (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:512:19)
+    at walkUpdatePath (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:339:22)
+    at castUpdate (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:96:18)
+    at model.Query._castUpdate (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:4480:10)
+    at castDoc (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:4508:18)
+    at model.Query.Query._findAndModify (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:3471:22)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:3021:8)
+    at model.Query._wrappedThunk [as _findOneAndUpdate] (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"66074cd2d8464dcc9b2d7fbef5b417d9\""
+kind: "number"
+value: "66074cd2d8464dcc9b2d7fbef5b417d9"
+path: "count"
+reason: {"generatedMessage":true,"code":"ERR_ASSERTION","actual":false,"expected":true,"operator":"=="}
+message: "Cast to number failed for value \"66074cd2d8464dcc9b2d7fbef5b417d9\" at path \"count\""
+name: "CastError"
+pid: 6648
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-05 15:40:10,460 ERROR 6648 [-/127.0.0.1/-/1ms POST /v1/editCart] nodejs.CastError: Cast to number failed for value "4cf7744443f94557b7c6ad37dca9c4db" at path "count"
+    at new CastError (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\error\cast.js:39:11)
+    at SchemaNumber.cast (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\number.js:361:11)
+    at SchemaNumber.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:975:12)
+    at SchemaNumber.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1389:15)
+    at SchemaNumber.castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\number.js:413:14)
+    at SchemaNumber.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1358:15)
+    at castUpdateVal (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:512:19)
+    at walkUpdatePath (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:339:22)
+    at castUpdate (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:96:18)
+    at model.Query._castUpdate (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:4480:10)
+    at castDoc (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:4508:18)
+    at model.Query.Query._findAndModify (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:3471:22)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:3021:8)
+    at model.Query._wrappedThunk [as _findOneAndUpdate] (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"4cf7744443f94557b7c6ad37dca9c4db\""
+kind: "number"
+value: "4cf7744443f94557b7c6ad37dca9c4db"
+path: "count"
+reason: {"generatedMessage":true,"code":"ERR_ASSERTION","actual":false,"expected":true,"operator":"=="}
+message: "Cast to number failed for value \"4cf7744443f94557b7c6ad37dca9c4db\" at path \"count\""
+name: "CastError"
+pid: 6648
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-05 15:40:11,685 ERROR 6648 [-/127.0.0.1/-/2ms POST /v1/editCart] nodejs.CastError: Cast to number failed for value "418fc60784d04e71beffe1ce5174c947" at path "count"
+    at new CastError (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\error\cast.js:39:11)
+    at SchemaNumber.cast (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\number.js:361:11)
+    at SchemaNumber.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:975:12)
+    at SchemaNumber.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1389:15)
+    at SchemaNumber.castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\number.js:413:14)
+    at SchemaNumber.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1358:15)
+    at castUpdateVal (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:512:19)
+    at walkUpdatePath (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:339:22)
+    at castUpdate (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:96:18)
+    at model.Query._castUpdate (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:4480:10)
+    at castDoc (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:4508:18)
+    at model.Query.Query._findAndModify (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:3471:22)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:3021:8)
+    at model.Query._wrappedThunk [as _findOneAndUpdate] (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"418fc60784d04e71beffe1ce5174c947\""
+kind: "number"
+value: "418fc60784d04e71beffe1ce5174c947"
+path: "count"
+reason: {"generatedMessage":true,"code":"ERR_ASSERTION","actual":false,"expected":true,"operator":"=="}
+message: "Cast to number failed for value \"418fc60784d04e71beffe1ce5174c947\" at path \"count\""
+name: "CastError"
+pid: 6648
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-05 15:40:25,407 ERROR 6648 [-/127.0.0.1/-/2ms POST /v1/editCart] nodejs.CastError: Cast to number failed for value "66074cd2d8464dcc9b2d7fbef5b417d9" at path "count"
+    at new CastError (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\error\cast.js:39:11)
+    at SchemaNumber.cast (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\number.js:361:11)
+    at SchemaNumber.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:975:12)
+    at SchemaNumber.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1389:15)
+    at SchemaNumber.castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\number.js:413:14)
+    at SchemaNumber.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1358:15)
+    at castUpdateVal (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:512:19)
+    at walkUpdatePath (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:339:22)
+    at castUpdate (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\castUpdate.js:96:18)
+    at model.Query._castUpdate (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:4480:10)
+    at castDoc (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:4508:18)
+    at model.Query.Query._findAndModify (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:3471:22)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:3021:8)
+    at model.Query._wrappedThunk [as _findOneAndUpdate] (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"66074cd2d8464dcc9b2d7fbef5b417d9\""
+kind: "number"
+value: "66074cd2d8464dcc9b2d7fbef5b417d9"
+path: "count"
+reason: {"generatedMessage":true,"code":"ERR_ASSERTION","actual":false,"expected":true,"operator":"=="}
+message: "Cast to number failed for value \"66074cd2d8464dcc9b2d7fbef5b417d9\" at path \"count\""
+name: "CastError"
+pid: 6648
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-05 15:47:15,610 ERROR 6648 [-/127.0.0.1/-/5ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{ '66074cd2d8464dcc9b2d7fbef5b417d9': '' }" at path "cid" for model "ShopList"
+    at new CastError (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1358:15)
+    at cast (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:4683:12)
+    at model.Query.Query._castConditions (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:1861:10)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:2811:8)
+    at model.Query._wrappedThunk [as _deleteMany] (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{ '66074cd2d8464dcc9b2d7fbef5b417d9': '' }\""
+kind: "string"
+value: {"66074cd2d8464dcc9b2d7fbef5b417d9":""}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{ '66074cd2d8464dcc9b2d7fbef5b417d9': '' }\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 6648
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-05 15:50:42,783 ERROR 6648 [-/127.0.0.1/-/2ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{ '66074cd2d8464dcc9b2d7fbef5b417d9': '' }" at path "cid" for model "ShopList"
+    at new CastError (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1358:15)
+    at cast (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:4683:12)
+    at model.Query.Query._castConditions (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:1861:10)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:2811:8)
+    at model.Query._wrappedThunk [as _deleteMany] (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{ '66074cd2d8464dcc9b2d7fbef5b417d9': '' }\""
+kind: "string"
+value: {"66074cd2d8464dcc9b2d7fbef5b417d9":""}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{ '66074cd2d8464dcc9b2d7fbef5b417d9': '' }\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 6648
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-05 15:50:46,401 ERROR 6648 [-/127.0.0.1/-/1ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{ '66074cd2d8464dcc9b2d7fbef5b417d9': '' }" at path "cid" for model "ShopList"
+    at new CastError (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1358:15)
+    at cast (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:4683:12)
+    at model.Query.Query._castConditions (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:1861:10)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:2811:8)
+    at model.Query._wrappedThunk [as _deleteMany] (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{ '66074cd2d8464dcc9b2d7fbef5b417d9': '' }\""
+kind: "string"
+value: {"66074cd2d8464dcc9b2d7fbef5b417d9":""}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{ '66074cd2d8464dcc9b2d7fbef5b417d9': '' }\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 6648
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-05 15:50:46,410 ERROR 6648 [-/127.0.0.1/-/1ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{ '4cf7744443f94557b7c6ad37dca9c4db': '' }" at path "cid" for model "ShopList"
+    at new CastError (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1358:15)
+    at cast (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:4683:12)
+    at model.Query.Query._castConditions (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:1861:10)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:2811:8)
+    at model.Query._wrappedThunk [as _deleteMany] (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{ '4cf7744443f94557b7c6ad37dca9c4db': '' }\""
+kind: "string"
+value: {"4cf7744443f94557b7c6ad37dca9c4db":""}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{ '4cf7744443f94557b7c6ad37dca9c4db': '' }\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 6648
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-05 15:50:58,831 ERROR 6648 [-/127.0.0.1/-/1ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{ '66074cd2d8464dcc9b2d7fbef5b417d9': '' }" at path "cid" for model "ShopList"
+    at new CastError (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1358:15)
+    at cast (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:4683:12)
+    at model.Query.Query._castConditions (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:1861:10)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:2811:8)
+    at model.Query._wrappedThunk [as _deleteMany] (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{ '66074cd2d8464dcc9b2d7fbef5b417d9': '' }\""
+kind: "string"
+value: {"66074cd2d8464dcc9b2d7fbef5b417d9":""}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{ '66074cd2d8464dcc9b2d7fbef5b417d9': '' }\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 6648
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-05 15:52:10,805 ERROR 6648 [-/127.0.0.1/-/1ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{ id: '66074cd2d8464dcc9b2d7fbef5b417d9' }" at path "cid" for model "ShopList"
+    at new CastError (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\schematype.js:1358:15)
+    at cast (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:4683:12)
+    at model.Query.Query._castConditions (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:1861:10)
+    at model.Query.<anonymous> (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\query.js:2811:8)
+    at model.Query._wrappedThunk [as _deleteMany] (D:\前端\project\mall\server\node_modules\_mongoose@5.8.4@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\前端\project\mall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{ id: '66074cd2d8464dcc9b2d7fbef5b417d9' }\""
+kind: "string"
+value: {"id":"66074cd2d8464dcc9b2d7fbef5b417d9"}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{ id: '66074cd2d8464dcc9b2d7fbef5b417d9' }\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 6648
+hostname: LAPTOP-FKOQDFD9
+

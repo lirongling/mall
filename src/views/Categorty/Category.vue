@@ -129,7 +129,7 @@ export default {
          // 跳转到详情页
     jumpDeta(item){
       // console.log(item);
-      this.$router.push({name:'details',query:{goodsId:item._id}})
+      this.$router.push({name:'details',query:{goodsId:item.id}})
     }
   },
   mounted() {

@@ -3,7 +3,7 @@
     <div class="title">商品推荐</div>
     <ScrollLeft>
       <div class="recommend-content">
-        <div v-for="(recommends,index) in recommend" :key="index" class="recommend-item" >
+        <div v-for="(recommends,index) in recommend" :key="index" class="recommend-item">
           <div class="recommend-img">
             <img :src="recommends.image" class="img" />
           </div>
@@ -12,7 +12,7 @@
             <div>{{recommends.price}}</div>
           </div>
           <div class="recommends-bottom">
-            <div class="flex">
+            <div class="flex" @click="addShop(recommends)">
               <van-icon name="shopping-cart-o" />
             </div>
             <div class="flex" @click="jumpDeta(recommends)">查看详情</div>
@@ -41,8 +41,20 @@ export default {
   },
   methods: {
     // 跳转到详情页
-    jumpDeta(item){
-      this.$router.push({name:'details',query:{goodsId:item.goodsId}})
+    jumpDeta(item) {
+      this.$router.push({ name: "details", query: { goodsId: item.goodsId } });
+    },
+    // 加入购物车
+    addShop(item) {
+      this.$api.addShop(item.goodsId).then(res => {
+        if (res.code === -1) {
+          this.$toast(res.msg);
+        } else if (res.code === 200) {
+          this.$toast(res.msg);
+          this.$store.state.shopListNumber++;
+        }
+        console.log(res);
+      });
     }
   },
   mounted() {},

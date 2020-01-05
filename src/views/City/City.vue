@@ -87,7 +87,7 @@ export default {
   watch: {
     searchValue(val) {
       this.searchCitys = this.searchCity.filter(item => {
-        return JSON.stringify(item.name).includes(val);
+        return JSON.stringify(item).includes(val);
       });
       console.log(this.searchCitys);
     }

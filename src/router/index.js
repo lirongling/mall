@@ -125,6 +125,24 @@ const routes = [{
         }
     },
     {
+        path: '/addressEdit',
+        name: 'addressEdit',
+        component: () =>
+            import ( /* webpackChunkName: "about" */ '../views/My/AddressEdit'),
+        meta: {
+            title: '新增地址'
+        }
+    },
+    {
+        path: '/settlement',
+        name: 'settlement',
+        component: () =>
+            import ( /* webpackChunkName: "about" */ '../views/settlement/Settlement'),
+        meta: {
+            title: '订单结算'
+        }
+    },
+    {
         path: '/allOrder',
         name: 'allOrder',
         component: () =>

@@ -46,7 +46,7 @@ export default {
     },
 
     deleteShop(id) {
-        return service.post('/deleteShop', id)
+        return service.post('/deleteShop', { _id: id })
     },
 
     // ===============================================================================================================

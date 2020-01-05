@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>
+    <div class="top">
       <van-swipe :autoplay="3000" @change="onChange">
         <van-swipe-item v-for="(item,index) in images" :key="index">
           <div class="img">
@@ -60,6 +60,9 @@ export default {
 </script>
 
 <style scoped lang='scss'>
+.top{
+  height: 375px;
+}
 .custom-indicator {
   position: absolute;
   right: 10px;

@@ -19,8 +19,11 @@ export default {
         .getCard()
         .then(res => {
           if (res.code === 200) {
-            console.log(res);
-             this.$store.state.shopListNumber = res.shopList.length;
+            // console.log(res);
+            this.$store.state.shopListNumber = 0;
+            res.shopList.map(item => {
+              this.$store.state.shopListNumber += item.count;
+            });
           }
         })
         .catch(err => {
@@ -29,7 +32,7 @@ export default {
     }
   },
   mounted() {
-    this.getCar()
+    this.getCar();
   },
   created() {},
   filters: {},
@@ -39,7 +42,7 @@ export default {
 };
 </script>
 <style lang="scss">
-@import url("//at.alicdn.com/t/font_1588350_1n56ce5ze0y.css");
+@import url("//at.alicdn.com/t/font_1588350_nmi5yoytq9.css");
 * {
   margin: 0;
   padding: 0;
