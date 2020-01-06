@@ -12,11 +12,14 @@
     </div>
     <div class="content">
       <van-address-edit
+        v-model="value"
         :area-list="areaList"
         show-postal
         show-delete
         show-set-default
         show-search-result
+        :address-info="AddressInfo"
+        @change-area="onChange"
         :search-result="searchResult"
         :area-columns-placeholder="['请选择', '请选择', '请选择']"
         @save="onSave"
@@ -24,6 +27,7 @@
         @change-detail="onChangeDetail"
       />
     </div>
+    <!-- {{value}} -->
   </div>
 </template>
 
@@ -33,7 +37,11 @@ export default {
   data() {
     return {
       areaList: area,
-      searchResult: []
+      searchResult: [],
+      show: false,
+      content: [],
+      value: [],
+      AddressInfo: {}
     };
   },
   components: {},
@@ -41,28 +49,62 @@ export default {
     // 保存地址
     onSave(content) {
       console.log(content);
-      this.$api.postAddress({
-        name: content.name,
-        tel: content.tel,
-        province: content.province,
-        city: content.city,
-        county: content.county,
-        addressDetail: content.addressDetail,
-        areaCode: content.areaCode,
-        isDefault: content.isDefault,
-        address: content.province+content.city+content.county+content.addressDetail,
-        chosenAddressId:content.isDefault ? '1':''
-      }).then(res=>{
-        if(res.code===200){
-          this.toast(res.msg)
-        }
-      }).catch(err=>{
-        console.log(err);
-      })
+      this.$api
+        .postAddress({
+          name: content.name,
+          tel: content.tel,
+          province: content.province,
+          city: content.city,
+          county: content.county,
+          addressDetail: content.addressDetail,
+          areaCode: content.areaCode,
+          isDefault: content.isDefault,
+          address:
+            content.province +
+            content.city +
+            content.county +
+            content.addressDetail,
+          chosenAddressId: content.isDefault ? "1" : "",
+          id: this.show ? this.AddressInfo._id : undefined
+        })
+        .then(res => {
+          if (res.code === 200) {
+            this.$router.history.go(-1)
+            this.$toast(res.msg);
+          }
+          console.log(res);
+        })
+        .catch(err => {
+          console.log(err);
+        });
     },
-    onDelete(content) {
-      content.name=''
+    // 删除按钮
+    onDelete() {
+      if (this.show) {
+        this.$dialog
+          .confirm({
+            title: "提醒",
+            message: "是否确认删除?"
+          })
+          .then(() => {
+            this.$api
+              .deleteAddress(this.AddressInfo._id)
+              .then(res => {
+                if (res.code === 200) {
+                  this.$router.history.go(-1);
+                  this.$toast(res.msg);
+                }
+              })
+              .catch(err => {
+                console.log(err);
+              });
+          })
+          .catch(() => {
+            // on cancel
+          });
+      }
     },
+    // 自动提示
     onChangeDetail(val) {
       if (val) {
         this.searchResult = [
@@ -74,10 +116,19 @@ export default {
       } else {
         this.searchResult = [];
       }
+    },
+    // 修改地址
+    onChange(values) {
+      console.log(values);
+      values = this.$route.query.addressItem;
     }
+    // 获取默认地址
   },
   mounted() {
-    console.log(this.$route.query.addressItem);
+    if (this.$route.query.addressItem) {
+      this.AddressInfo = this.$route.query.addressItem;
+      this.show = true;
+    }
   },
   watch: {},
   computed: {}

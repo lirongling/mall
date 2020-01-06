@@ -151,10 +151,11 @@ export default {
       if (this.shopLists.length === 0) {
         this.$toast("你还未选择删除的商品哟");
       } else {
-        this.$dialog.confirm({
-          title: "提醒",
-          message: "是否确认删除？"
-        })
+        this.$dialog
+          .confirm({
+            title: "提醒",
+            message: "是否确认删除？"
+          })
           .then(() => {
             this.shopLists.map(item => {
               if (item.check) {
@@ -184,12 +185,14 @@ export default {
       this.shopLists = this.shopList.filter(item => {
         return item.check;
       });
+      this.$store.state.shopLists = this.shopLists;
       if (this.shopLists.length > 0) {
-        // this.$router.push("/settlement");
-        this.$router.push({
-          name: "settlement",
-          params: { shopLists: this.shopLists }
-        });
+        this.$router.push("/settlement");
+
+        // this.$router.push({
+        //   name: "settlement",
+        //   params: { shopLists: this.shopLists }
+        // });
       } else {
         this.$toast("你还未选择结算的商品哟");
       }

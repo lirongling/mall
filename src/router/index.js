@@ -125,6 +125,15 @@ const routes = [{
         }
     },
     {
+        path: '/information',
+        name: 'information',
+        component: () =>
+            import ( /* webpackChunkName: "about" */ '../views/My/Information'),
+        meta: {
+            title: '个人资料'
+        }
+    },
+    {
         path: '/addressEdit',
         name: 'addressEdit',
         component: () =>

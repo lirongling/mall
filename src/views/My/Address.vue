@@ -24,6 +24,7 @@
         default-tag-text="默认"
         @add="onAdd"
         @edit="onEdit"
+        @click-item="clickItem"
       />
     </div>
   </div>
@@ -46,7 +47,7 @@ export default {
         .then(res => {
           if (res.code === 200) {
             this.address = res.address;
-            this.chosenAddress()
+            this.chosenAddress();
           }
           console.log(res);
         })
@@ -56,27 +57,38 @@ export default {
     },
     // 默认选中地址
     chosenAddress() {
-      let flage=0
+      let flage = 0;
+      let b=1;
       this.address.map(item => {
-        if(item.isDefault){
-          flage++
-          item.id='1'
+        if (item.isDefault) {
+          flage++;
+          item.id = "1";
+        }
+        else{
+          b++;
+          item.id=b
         }
       });
-      if(flage===0){
-        this.address[0].id='1'
+      if (flage === 0) {
+        this.address[this.address.length - 1].id = "1";
+
       }
+     
     },
     //新增地址
     addAddress() {
-      console.log('object');
+      // console.log("object");
       this.$router.push("/addressEdit");
     },
+    // 点击切换
+    clickItem(item,index) {
+      this.$store.state.defaultAddress=item
+    },
     onAdd() {
-      // Toast("新增地址");
+      this.$router.push("/addressEdit");
     },
     onEdit(item, index) {
-      this.$router.push({name:'addressEdit',query:{addressItem:item}})
+      this.$router.push({ name: "addressEdit", query: { addressItem: item } });
     }
   },
   mounted() {

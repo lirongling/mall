@@ -1,7 +1,12 @@
 <template>
   <div>
-    <div class="content flex" @click="addAddress">
-      <div class="add"><span class="iconfont icon-add"></span>点击添加收获地址</div>
+    <div class="content flex" @click="addAddress" v-if="address.leng===0">
+      <div class="add">
+        <span class="iconfont icon-add"></span>点击添加收获地址
+      </div>
+    </div>
+    <div v-else class="address">
+      <van-address-list :list="defaultAddress" @edit="addAddress" />
     </div>
   </div>
 </template>
@@ -10,7 +15,7 @@
 export default {
   data() {
     return {
-      defaultAddress: null,
+      defaultAddress: [],
       address: []
     };
   },
@@ -22,9 +27,16 @@ export default {
         .getDefaultAddress()
         .then(res => {
           if (res.code === 200) {
-            this.defaultAddress = res.defaultAdd;
+            if (res.defaultAdd !== null) {
+              this.defaultAddress.push(res.defaultAdd);
+            } else {
+              this.getAddress();
+            }
+            if (this.$store.state.defaultAddress.name) {
+              this.defaultAddress = [];
+              this.defaultAddress.push(this.$store.state.defaultAddress);
+            }
           }
-          console.log(res);
         })
         .catch(err => {
           console.log(err);
@@ -37,21 +49,22 @@ export default {
         .then(res => {
           if (res.code === 200) {
             this.address = res.address;
+            this.$emit("send", this.address);
+            this.defaultAddress = [];
+            this.defaultAddress.push(res.address[res.address.length - 1]);
           }
-          console.log(res);
         })
         .catch(err => {
           console.log(err);
         });
     },
     // 跳转到地址
-    addAddress(){
-      this.$router.push('/address')
+    addAddress() {
+      this.$router.push("/address");
     }
   },
   mounted() {
     this.getDefaultAddress();
-    this.getAddress();
   },
   watch: {},
   computed: {}
@@ -73,9 +86,16 @@ export default {
     justify-content: center;
     align-items: center;
   }
-   .add>span{
+  .add > span {
     font-size: 20px;
     margin-right: 10px;
+  }
+}
+.address {
+  /deep/ .van-address-item .van-radio__icon--checked .van-icon,
+  .van-address-item__edit {
+    width: 0 !important;
+    height: 0 !important;
   }
 }
 </style>

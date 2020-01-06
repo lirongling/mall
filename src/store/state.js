@@ -4,5 +4,7 @@ export default {
     city: 0,
     cityLoad: '定位中',
     searchHistory: [],
-    searchText: ''
+    searchText: '',
+    defaultAddress: {},
+    shopLists: [],
 }

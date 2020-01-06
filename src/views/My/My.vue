@@ -5,7 +5,7 @@
       <mallTop>
         <div slot="left"></div>
         <div slot="title">个人中心</div>
-        <div slot="right">
+        <div slot="right" @click="editUser">
           <van-icon name="setting-o" />
         </div>
       </mallTop>
@@ -22,7 +22,7 @@
       </div>
       <div class="welcome">
         <span>欢迎您!</span>
-        <span>{{loginMsg.username}}</span>
+        <span>{{loginMsg.nickname}}</span>
       </div>
     </div>
     <!-- 订单 -->
@@ -42,28 +42,36 @@
     <!-- 菜单栏 -->
     <div>
       <div class="menu-item flex" @click="jumpMenu('/allOrder')">
-        <div class="item-left iconfont icon-dingdan"><span>全部订单</span></div>
+        <div class="item-left iconfont icon-dingdan">
+          <span>全部订单</span>
+        </div>
         <div class="item-right iconfont icon-iconfontzhizuobiaozhun19"></div>
       </div>
       <div class="split">
         <van-divider />
       </div>
-      <div class="menu-item flex"  @click="jumpMenu('/favorite')">
-        <div class="item-left iconfont icon-shoucang1"><span>收藏商品</span></div>
+      <div class="menu-item flex" @click="jumpMenu('/favorite')">
+        <div class="item-left iconfont icon-shoucang1">
+          <span>收藏商品</span>
+        </div>
         <div class="item-right iconfont icon-iconfontzhizuobiaozhun19"></div>
       </div>
       <div class="split">
         <van-divider />
       </div>
       <div class="menu-item flex" @click="jumpMenu('/address')">
-        <div class="item-left iconfont icon-dizhi"><span>地址管理</span></div>
+        <div class="item-left iconfont icon-dizhi">
+          <span>地址管理</span>
+        </div>
         <div class="item-right iconfont icon-iconfontzhizuobiaozhun19"></div>
       </div>
       <div class="split">
         <van-divider />
       </div>
       <div class="menu-item flex" @click="jumpMenu('/history')">
-        <div class="item-left iconfont icon-zuijinliulan"><span>最近浏览</span></div>
+        <div class="item-left iconfont icon-zuijinliulan">
+          <span>最近浏览</span>
+        </div>
         <div class="item-right iconfont icon-iconfontzhizuobiaozhun19"></div>
       </div>
       <div class="split">
@@ -96,14 +104,18 @@ export default {
         });
     },
     // 跳转页面
-    jumpMenu(path){
-        this.$router.push(path)
+    jumpMenu(path) {
+      this.$router.push(path);
+    },
+    // 跳转到用户修改页面
+    editUser() {
+      // console.log('object');
+      this.$router.push("/information");
     },
     onChange() {}
   },
   mounted() {
     this.loginMsg = JSON.parse(localStorage.getItem("loginMsg"));
-    console.log(this.loginMsg);
   },
   watch: {},
   computed: {}
@@ -150,15 +162,18 @@ export default {
     color: rgb(202, 187, 187);
     font-weight: 600;
   }
+  .welcome > span:nth-child(2) {
+    margin-left: 10px;
+    color: rgb(45, 149, 180);
+  }
 }
 .menu-item {
   width: 90%;
   margin: 6px auto;
   .item-left {
     font-size: 20px;
-    
   }
-  .item-left>span{
+  .item-left > span {
     font-size: 17px;
     font-weight: 520;
     padding-left: 8px;
