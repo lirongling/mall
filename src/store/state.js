@@ -7,4 +7,5 @@ export default {
     searchText: '',
     defaultAddress: {},
     shopLists: [],
+    shopListss: [],
 }

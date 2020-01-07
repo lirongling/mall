@@ -12,13 +12,12 @@
         <Contens :good.sync="good"></Contens>
       </div>
       <div>
-        <BottomTab :good.sync="good"></BottomTab>
+        <BottomTab :good.sync="good" :comment.sync="comment"></BottomTab>
       </div>
-     
     </Scroll>
-     <div class="bottom-bar">
-        <BottomBar :good.sync="good"></BottomBar>
-      </div>
+    <div class="bottom-bar">
+      <BottomBar :good.sync="good"></BottomBar>
+    </div>
   </div>
 </template>
 
@@ -31,7 +30,8 @@ import Scroll from "../../components/scroll/Scroll";
 export default {
   data() {
     return {
-      good: {}
+      good: {},
+      comment: []
     };
   },
   components: {
@@ -48,6 +48,7 @@ export default {
         .then(res => {
           console.log(res);
           if (res.code === 200) {
+            this.comment=res.goods.comment;
             this.good = res.goods.goodsOne;
 
             // console.log(this.good);

@@ -50,6 +50,7 @@ export default {
   data() {
     return {
       shopLists: [],
+      shopListss: [],
       address: [],
       orderId: [],
       count: 0,
@@ -108,11 +109,12 @@ export default {
   },
   mounted() {
     this.shopLists = this.$store.state.shopLists;
+    
     if (this.$route.query.shopLists) {
       this.flage = true;
       this.shopLists = [];
-      this.shopLists.push(this.$route.query.shopLists);
-      console.log(this.$route.query.shopLists);
+      this.shopLists.push(this.$store.state.shopListss);
+      
     }
   },
   watch: {},

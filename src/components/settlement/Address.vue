@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="content flex" @click="addAddress" v-if="address.leng===0">
+    <div class="content flex" @click="addAddress" v-if="defaultAddress.length===0">
       <div class="add">
         <span class="iconfont icon-add"></span>点击添加收获地址
       </div>
@@ -29,6 +29,7 @@ export default {
           if (res.code === 200) {
             if (res.defaultAdd !== null) {
               this.defaultAddress.push(res.defaultAdd);
+              console.log(this.defaultAddress);
             } else {
               this.getAddress();
             }
@@ -48,7 +49,7 @@ export default {
         .getAddress()
         .then(res => {
           if (res.code === 200) {
-            this.address = res.address;
+            console.log(res);
             this.$emit("send", this.address);
             this.defaultAddress = [];
             this.defaultAddress.push(res.address[res.address.length - 1]);

@@ -134,6 +134,33 @@ const routes = [{
         }
     },
     {
+        path: '/evaluation',
+        name: 'evaluation',
+        component: () =>
+            import ( /* webpackChunkName: "about" */ '../views/My/Evaluation'),
+        meta: {
+            title: '评价中心'
+        }
+    },
+    {
+        path: '/evaluationDetails',
+        name: 'evaluationDetails',
+        component: () =>
+            import ( /* webpackChunkName: "about" */ '../views/My/EvaluationDetails'),
+        meta: {
+            title: '评价详情'
+        }
+    },
+    {
+        path: '/sunOrder',
+        name: 'sunOrder',
+        component: () =>
+            import ( /* webpackChunkName: "about" */ '../views/My/SunOrder'),
+        meta: {
+            title: '评论晒单'
+        }
+    },
+    {
         path: '/addressEdit',
         name: 'addressEdit',
         component: () =>

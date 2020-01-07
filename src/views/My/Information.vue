@@ -147,10 +147,10 @@ export default {
       this.$api
         .loginOut()
         .then(res => {
-          if(res.code===0){
-            this.$toast('退出成功')
+          if (res.code === 0) {
+            this.$toast("退出成功");
             localStorage.removeItem("loginMsg");
-             this.$router.history.go(-1);
+            this.$router.history.go(-1);
           }
           console.log(res);
         })
@@ -229,6 +229,7 @@ export default {
   height: 35px !important;
 }
 
+
 .top {
   position: fixed;
   top: 0;
@@ -250,6 +251,7 @@ export default {
   margin: 10px auto;
   margin-top: 70px;
   font-size: 16px;
+
   .avatar {
     .avatar-title {
       margin-left: 18px;

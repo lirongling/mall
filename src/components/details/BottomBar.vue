@@ -95,7 +95,8 @@ export default {
     // 购买
     buyGoods() {
       this.good.count=this.amount
-      console.log(this.good);
+      this.$store.state.shopListss=this.good
+      // console.log(this.good);
       this.$router.push({name:'settlement',query:{shopLists: this.good}})
     },
     // 修改商品数量

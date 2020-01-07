@@ -20,9 +20,13 @@
 
         <!-- {{loginMsg}} -->
       </div>
-      <div class="welcome">
+      <div class="welcome" v-if="loginMsg!==null">
         <span>欢迎您!</span>
         <span>{{loginMsg.nickname}}</span>
+      </div>
+      <div v-else class="welcome">
+        <span>暂未登录</span>
+        <span @click="jumpLogin">点击即可登录</span>
       </div>
     </div>
     <!-- 订单 -->
@@ -31,7 +35,7 @@
         <van-tabbar-item class="iconfont icon-daifukuan">代付款</van-tabbar-item>
         <van-tabbar-item class="iconfont icon-yiwancheng">待发货</van-tabbar-item>
         <van-tabbar-item class="iconfont icon-tubiaolunkuo-">待收货</van-tabbar-item>
-        <van-tabbar-item class="iconfont icon-daishouhuo">评价</van-tabbar-item>
+        <van-tabbar-item class="iconfont icon-daishouhuo" :info="comment.length" to="/evaluation">评价</van-tabbar-item>
         <van-tabbar-item class="iconfont icon-weibiaoti527">已完成</van-tabbar-item>
       </van-tabbar>
     </div>
@@ -78,7 +82,6 @@
         <van-divider />
       </div>
     </div>
-    <van-button type="warning" @click="loginOut">警告按钮</van-button>
   </div>
 </template>
 
@@ -87,7 +90,8 @@ export default {
   data() {
     return {
       loginMsg: "",
-      active: 0
+      active: 0,
+      comment: []
     };
   },
   components: {},
@@ -103,6 +107,10 @@ export default {
           console.log(err);
         });
     },
+    // 立即登录
+    jumpLogin() {
+      this.$router.push("/login");
+    },
     // 跳转页面
     jumpMenu(path) {
       this.$router.push(path);
@@ -112,10 +120,29 @@ export default {
       // console.log('object');
       this.$router.push("/information");
     },
-    onChange() {}
+    onChange() {},
+    // 查询待评价
+    tobeEvaluated() {
+      this.$api
+        .tobeEvaluated()
+        .then(res => {
+          if (res.code === 200) {
+            this.comment = res.data.list;
+          }
+          console.log(res);
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    }
+  },
+  beforeMount(){
+    this.tobeEvaluated();
+    
+    this.loginMsg = JSON.parse(localStorage.getItem("loginMsg"));
   },
   mounted() {
-    this.loginMsg = JSON.parse(localStorage.getItem("loginMsg"));
+    
   },
   watch: {},
   computed: {}
@@ -123,6 +150,10 @@ export default {
 </script>
 
 <style scoped lang='scss'>
+/deep/ .van-info{
+  top: -20px;
+  right:-10px;
+}
 /deep/ .icon-daifukuan:before,
 .icon-yiwancheng:before,
 .icon-tubiaolunkuo-:before,

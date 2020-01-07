@@ -1,7 +1,7 @@
 <template>
   <div class="search">
     <!-- 搜索历史 -->
-    <div class="hotCity">
+    <div class="hotCity" v-if="this.$store.state.searchText.length===0"> 
       <div class="cityTitle flex">
         <div>搜索历史</div>
         <div>
@@ -90,7 +90,7 @@ export default {
     // 跳转到详情页
     jumpDeta(item) {
       // console.log(item);
-      this.$router.push({ name: "details", query: { goodsId: item._id } });
+      this.$router.push({ name: "details", query: { goodsId: item.id } });
     },
     // 清除搜索历史
     cleanSearch() {
@@ -99,6 +99,7 @@ export default {
     // 点击搜索
     selectSearch(item) {
       this.$store.state.searchText = item;
+      
     }
   },
 

@@ -118,7 +118,7 @@ export default {
         this.$dialog
           .confirm({
             title: "标题",
-            message: "是否确认注册"
+            message: "是否确认登录"
           })
           .then(() => {
             this.getLogin();

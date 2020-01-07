@@ -234,3 +234,21 @@
 2020-01-06 08:50:38,184 INFO 4820 [Timer] D:\前端\project\mall\server\node_modules\_egg-multipart@2.10.1@egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 70761818ms at 2020-01-07 04:30:00.002
 2020-01-06 08:50:38,185 INFO 4820 [Timer] D:\前端\project\mall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js next time will execute after 54561816ms at 2020-01-07 00:00:00.001
 2020-01-06 08:50:38,185 INFO 4820 [Timer] D:\前端\project\mall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 54562815ms at 2020-01-07 00:00:01.000
+2020-01-07 08:15:22,077 INFO 9436 [egg-schedule]: register schedule D:\前端\project\mall\server\node_modules\_egg-multipart@2.10.1@egg-multipart\app\schedule\clean_tmpdir.js
+2020-01-07 08:15:22,077 INFO 9436 [egg-schedule]: register schedule D:\前端\project\mall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js
+2020-01-07 08:15:22,078 INFO 9436 [egg-schedule]: register schedule D:\前端\project\mall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js
+2020-01-07 08:15:29,887 INFO 13576 [Timer] D:\前端\project\mall\server\node_modules\_egg-multipart@2.10.1@egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 72870116ms at 2020-01-08 04:30:00.003
+2020-01-07 08:15:29,887 INFO 13576 [Timer] D:\前端\project\mall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js next time will execute after 56670113ms at 2020-01-08 00:00:00.000
+2020-01-07 08:15:29,888 INFO 13576 [Timer] D:\前端\project\mall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 56671113ms at 2020-01-08 00:00:01.000
+2020-01-07 09:57:42,561 INFO 5316 [egg-schedule]: register schedule D:\前端\project\mall\server\node_modules\_egg-multipart@2.10.1@egg-multipart\app\schedule\clean_tmpdir.js
+2020-01-07 09:57:42,561 INFO 5316 [egg-schedule]: register schedule D:\前端\project\mall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js
+2020-01-07 09:57:42,561 INFO 5316 [egg-schedule]: register schedule D:\前端\project\mall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js
+2020-01-07 09:57:54,851 INFO 10596 [Timer] D:\前端\project\mall\server\node_modules\_egg-multipart@2.10.1@egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 66725151ms at 2020-01-08 04:30:00.002
+2020-01-07 09:57:54,852 INFO 10596 [Timer] D:\前端\project\mall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js next time will execute after 50525149ms at 2020-01-08 00:00:00.001
+2020-01-07 09:57:54,852 INFO 10596 [Timer] D:\前端\project\mall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 50526148ms at 2020-01-08 00:00:01.000
+2020-01-07 19:47:25,639 INFO 2684 [egg-schedule]: register schedule D:\前端\project\mall\server\node_modules\_egg-multipart@2.10.1@egg-multipart\app\schedule\clean_tmpdir.js
+2020-01-07 19:47:25,639 INFO 2684 [egg-schedule]: register schedule D:\前端\project\mall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js
+2020-01-07 19:47:25,639 INFO 2684 [egg-schedule]: register schedule D:\前端\project\mall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js
+2020-01-07 19:47:32,544 INFO 1424 [Timer] D:\前端\project\mall\server\node_modules\_egg-multipart@2.10.1@egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 31347459ms at 2020-01-08 04:30:00.003
+2020-01-07 19:47:32,544 INFO 1424 [Timer] D:\前端\project\mall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js next time will execute after 15147456ms at 2020-01-08 00:00:00.000
+2020-01-07 19:47:32,544 INFO 1424 [Timer] D:\前端\project\mall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 15148456ms at 2020-01-08 00:00:01.000

@@ -9,7 +9,7 @@
           <span class="iconfont icon-xiala ico"></span>
         </div>
       </div>
-      <div class="title">
+      <div class="title" >
         <div v-if="!showPop" class="search1">
           <van-search
             placeholder="请输入搜索关键词"
@@ -19,7 +19,7 @@
           />
         </div>
         <div v-else>
-          <van-search v-model="searchText" placeholder="请输入搜索关键词" show-action @cancel="onCancel" />
+          <van-search v-model="$store.state.searchText" placeholder="请输入搜索关键词" show-action @cancel="onCancel" />
         </div>
 
         <!-- <van-search
@@ -41,7 +41,7 @@
 export default {
   data() {
     return {
-      searchText: "",
+      searchText:this.$store.state.searchText,
       city: "定位中..."
     };
   },
