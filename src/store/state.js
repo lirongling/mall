@@ -8,4 +8,9 @@ export default {
     defaultAddress: {},
     shopLists: [],
     shopListss: [],
+    historyShops: [{
+        nickname: '',
+        goods: [],
+    }],
+    userInfo: [],
 }

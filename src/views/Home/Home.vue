@@ -4,62 +4,55 @@
     <div class="topSearch">
       <HomeTop :showPop="showPop"></HomeTop>
     </div>
-  
+
     <!-- 刷新 -->
-    <van-pull-refresh v-model="isLoading" success-text="刷新成功" @refresh="onRefresh">
-      <!-- 滚动 -->
-      <Scroll class="wrapper">
-        <div>
-          <!-- 轮播图 -->
-          <div class="wheel">
-            <Wheel :slides.sync="recommend.slides"></Wheel>
-          </div>
-          <!-- 分类 -->
-          <div class="category">
-            <Category :category.sync="recommend.category"></Category>
-          </div>
-
-          <!-- 广告 -->
-          <div class="advertising flex" v-if="recommend.advertesPicture">
-            <img :src="recommend.advertesPicture.PICTURE_ADDRESS" class="advertising-img" />
-          </div>
-          <!-- 推荐 -->
-          <div class="recommend">
-            <Recommend :recommend.sync="recommend.recommend"></Recommend>
-          </div>
-
-          <!-- 楼层 -->
-          <div v-if="recommend.floorName">
-            <Floor
-              :floor.sync="recommend.floor1"
-              :num="'1'"
-              :floorName="recommend.floorName.floor1"
-            ></Floor>
-          </div>
-          <div v-if="recommend.floorName">
-            <Floor
-              :floor.sync="recommend.floor2"
-              :num="'2'"
-              :floorName="recommend.floorName.floor2"
-            ></Floor>
-          </div>
-          <div v-if="recommend.floorName" class>
-            <Floor
-              :floor.sync="recommend.floor3"
-              :num="'3'"
-              :floorName="recommend.floorName.floor3"
-            ></Floor>
-          </div>
-          <div class="hot recommend-bottom">
-            <Hot :hotGoods.sync="recommend.hotGoods"></Hot>
-          </div>
+    <!-- <van-pull-refresh v-model="isLoading" success-text="刷新成功" @refresh="onRefresh"> -->
+    <!-- 滚动 -->
+    <HomeScroll class="wrapper">
+      <div>
+        <!-- 轮播图 -->
+        <div class="wheel">
+          <Wheel :slides.sync="recommend.slides"></Wheel>
         </div>
-      </Scroll>
-    </van-pull-refresh>
-      <!-- pop弹出层 -->
+        <!-- 分类 -->
+        <div class="category">
+          <Category :category.sync="recommend.category"></Category>
+        </div>
+
+        <!-- 广告 -->
+        <div class="advertising flex" v-if="recommend.advertesPicture">
+          <img :src="recommend.advertesPicture.PICTURE_ADDRESS" class="advertising-img" />
+        </div>
+        <!-- 推荐 -->
+        <div class="recommend">
+          <Recommend :recommend.sync="recommend.recommend"></Recommend>
+        </div>
+
+        <!-- 楼层 -->
+        <div v-if="recommend.floorName">
+          <Floor :floor.sync="recommend.floor1" :num="'1'" :floorName="recommend.floorName.floor1"></Floor>
+        </div>
+        <div v-if="recommend.floorName">
+          <Floor :floor.sync="recommend.floor2" :num="'2'" :floorName="recommend.floorName.floor2"></Floor>
+        </div>
+        <div v-if="recommend.floorName" class>
+          <Floor :floor.sync="recommend.floor3" :num="'3'" :floorName="recommend.floorName.floor3"></Floor>
+        </div>
+        <div class="hot recommend-bottom">
+          <Hot :hotGoods.sync="recommend.hotGoods"></Hot>
+        </div>
+      </div>
+    </HomeScroll>
+    <!-- </van-pull-refresh> -->
+    <!-- pop弹出层 -->
     <div>
-      <van-popup v-model="showPop" :overlay="isOverlay" position="right" :style="{ height: '93vh' ,width:'100%' ,marginTop:'5vh'}" >
-       <Search></Search>
+      <van-popup
+        v-model="showPop"
+        :overlay="isOverlay"
+        position="right"
+        :style="{ height: '93vh' ,width:'100%' ,marginTop:'4vh'}"
+      >
+        <Search></Search>
       </van-popup>
     </div>
   </div>
@@ -76,6 +69,7 @@ import Floor from "../../components/home/Floor";
 import Hot from "../../components/home/Hot";
 import Search from "../../components/home/Search";
 import Scroll from "../../components/scroll/Scroll";
+import HomeScroll from "../../components/scroll/HomeScroll";
 
 export default {
   data() {
@@ -83,9 +77,9 @@ export default {
       recommend: {},
       count: 0,
       isLoading: false,
-      showPop:false,
-      isOverlay:false
-      
+      showPop: false,
+      isOverlay: false,
+      flage: false
     };
   },
   components: {
@@ -97,7 +91,8 @@ export default {
     Floor,
     Scroll,
     Hot,
-    Search
+    Search,
+    HomeScroll
   },
   methods: {
     getRecommend() {
@@ -106,6 +101,7 @@ export default {
         .then(res => {
           console.log(res);
           if (res.code === 200) {
+            this.flage = true;
             this.recommend = res.data;
           }
         })
@@ -140,8 +136,9 @@ export default {
   left: 0;
 }
 .home {
-  height: 100%;
+  height: 100vh;
   background: #eeeeee;
+  margin-top: -9px;
   .wheel {
     // margin-top: 54px;
     width: 100%;
@@ -171,7 +168,8 @@ export default {
   padding-bottom: 65px;
 }
 .wrapper {
-  margin-bottom: 65px;
+  margin-top: 44px;
+  // margin-bottom: 65px;
   height: 76vh;
 }
 </style>

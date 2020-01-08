@@ -147,7 +147,7 @@ export default {
     // 获取验证码
     getCode() {
       this.$api.getAverify
-      
+
         .then(res => {
           console.log(res);
           this.codeImg = res;
@@ -158,12 +158,12 @@ export default {
     },
     //获取接口验证用户信息
     getLogin() {
-      this.$api.login({
+      this.$api
+        .login({
           nickname: this.user.username,
           password: this.user.password,
-          verify: this.user.code,
+          verify: this.user.code
         })
-       
         .then(res => {
           console.log(res);
           if (res.code === -2) {
@@ -174,6 +174,8 @@ export default {
             this.$router.push("/");
             this.$toast.success(res.msg);
             localStorage.setItem("loginMsg", JSON.stringify(res.userInfo));
+            this.$store.state.userInfo = res.userInfo;
+            this.history(res)
           } else if (res.code === -1) {
             this.user = "";
             this.afreshCode();
@@ -186,10 +188,34 @@ export default {
     // 更新验证码
     afreshCode() {
       this.$refs.captcha.src = "api/verify?time=" + Date.now();
+    },
+    // 保存历史纪录用户
+    history(res) {
+      if (JSON.parse(localStorage.getItem("historyShops"))) {
+        let historyShops = JSON.parse(localStorage.getItem("historyShops"));
+        let flage = historyShops.every(item => {
+          item.nickname !== res.userInfo.nickname;
+        });
+        if (flage) {
+          historyShops.push({
+            nickname: res.userInfo.nickname,
+            goods: []
+          });
+          localStorage.setItem("historyShops", JSON.stringify(historyShops));
+        }
+      } else {
+        let historyShops = [];
+        historyShops.push({
+          nickname: res.userInfo.nickname,
+          goods: []
+        });
+        localStorage.setItem("historyShops", JSON.stringify(historyShops));
+      
+      }
     }
   },
   mounted() {
-//  this.getCode()
+    //  this.getCode()
   },
   watch: {},
   computed: {}

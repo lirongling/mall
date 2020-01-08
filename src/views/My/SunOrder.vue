@@ -106,7 +106,9 @@ export default {
         });
     }
   },
-  mounted() {},
+  mounted() {
+    console.log(this.$route.query.goods);
+  },
   watch: {},
   computed: {}
 };

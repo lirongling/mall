@@ -1706,3 +1706,13 @@ hostname: LAPTOP-FKOQDFD9
 2020-01-07 19:47:21,903 INFO 1424 [egg-watcher] Start watching: "D:\\前端\\project\\mall\\server\\app.js"
 2020-01-07 19:47:21,904 INFO 1424 [egg-watcher:agent] watcher start success
 2020-01-07 19:47:21,927 INFO 1424 [egg:core] dump config after ready, 8ms
+2020-01-08 08:19:15,702 INFO 7984 [egg:logger] init all loggers with options: {"dir":"D:\\前端\\project\\mall\\server\\logs\\server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-01-08 08:19:15,715 INFO 7984 [egg:core] dump config after load, 6ms
+2020-01-08 08:19:15,927 INFO 7984 [egg-watcher] Start watching: ["D:\\前端\\project\\mall\\server\\app","D:\\前端\\project\\mall\\server\\config","D:\\前端\\project\\mall\\server\\mocks","D:\\前端\\project\\mall\\server\\mocks_proxy","D:\\前端\\project\\mall\\server\\app.js"]
+2020-01-08 08:19:15,927 INFO 7984 [egg-watcher] Start watching: "D:\\前端\\project\\mall\\server\\app"
+2020-01-08 08:19:15,928 INFO 7984 [egg-watcher] Start watching: "D:\\前端\\project\\mall\\server\\config"
+2020-01-08 08:19:15,928 INFO 7984 [egg-watcher] Start watching: "D:\\前端\\project\\mall\\server\\mocks"
+2020-01-08 08:19:15,929 INFO 7984 [egg-watcher] Start watching: "D:\\前端\\project\\mall\\server\\mocks_proxy"
+2020-01-08 08:19:15,929 INFO 7984 [egg-watcher] Start watching: "D:\\前端\\project\\mall\\server\\app.js"
+2020-01-08 08:19:15,929 INFO 7984 [egg-watcher:agent] watcher start success
+2020-01-08 08:19:15,951 INFO 7984 [egg:core] dump config after ready, 7ms

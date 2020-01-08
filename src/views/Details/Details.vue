@@ -11,7 +11,7 @@
       <div>
         <Contens :good.sync="good"></Contens>
       </div>
-      <div>
+      <div class="bottom-tab">
         <BottomTab :good.sync="good" :comment.sync="comment"></BottomTab>
       </div>
     </Scroll>
@@ -42,14 +42,16 @@ export default {
     Scroll
   },
   methods: {
+    // 获取商品数据
     getGoodOne() {
       this.$api
         .goodOne(this.$route.query.goodsId, 1)
         .then(res => {
           console.log(res);
           if (res.code === 200) {
-            this.comment=res.goods.comment;
+            this.comment = res.goods.comment;
             this.good = res.goods.goodsOne;
+            this.history();
 
             // console.log(this.good);
           }
@@ -57,10 +59,34 @@ export default {
         .catch(err => {
           console.log(err);
         });
+    },
+    // 存历史浏览
+    history() {
+    
+
+      if (JSON.parse(localStorage.getItem("loginMsg"))) {
+        let loginMsg = JSON.parse(localStorage.getItem("loginMsg"));
+        let historyShops = JSON.parse(localStorage.getItem("historyShops"));
+        historyShops.map(item => {
+          if (item.nickname === loginMsg.nickname) {
+            console.log(
+              !JSON.stringify(item.goods).includes(JSON.stringify(this.good.id))
+            );
+            if (
+              !JSON.stringify(item.goods).includes(JSON.stringify(this.good.id))
+            ) {
+              this.good.add_time = new Date();
+              item.goods.push(this.good);
+            }
+          }
+        });
+        localStorage.setItem("historyShops", JSON.stringify(historyShops));
+      }
     }
   },
   mounted() {
     this.getGoodOne();
+
     // this.$route.query.goodsId
   },
   watch: {},
@@ -69,11 +95,12 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-.bottom-bar {
-  // margin-bottom: 10vh;
+.bottom-tab {
+  padding-bottom: 6vh;
 }
 .wrapper {
   // margin-bottom: 65px;
-  height: 60vh;
+  height: 94vh;
+  overflow: hidden;
 }
 </style>

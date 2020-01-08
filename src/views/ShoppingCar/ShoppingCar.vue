@@ -159,7 +159,6 @@ export default {
           .then(() => {
             this.shopLists.map(item => {
               if (item.check) {
-                // console.log(item);
                 this.$api
                   .deleteShop(item.cid)
                   .then(res => {

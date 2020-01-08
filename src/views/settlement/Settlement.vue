@@ -15,27 +15,31 @@
       <Address @send="send" ref="addressChild"></Address>
     </div>
     <!-- 分割 -->
+
     <div class="split0"></div>
-    <div class="content">
-      <div class="content-item" v-for="(item,index) in shopLists" :key="index">
-        <div class="good flex">
-          <div class="good-img">
-            <img :src="item.image_path" />
-          </div>
-          <div class="good-de flex">
-            <div class="good-name">{{item.name}}</div>
-            <div class="good-bottom flex">
-              <div class="good-price">￥{{(item.present_price*item.count).toFixed(2)}}</div>
-              <div class="good-count">X{{item.count}}</div>
+    <!-- 滚动 -->
+    <Scroll class="wrapper">
+      <div class="content">
+        <div class="content-item" v-for="(item,index) in shopLists" :key="index">
+          <div class="good flex">
+            <div class="good-img">
+              <img :src="item.image_path" />
+            </div>
+            <div class="good-de flex">
+              <div class="good-name">{{item.name}}</div>
+              <div class="good-bottom flex">
+                <div class="good-price">￥{{(item.present_price*item.count).toFixed(2)}}</div>
+                <div class="good-count">X{{item.count}}</div>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- 分割线 -->
-        <div class>
-          <van-divider />
+          <!-- 分割线 -->
+          <div class>
+            <van-divider />
+          </div>
         </div>
       </div>
-    </div>
+    </Scroll>
 
     <!-- 底部按钮 -->
     <div class="submit">
@@ -46,6 +50,7 @@
 
 <script>
 import Address from "../../components/settlement/Address";
+import Scroll from "../../components/scroll/Scroll";
 export default {
   data() {
     return {
@@ -58,7 +63,8 @@ export default {
     };
   },
   components: {
-    Address
+    Address,
+    Scroll
   },
   methods: {
     // 提交订单
@@ -109,12 +115,11 @@ export default {
   },
   mounted() {
     this.shopLists = this.$store.state.shopLists;
-    
+
     if (this.$route.query.shopLists) {
       this.flage = true;
       this.shopLists = [];
       this.shopLists.push(this.$store.state.shopListss);
-      
     }
   },
   watch: {},
@@ -172,6 +177,7 @@ export default {
     height: 80%;
     .good-name {
       font-size: 16px;
+      width: 256px;
       word-break: keep-all; /* 不换行 */
       white-space: nowrap; /* 不换行 */
       overflow: hidden; /* 内容超出宽度时隐藏超出部分的内容 */
@@ -188,5 +194,10 @@ export default {
       }
     }
   }
+}
+.wrapper {
+  margin-bottom: 65px;
+  height: 65.7vh;
+  overflow: hidden;
 }
 </style>

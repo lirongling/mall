@@ -150,6 +150,7 @@ export default {
           if (res.code === 0) {
             this.$toast("退出成功");
             localStorage.removeItem("loginMsg");
+            this.$store.state.userInfo=[]
             this.$router.history.go(-1);
           }
           console.log(res);

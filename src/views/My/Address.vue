@@ -31,6 +31,7 @@
 </template>
 
 <script>
+import Scroll from "../../components/scroll/Scroll";
 export default {
   data() {
     return {
@@ -38,7 +39,9 @@ export default {
       chosenAddressId: "1"
     };
   },
-  components: {},
+  components: {
+    Scroll
+  },
   methods: {
     // 获取所有地址
     getAddress() {
@@ -58,22 +61,19 @@ export default {
     // 默认选中地址
     chosenAddress() {
       let flage = 0;
-      let b=1;
+      let b = 1;
       this.address.map(item => {
         if (item.isDefault) {
           flage++;
           item.id = "1";
-        }
-        else{
+        } else {
           b++;
-          item.id=b
+          item.id = b;
         }
       });
       if (flage === 0) {
         this.address[this.address.length - 1].id = "1";
-
       }
-     
     },
     //新增地址
     addAddress() {
@@ -81,8 +81,8 @@ export default {
       this.$router.push("/addressEdit");
     },
     // 点击切换
-    clickItem(item,index) {
-      this.$store.state.defaultAddress=item
+    clickItem(item, index) {
+      this.$store.state.defaultAddress = item;
     },
     onAdd() {
       this.$router.push("/addressEdit");
@@ -100,9 +100,18 @@ export default {
 </script>
 
 <style scoped lang='scss'>
+// /deep/ .van-address-list__bottom {
+//   width: 0 !important;
+//   height: 0!important;
+//   position: fixed !important;
+//   bottom: 0;
+//   width: 0;
+// }
 .top {
   position: fixed;
   top: 0;
+  background: white;
+  z-index: 999;
 }
 .split {
   width: 100vw;
@@ -121,4 +130,9 @@ export default {
 .add-list {
   margin-top: 60px;
 }
+// .wrapper {
+//   // margin-bottom: 65px;
+//   height: 90vh;
+//   overflow: hidden;
+// }
 </style>

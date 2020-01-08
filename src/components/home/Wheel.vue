@@ -3,7 +3,7 @@
     <van-swipe :autoplay="3000" indicator-color="white">
       <div v-for="(slide,index) in slides" :key="index">
         <van-swipe-item>
-          <img :src="slide.image" class="img"/>
+          <img :src="slide.image" class="img" />
         </van-swipe-item>
       </div>
     </van-swipe>
@@ -13,8 +13,7 @@
 <script>
 export default {
   data() {
-    return {
-    };
+    return {};
   },
   props: {
     slides: {
@@ -34,8 +33,8 @@ export default {
 .wheel {
   margin-top: 54px;
   width: 100%;
-  
-  .img{
+
+  .img {
     width: 100%;
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="search">
     <!-- 搜索历史 -->
-    <div class="hotCity" v-if="this.$store.state.searchText.length===0"> 
+    <div class="hotCity" v-if="this.$store.state.searchText.length===0">
       <div class="cityTitle flex">
         <div>搜索历史</div>
         <div>
@@ -62,9 +62,9 @@ export default {
           if (res.code === 200) {
             this.searchGoods = res.data.list;
             if (res.data.list.length === 0) {
-              this.$toast('暂无数据哟');
-            }else{
-              this.$toast('搜索成功,共有'+res.data.list.length+'条');
+              this.$toast("暂无数据哟");
+            } else {
+              this.$toast("搜索成功,共有" + res.data.list.length + "条");
             }
             if (res.data.count > 0) {
               if (
@@ -99,7 +99,6 @@ export default {
     // 点击搜索
     selectSearch(item) {
       this.$store.state.searchText = item;
-      
     }
   },
 
@@ -115,19 +114,23 @@ export default {
   watch: {
     "$store.state.searchText": function() {
       // console.log(this.$store.state.searchText);
-      this.searchItem();
+      setTimeout(() => {
+        this.searchItem();
+      }, 200);
+
       // this.$keyword.keyWord()
     }
   },
+
   computed: {}
 };
 </script>
 
 <style scoped lang='scss'>
-/deep/ .van-tag--round{
+/deep/ .van-tag--round {
   // padding: 5px 10px;
   margin: 5px 10px;
-  font-size: 13px
+  font-size: 13px;
 }
 .clean {
   font-size: 20px;
@@ -225,6 +228,7 @@ export default {
   width: 95%;
   margin: 0 auto;
   border-radius: 5px;
+  font-size: 16px;
 }
 .cityNa {
   margin: 10px auto;

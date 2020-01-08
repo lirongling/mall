@@ -11,11 +11,15 @@
       </div>
     </div>
     <div class="content">
-      <van-tabs v-model="active" animated>
+      <van-tabs v-model="active" animated swipeable>
         <van-tab v-for="(item,index) in tabsName" :key="index" :title="item">
           <!-- 滚动 -->
           <Scroll class="wrapper">
             <div class="all">
+              <div v-if="active===0">
+                <div class="comp">已完成:</div>
+                <CompOrder :orderList.sync="orderList"></CompOrder>
+              </div>
               <div v-if="active===4">
                 <CompOrder :orderList.sync="orderList"></CompOrder>
               </div>
@@ -85,14 +89,20 @@ export default {
   margin-top: 44px;
 }
 .content {
+  // width: 95%;
+  // margin: 0 ;
   margin-top: 50px;
 }
 .wrapper {
   padding-bottom: 65px;
-  height: 86vh;
+  height: 73.9vh;
   // overflow: hidden;
 }
 .all {
-  padding-bottom: 100px;
+  padding-bottom: 80px;
+}
+.comp{
+  margin: 20px;
+  font-size: 16px;
 }
 </style>

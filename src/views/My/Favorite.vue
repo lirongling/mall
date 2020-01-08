@@ -17,7 +17,7 @@
     <Scroll class="wrapper" v-if="this.collection.length>0">
       <div class="content">
         <div class="content-item" v-for="(item,index) in collection" :key="index">
-          <div class="goods flex" @click="cancelCollection(item,index)">
+          <div class="goods flex" >
             <div class="good-img flex">
               <img :src="item.image_path" />
             </div>
@@ -28,7 +28,7 @@
                 <div class="add-time">{{distanceTime(item.add_time)}}</div>
               </div>
             </div>
-            <div class="bt flex">
+            <div class="bt flex" @click="cancelCollection(item,index)">
               <van-icon name="close" />
             </div>
           </div>

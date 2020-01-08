@@ -1050,3 +1050,20 @@
 2020-01-07 19:47:32,516 INFO 2684 [egg-mongoose] instance[0] start successfully
 2020-01-07 19:47:32,519 INFO 2684 [egg-watcher:application] watcher start success
 2020-01-07 19:47:32,533 INFO 2684 [egg:core] dump config after ready, 8ms
+2020-01-08 08:19:19,685 INFO 10032 [egg:logger] init all loggers with options: {"dir":"D:\\前端\\project\\mall\\server\\logs\\server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-01-08 08:19:19,732 INFO 10032 [egg-multipart] stream mode enable
+2020-01-08 08:19:22,491 INFO 10032 [egg-mongoose] connecting mongodb://127.0.0.1/shoppingMall
+2020-01-08 08:19:24,941 INFO 10032 [egg-static] starting static serve /public/ -> D:\前端\project\mall\server\app\public
+2020-01-08 08:19:24,947 INFO 10032 [egg-security] use methodnoallow middleware
+2020-01-08 08:19:24,949 INFO 10032 [egg-security] use noopen middleware
+2020-01-08 08:19:24,953 INFO 10032 [egg-security] use nosniff middleware
+2020-01-08 08:19:24,954 INFO 10032 [egg-security] use xssProtection middleware
+2020-01-08 08:19:24,956 INFO 10032 [egg-security] use xframe middleware
+2020-01-08 08:19:24,957 INFO 10032 [egg-security] use dta middleware
+2020-01-08 08:19:24,957 INFO 10032 [egg-security] compose 6 middlewares into one security middleware
+2020-01-08 08:19:25,068 INFO 10032 [egg:core] dump config after load, 7ms
+2020-01-08 08:19:25,074 INFO 10032 [egg-mongoose] starting...
+2020-01-08 08:19:25,144 INFO 10032 [egg-mongoose] mongodb://127.0.0.1/shoppingMall connected successfully
+2020-01-08 08:19:25,158 INFO 10032 [egg-mongoose] instance[0] start successfully
+2020-01-08 08:19:25,161 INFO 10032 [egg-watcher:application] watcher start success
+2020-01-08 08:19:25,175 INFO 10032 [egg:core] dump config after ready, 9ms

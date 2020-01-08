@@ -27,11 +27,18 @@
           <div class="split1">
             <van-divider />
           </div>
-          
         </div>
-        <div class="add_time">创建时间<span>{{items.add_time}}</span></div>
-        <div class="add_time">收货地址:<span>{{items.address}}</span></div>
-        <div class="add_time"><span>共{{getMount(items.order_list)}}</span></div>
+        <div class="add_time">
+          创建时间
+          <span>{{items.add_time}}</span>
+        </div>
+        <div class="add_time">
+          收货地址:
+          <span>{{items.address}}</span>
+        </div>
+        <div class="add_time">
+          <span>共{{getMount(items.order_list)}}件商品 合计:￥{{Number(items.mallPrice).toFixed(2)}}</span>
+        </div>
       </div>
     </div>
   </div>
@@ -50,12 +57,12 @@ export default {
   },
   components: {},
   methods: {
-    getMount(items){
-        let count=0
-        items.map(item=>{
-          count+=item.count
-        })
-        return count  
+    getMount(items) {
+      let count = 0;
+      items.map(item => {
+        count += item.count;
+      });
+      return count;
     }
   },
   mounted() {},
@@ -68,11 +75,12 @@ export default {
 .content-item1 {
   width: 90%;
   padding: 10px;
-  background: rgb(236, 236, 236);
-  margin: 10px auto;
+  background: rgb(245, 241, 245);
+  margin: 15px auto;
   border-radius: 10px;
   .order_id {
     font-size: 16px;
+    color: #3f3f3f;
   }
   .order_id > span {
     margin-left: 10px;
@@ -88,7 +96,6 @@ export default {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  
 
   .good-img {
     width: 100px;
@@ -104,6 +111,7 @@ export default {
     height: 80%;
     .good-name {
       font-size: 16px;
+      color: rgb(80, 76, 76);
       word-break: keep-all; /* 不换行 */
       white-space: nowrap; /* 不换行 */
       overflow: hidden; /* 内容超出宽度时隐藏超出部分的内容 */
@@ -121,12 +129,13 @@ export default {
     }
   }
 }
-.split1:nth-last-child(){
+.split1:nth-last-child() {
   height: 0;
 }
-.add_time{
+.add_time {
   text-align: right;
   font-size: 13px;
+  margin-bottom: 10px;
+  color: #3f3f3f;
 }
-
 </style>
