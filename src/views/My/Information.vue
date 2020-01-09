@@ -150,7 +150,8 @@ export default {
           if (res.code === 0) {
             this.$toast("退出成功");
             localStorage.removeItem("loginMsg");
-            this.$store.state.userInfo=[]
+            this.$store.state.shopListNumber = 0;
+            this.$store.state.userInfo = [];
             this.$router.history.go(-1);
           }
           console.log(res);
@@ -230,10 +231,12 @@ export default {
   height: 35px !important;
 }
 
-
 .top {
   position: fixed;
   top: 0;
+  background: white;
+  z-index: 9999;
+  height: 44px;
 }
 .split {
   width: 100vw;

@@ -130,13 +130,13 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-.topSearch {
-  display: flex;
-  top: 0;
-  left: 0;
-}
+// .topSearch {
+//   // display: flex;
+//   // top: 0;
+//   // left: 0;
+// }
 .home {
-  height: 100vh;
+  height: 100%;
   background: #eeeeee;
   margin-top: -9px;
   .wheel {

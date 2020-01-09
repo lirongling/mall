@@ -76,7 +76,7 @@ export default {
     addShop() {
       this.$api.addShop(this.good.id).then(res => {
         if (res.code === -1) {
-          this.$toast(res.msg);
+          this.isLogin();
         } else if (res.code === 200) {
           this.$toast(res.msg);
           this.$store.state.shopListNumber++;
@@ -92,22 +92,38 @@ export default {
     buyShop() {
       this.show = true;
     },
+    // 登录提醒
+    isLogin() {
+      this.$dialog
+        .confirm({
+          title: "提示",
+          message: "您暂未登录,是否去登录?"
+        })
+        .then(() => {
+          this.$router.push("/login");
+        })
+        .catch(() => {});
+    },
     // 购买
     buyGoods() {
-      this.good.count=this.amount
-      this.$store.state.shopListss=this.good
+      this.good.count = this.amount;
+      // this.$store.state.shopListss = this.good;
       // console.log(this.good);
-      this.$router.push({name:'settlement',query:{shopLists: this.good}})
+      this.$router.push({
+        name: "settlement",
+        query: { shopLists: JSON.stringify(this.good) }
+      });
     },
     // 修改商品数量
     onChange(amount) {
-      if(amount>=3){
-        this.$toast('每个人限购三件哟')
-      }else if(amount<=1){
-        this.$toast('最少选择一件')
+      if (amount >= 3) {
+        this.$toast("每个人限购三件哟");
+      } else if (amount <= 1) {
+        this.$toast("最少选择一件");
       }
     }
   },
+
   mounted() {},
   watch: {},
   computed: {}

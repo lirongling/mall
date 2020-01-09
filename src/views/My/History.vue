@@ -19,12 +19,12 @@
     <Scroll class="wrapper" v-if="this.historyShops.length>0">
       <div class="content">
         <div class="content-item" v-for="(item,index) in historyShops" :key="index">
-          <div class="goods flex" >
-            <div class="good-img flex">
+          <div class="goods flex">
+            <div class="good-img flex" @click="jumpDeta(item.id)">
               <img :src="item.image_path" />
             </div>
             <div class="good-de flex">
-              <div class="good-name">{{item.name}}</div>
+              <div class="good-name" @click="jumpDeta(item.id)">{{item.name}}</div>
               <div class="good-price flex">
                 <div class="price">￥{{(item.present_price).toFixed(2)}}</div>
                 <div class="add-time">{{distanceTime(item.add_time)}}</div>
@@ -56,8 +56,8 @@ export default {
       num: 0,
       historyShops: [],
       historyShop: [],
-      userHistory:[],
-      userIndex:0,
+      userHistory: [],
+      userIndex: 0
     };
   },
   components: {
@@ -68,13 +68,17 @@ export default {
     getHistoryShops() {
       let loginMsg = JSON.parse(localStorage.getItem("loginMsg"));
       this.historyShop = JSON.parse(localStorage.getItem("historyShops"));
-      this.historyShop.map((item,index) => {
+      this.historyShop.map((item, index) => {
         if (item.nickname === loginMsg.nickname) {
-          this.userHistory=item
-          this.historyShops=item.goods
-          this.userIndex=index
+          this.userHistory = item;
+          this.historyShops = item.goods;
+          this.userIndex = index;
         }
       });
+    },
+    // 跳转到详情页
+    jumpDeta(id) {
+      this.$router.push({ name: "details", query: { goodsId: id } });
     },
     // 计算时间
     distanceTime(oldTime) {
@@ -100,20 +104,19 @@ export default {
     // 取消收藏
     cancelCollection(item, index) {
       this.userHistory.goods.splice(index, 1);
-      this.historyShop.splice(this.userIndex,1, this.userHistory)
+      this.historyShop.splice(this.userIndex, 1, this.userHistory);
       localStorage.setItem("historyShops", JSON.stringify(this.historyShop));
-      this.$toast('删除完成')
+      this.$toast("删除完成");
     },
     // 清空收藏
     removeAll() {
-      this.historyShops=[]
-      this.userHistory.goods=[];
-      this.historyShop.splice(this.userIndex,1, this.userHistory)
+      this.historyShops = [];
+      this.userHistory.goods = [];
+      this.historyShop.splice(this.userIndex, 1, this.userHistory);
       localStorage.setItem("historyShops", JSON.stringify(this.historyShop));
-        if (this.userHistory.goods.length === 0) {
-          this.$toast("清空完成");
-        }
-     
+      if (this.userHistory.goods.length === 0) {
+        this.$toast("清空完成");
+      }
     },
     // 去购物
     goShop() {

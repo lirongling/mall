@@ -36,7 +36,8 @@ export default {
   data() {
     return {
       address: [],
-      chosenAddressId: "1"
+      chosenAddressId: "1",
+      addressDe: {}
     };
   },
   components: {
@@ -58,14 +59,23 @@ export default {
           console.log(err);
         });
     },
+    // 排序
+    reverse() {
+      this.address.reverse();
+      this.address.unshift(this.addressDe);
+    },
     // 默认选中地址
     chosenAddress() {
       let flage = 0;
       let b = 1;
-      this.address.map(item => {
+      this.address.map((item, index) => {
         if (item.isDefault) {
           flage++;
           item.id = "1";
+          this.addressDe = item;
+          this.address.splice(index, 1);
+          console.log(this.address);
+          this.reverse();
         } else {
           b++;
           item.id = b;

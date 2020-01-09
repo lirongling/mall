@@ -14,7 +14,6 @@
       <van-address-edit
         v-model="value"
         :area-list="areaList"
-        show-postal
         show-delete
         show-set-default
         show-search-result
@@ -69,7 +68,7 @@ export default {
         })
         .then(res => {
           if (res.code === 200) {
-            this.$router.history.go(-1)
+            this.$router.history.go(-1);
             this.$toast(res.msg);
           }
           console.log(res);

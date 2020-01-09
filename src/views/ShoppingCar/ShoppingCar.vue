@@ -50,13 +50,13 @@
               <div v-else class="bar-imgs"></div>
             </div>
             <div class="content-right flex">
-              <div class="img">
+              <div class="img" @click="jumpDeta(item.cid)">
                 <img :src="item.image_path" />
               </div>
               <div class="good flex">
-                <div class="good-name">{{item.name}}</div>
+                <div class="good-name" @click="jumpDeta(item.cid)">{{item.name}}</div>
                 <div class="bottom flex">
-                  <div class="price">￥{{(item.present_price).toFixed(2)}}</div>
+                  <div class="price">￥{{(item.present_price*item.count).toFixed(2)}}</div>
                   <div class="amount">
                     <van-stepper v-model="item.count" integer min="1" @change="stepper(item)" />
                   </div>
@@ -119,6 +119,10 @@ export default {
       this.shopList.map(item => {
         item.check = this.checkAllBt;
       });
+    },
+    // 跳转到详情页
+    jumpDeta(id) {
+      this.$router.push({ name: "details", query: { goodsId: id } });
     },
     //加减商品数量
     stepper(item) {
@@ -222,13 +226,13 @@ export default {
 .mall-top {
   z-index: 99;
   background: white;
-  position: fixed;
+  // position: fixed;
   width: 100%;
   height: 44px;
   top: 0;
 }
 .split0 {
-  position: fixed;
+  // position: fixed;
   top: 30px;
   z-index: 999;
   width: 100%;
@@ -248,10 +252,10 @@ export default {
 .top {
   width: 100%;
   margin: 10px auto;
-  position: fixed;
+  // position: absolute;
   left: 50%;
   top: 33px;
-  transform: translateX(-50%);
+  // transform: translateX(-50%);
   background: white;
   z-index: 99;
   /deep/ .van-divider {
@@ -289,7 +293,7 @@ export default {
   }
 }
 .contior {
-  margin-top: 155px;
+  // margin-top: 155px;
   // padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -341,11 +345,13 @@ export default {
   width: 15px;
   height: 15px;
   background: url("../../assets/img/icon_checkbox.png") 0 -25px;
+  background-size: 15px;
 }
 .bar-imgs {
   width: 15px;
   height: 15px;
   background: url("../../assets/img/icon_checkbox.png") 0 0px;
+  background-size: 15px;
 }
 .bar-text {
   margin-left: 8px;
@@ -353,6 +359,7 @@ export default {
 }
 .wrapper {
   margin-bottom: 65px;
-  height: 76vh;
+  height: 66vh;
+  overflow: hidden;
 }
 </style>

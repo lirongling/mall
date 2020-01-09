@@ -115,11 +115,10 @@ export default {
   },
   mounted() {
     this.shopLists = this.$store.state.shopLists;
-
     if (this.$route.query.shopLists) {
       this.flage = true;
       this.shopLists = [];
-      this.shopLists.push(this.$store.state.shopListss);
+      this.shopLists.push(JSON.parse(this.$route.query.shopLists));
     }
   },
   watch: {},

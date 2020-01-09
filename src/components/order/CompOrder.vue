@@ -110,6 +110,7 @@ export default {
     align-items: flex-start;
     height: 80%;
     .good-name {
+      width: 236px;
       font-size: 16px;
       color: rgb(80, 76, 76);
       word-break: keep-all; /* 不换行 */

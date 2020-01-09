@@ -175,7 +175,7 @@ export default {
             this.$toast.success(res.msg);
             localStorage.setItem("loginMsg", JSON.stringify(res.userInfo));
             this.$store.state.userInfo = res.userInfo;
-            this.history(res)
+            this.history(res);
           } else if (res.code === -1) {
             this.user = "";
             this.afreshCode();
@@ -193,13 +193,15 @@ export default {
     history(res) {
       if (JSON.parse(localStorage.getItem("historyShops"))) {
         let historyShops = JSON.parse(localStorage.getItem("historyShops"));
+
         let flage = historyShops.every(item => {
-          item.nickname !== res.userInfo.nickname;
+          return item.nickname !== res.userInfo.nickname;
         });
         if (flage) {
           historyShops.push({
             nickname: res.userInfo.nickname,
-            goods: []
+            goods: [],
+            search: []
           });
           localStorage.setItem("historyShops", JSON.stringify(historyShops));
         }
@@ -207,10 +209,10 @@ export default {
         let historyShops = [];
         historyShops.push({
           nickname: res.userInfo.nickname,
-          goods: []
+          goods: [],
+          search: []
         });
         localStorage.setItem("historyShops", JSON.stringify(historyShops));
-      
       }
     }
   },

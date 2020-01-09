@@ -1,6 +1,6 @@
 <template>
   <div class="rules">
-    <p class="drop-down" v-if="dropDown">松手刷新数据...</p>
+    <p class="drop-down">松手刷新数据...</p>
     <div class="bscroll" ref="bscroll">
       <div class="bscroll-container">
         <slot class="height"></slot>
@@ -16,18 +16,26 @@ export default {
   data() {
     return {
       dropDown: true,
-      showMore: false
+      showMore: false,
+      showMore1: false
     };
   },
   mounted() {
-    this.scrollFn();
+    setTimeout(() => {
+      this.scrollFn();
+    }, 500);
+    const options = {
+      click: true,
+      tap: true
+    };
+    this.scroll = new BScroll(this.$refs.bscroll, options);
   },
   methods: {
     scrollFn() {
       this.$nextTick(() => {
         if (!this.scroll) {
           this.scroll = new BScroll(this.$refs.bscroll, {
-            click: true,
+            // click: true,
             scrollY: true,
             probeType: 3
           });
@@ -39,8 +47,9 @@ export default {
           //如果下拉超过50px 就显示下拉刷新的文字
           if (pos.y > 0) {
             this.dropDown = true;
-          } else {
+          } else if (pos.y > -10) {
             this.dropDown = false;
+            this.dropDown1 = true;
           }
         });
         //touchEnd（手指离开以后触发） 通过这个方法来监听下拉刷新
@@ -51,8 +60,11 @@ export default {
             console.log(this.$parent);
             // console.log(this.$parent.fatherMethod());
             if (this.$parent.flage) {
-              this.$toast("下拉刷新成功");
-              this.dropDown = false;
+              setTimeout(() => {
+                this.$toast("下拉刷新成功");
+                this.dropDown = false;
+                this.dropDown1 = false;
+              }, 400);
             }
           }
           //上拉加载 总高度>下拉的高度+10 触发加载更多
@@ -76,19 +88,24 @@ export default {
  
  
 <style scoped>
+.rules {
+  position: relative;
+}
 .bscroll {
   /* margin-top: 150px; */
   width: 100%;
-  height: 88vh;
+  height: 93vh;
   overflow: hidden;
+  /* padding-top: 20px; */
+  margin-top: 43px;
 }
 /* .bscroll-container {
     background: #ff0000;
   } */
 .drop-down {
-  /* position: absolute;
-  top: 0px;
-  left: 0px; */
+  position: absolute;
+  top: 10px;
+  left: 0px;
   width: 100%;
   height: 50px;
   line-height: 50px;
@@ -98,10 +115,11 @@ export default {
 }
 .more {
   position: absolute;
-  bottom: 46px;
+
+  bottom: 80px;
   width: 100%;
-  height: 50px;
-  line-height: 50px;
+  height: 80px;
+  line-height: 80px;
   text-align: center;
   font-size: 0.8rem;
   color: #ccc;

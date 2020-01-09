@@ -1,11 +1,11 @@
 <template>
   <div>
     <!-- 顶部导航 -->
-    <div>
+    <div class="top-bar">
       <mallTop>
         <div slot="left"></div>
         <div slot="title">个人中心</div>
-        <div slot="right" @click="editUser">
+        <div slot="right" @click="jumpMenu('/information')">
           <van-icon name="setting-o" />
         </div>
       </mallTop>
@@ -32,11 +32,15 @@
     <!-- 订单 -->
     <div class="order flex">
       <van-tabbar v-model="active" @change="onChange" :fixed="false" active-color="#7d7e80">
-        <van-tabbar-item class="iconfont icon-daifukuan">代付款</van-tabbar-item>
-        <van-tabbar-item class="iconfont icon-yiwancheng">待发货</van-tabbar-item>
-        <van-tabbar-item class="iconfont icon-tubiaolunkuo-">待收货</van-tabbar-item>
-        <van-tabbar-item class="iconfont icon-daishouhuo" :info="comment.length" to="/evaluation">评价</van-tabbar-item>
-        <van-tabbar-item class="iconfont icon-weibiaoti527">已完成</van-tabbar-item>
+        <van-tabbar-item class="iconfont icon-daifukuan" @click="jumpOrder(1)">代付款</van-tabbar-item>
+        <van-tabbar-item class="iconfont icon-yiwancheng" @click="jumpOrder(2)">待发货</van-tabbar-item>
+        <van-tabbar-item class="iconfont icon-tubiaolunkuo-" @click="jumpOrder(3)">待收货</van-tabbar-item>
+        <van-tabbar-item
+          class="iconfont icon-daishouhuo"
+          :info="evaluationNumber"
+          @click="jumpMenu('/evaluation')"
+        >评价</van-tabbar-item>
+        <van-tabbar-item class="iconfont icon-weibiaoti527" @click="jumpOrder(4)">已完成</van-tabbar-item>
       </van-tabbar>
     </div>
     <!-- 分割线 -->
@@ -44,8 +48,8 @@
       <van-divider />
     </div>
     <!-- 菜单栏 -->
-    <div>
-      <div class="menu-item flex" @click="jumpMenu('/allOrder')">
+    <div class="menu">
+      <div class="menu-item flex" @click="jumpOrder(0)">
         <div class="item-left iconfont icon-dingdan">
           <span>全部订单</span>
         </div>
@@ -113,12 +117,36 @@ export default {
     },
     // 跳转页面
     jumpMenu(path) {
-      this.$router.push(path);
+      if (this.loginMsg !== null) {
+        this.$router.push(path);
+      } else {
+        this.isLogin();
+      }
+    },
+    // 跳转到订单页面
+    jumpOrder(num) {
+      if (this.loginMsg !== null) {
+        this.$router.push({ name: "allOrder", query: { num: num } });
+      } else {
+        this.isLogin();
+      }
     },
     // 跳转到用户修改页面
     editUser() {
       // console.log('object');
       this.$router.push("/information");
+    },
+    // 登录提醒
+    isLogin() {
+      this.$dialog
+        .confirm({
+          title: "提示",
+          message: "您暂未登录,是否去登录?"
+        })
+        .then(() => {
+          this.$router.push("/login");
+        })
+        .catch(() => {});
     },
     onChange() {},
     // 查询待评价
@@ -129,30 +157,34 @@ export default {
           if (res.code === 200) {
             this.comment = res.data.list;
           }
-          console.log(res);
         })
         .catch(err => {
           console.log(err);
         });
     }
   },
-  beforeMount(){
+  beforeMount() {
     this.tobeEvaluated();
-    
     this.loginMsg = JSON.parse(localStorage.getItem("loginMsg"));
   },
-  mounted() {
-    
-  },
+  mounted() {},
   watch: {},
-  computed: {}
+  computed: {
+    evaluationNumber() {
+      if (this.comment.length > 0) {
+        return this.comment.length;
+      } else {
+        return null;
+      }
+    }
+  }
 };
 </script>
 
 <style scoped lang='scss'>
-/deep/ .van-info{
+/deep/ .van-info {
   top: -20px;
-  right:-10px;
+  right: -10px;
 }
 /deep/ .icon-daifukuan:before,
 .icon-yiwancheng:before,
@@ -169,6 +201,10 @@ export default {
     color: rgb(22, 21, 21) !important;
   }
 }
+.top-bar {
+  background: rgb(97, 23, 146);
+  z-index: 999;
+}
 .top {
   width: 100%;
   height: 200px;
@@ -177,6 +213,7 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
   .img {
     width: 60px;
     height: 60px;
@@ -209,5 +246,8 @@ export default {
     font-weight: 520;
     padding-left: 8px;
   }
+}
+.menu {
+  margin-bottom: 50px;
 }
 </style>

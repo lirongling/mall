@@ -13,7 +13,7 @@
       </div>
       <div class="cityNa">
         <div class="nowCityName">
-          <div v-for="(item,index) in this.$store.state.searchHistory" :key="index">
+          <div v-for="(item,index) in searchHistoryss" :key="index">
             <van-tag round type="success" @click="selectSearch(item)">{{item}}</van-tag>
             <!-- <span class="cityItem" @click="selectSearch(item)">{{item}}</span> -->
           </div>
@@ -49,7 +49,8 @@ export default {
   data() {
     return {
       searchGoods: [],
-      keyWords: util.keyWord
+      keyWords: util.keyWord,
+      searchHistorys: []
     };
   },
   components: {},
@@ -67,16 +68,7 @@ export default {
               this.$toast("搜索成功,共有" + res.data.list.length + "条");
             }
             if (res.data.count > 0) {
-              if (
-                !JSON.stringify(this.$store.state.searchHistory).includes(
-                  this.$store.state.searchText
-                )
-              ) {
-                console.log(this.$store.state.searchText);
-                this.$store.state.searchHistory.push(
-                  this.$store.state.searchText
-                );
-              }
+              this.history();
             }
           } else if (res.code === -1) {
             this.searchGoods = [];
@@ -94,17 +86,79 @@ export default {
     },
     // 清除搜索历史
     cleanSearch() {
-      this.$store.state.searchHistory = [];
+      this.searchHistorys = [];
+      if (JSON.parse(localStorage.getItem("loginMsg"))) {
+        console.log("object");
+        let loginMsg = JSON.parse(localStorage.getItem("loginMsg"));
+        let historyShops = JSON.parse(localStorage.getItem("historyShops"));
+
+        historyShops.map(item => {
+          if (item.nickname === loginMsg.nickname) {
+            item.search = [];
+          }
+          localStorage.setItem("historyShops", JSON.stringify(historyShops));
+        });
+      } else {
+        let tourists = [];
+        localStorage.setItem("tourists", JSON.stringify(tourists));
+      }
     },
     // 点击搜索
     selectSearch(item) {
       this.$store.state.searchText = item;
+    },
+    // 存历史浏览
+    history() {
+      if (JSON.parse(localStorage.getItem("loginMsg"))) {
+        let loginMsg = JSON.parse(localStorage.getItem("loginMsg"));
+        let historyShops = JSON.parse(localStorage.getItem("historyShops"));
+        historyShops.map(item => {
+          if (item.nickname === loginMsg.nickname) {
+            console.log(item.search.includes(this.$store.state.searchText));
+            if (!item.search.includes(this.$store.state.searchText)) {
+              item.search.unshift(this.$store.state.searchText);
+              this.searchHistorys.unshift(this.$store.state.searchText);
+            }
+          }
+        });
+        localStorage.setItem("historyShops", JSON.stringify(historyShops));
+      } else {
+        if (JSON.parse(localStorage.getItem("tourists"))) {
+          let tourists = JSON.parse(localStorage.getItem("tourists"));
+          if (!tourists.includes(this.$store.state.searchText)) {
+            tourists.unshift(this.$store.state.searchText);
+            this.searchHistorys.unshift(this.$store.state.searchText);
+            localStorage.setItem("tourists", JSON.stringify(tourists));
+          }
+        } else {
+          let tourists = [];
+          tourists.push(this.$store.state.searchText);
+          this.searchHistorys.push(this.$store.state.searchText);
+          localStorage.setItem("tourists", JSON.stringify(tourists));
+        }
+      }
+    },
+    // 获取搜索历史
+    searchHistory() {
+      if (JSON.parse(localStorage.getItem("loginMsg"))) {
+        let loginMsg = JSON.parse(localStorage.getItem("loginMsg"));
+        let historyShops = JSON.parse(localStorage.getItem("historyShops"));
+        historyShops.map(item => {
+          if (item.nickname === loginMsg.nickname) {
+            this.searchHistorys = item.search;
+          }
+        });
+      } else {
+        this.searchHistorys = JSON.parse(localStorage.getItem("tourists"));
+      }
     }
   },
 
   updated() {},
   mounted() {
+    this.searchHistory();
     console.log(this.keyWords);
+    // this.history();
   },
   filters: {
     keyWord(val) {
@@ -122,7 +176,11 @@ export default {
     }
   },
 
-  computed: {}
+  computed: {
+    searchHistoryss() {
+      return this.searchHistorys;
+    }
+  }
 };
 </script>
 

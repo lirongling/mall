@@ -8,7 +8,7 @@
         <van-tabbar-item icon="qr" replace to="/category">分类</van-tabbar-item>
         <van-tabbar-item
           icon="shopping-cart-o"
-          :info=" this.$store.state.shopListNumber"
+          :info=" shopListNumber"
           replace
           to="/shoppingCar"
         >购物车</van-tabbar-item>
@@ -50,7 +50,15 @@ export default {
     this.change();
   },
   watch: {},
-  computed: {}
+  computed: {
+    shopListNumber() {
+      if (this.$store.state.shopListNumber > 0) {
+        return this.$store.state.shopListNumber;
+      } else {
+        return null;
+      }
+    }
+  }
 };
 </script>
 

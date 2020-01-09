@@ -12,17 +12,19 @@
     </div>
     <div class="no-collection" v-if="this.collection.length===0">
       <div>你的收藏还是空空的~~</div>
-      <div><van-button round plain hairline type="primary" @click="goShop">立即购物</van-button></div>
+      <div>
+        <van-button round plain hairline type="primary" @click="goShop">立即购物</van-button>
+      </div>
     </div>
     <Scroll class="wrapper" v-if="this.collection.length>0">
       <div class="content">
         <div class="content-item" v-for="(item,index) in collection" :key="index">
-          <div class="goods flex" >
-            <div class="good-img flex">
+          <div class="goods flex">
+            <div class="good-img flex" @click="jumpDeta(item.cid)">
               <img :src="item.image_path" />
             </div>
             <div class="good-de flex">
-              <div class="good-name">{{item.name}}</div>
+              <div class="good-name" @click="jumpDeta(item.cid)">{{item.name}}</div>
               <div class="good-price flex">
                 <div class="price">￥{{(item.present_price).toFixed(2)}}</div>
                 <div class="add-time">{{distanceTime(item.add_time)}}</div>
@@ -66,7 +68,6 @@ export default {
         .then(res => {
           if (res.code === 200) {
             this.collection = res.data.list;
-        
           }
         })
         .catch(err => {
@@ -121,7 +122,6 @@ export default {
         this.cancelCollection(item, index);
       });
       setTimeout(() => {
-        
         if (this.collection.length === this.num) {
           this.collection = [];
           this.$toast("清空完成");
@@ -129,8 +129,12 @@ export default {
       }, 1000);
     },
     // 去购物
-    goShop(){
-      this.$router.push('/')
+    goShop() {
+      this.$router.push("/");
+    },
+    // 跳转到详情页
+    jumpDeta(id) {
+      this.$router.push({ name: "details", query: { goodsId: id } });
     }
   },
   mounted() {
@@ -147,11 +151,11 @@ export default {
   height: 40px;
   padding-top: -10px;
 }
-/deep/ .van-button--large{
-  line-height: 6.8vh!important;
+/deep/ .van-button--large {
+  line-height: 6.8vh !important;
 }
 // /deep/.van-button__text {
-  
+
 // }
 .top {
   position: fixed;

@@ -49,7 +49,7 @@ export default {
         .then(res => {
           console.log(res);
           if (res.code === 200) {
-            this.comment = res.goods.comment;
+            this.comment = res.goods.comment.reverse();
             this.good = res.goods.goodsOne;
             this.history();
 
@@ -62,8 +62,6 @@ export default {
     },
     // 存历史浏览
     history() {
-    
-
       if (JSON.parse(localStorage.getItem("loginMsg"))) {
         let loginMsg = JSON.parse(localStorage.getItem("loginMsg"));
         let historyShops = JSON.parse(localStorage.getItem("historyShops"));
@@ -76,7 +74,7 @@ export default {
               !JSON.stringify(item.goods).includes(JSON.stringify(this.good.id))
             ) {
               this.good.add_time = new Date();
-              item.goods.push(this.good);
+              item.goods.unshift(this.good);
             }
           }
         });

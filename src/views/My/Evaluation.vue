@@ -73,7 +73,9 @@ export default {
         .then(res => {
           if (res.code === 200) {
             this.comment = res.data.list;
+            // this.comment.reverse();
             this.review = this.comment;
+            this.review.reverse();
           }
           console.log(res);
         })
@@ -81,6 +83,7 @@ export default {
           console.log(err);
         });
     },
+
     // 查询出已评价
     alreadyEvaluated() {
       this.$api
@@ -131,12 +134,11 @@ export default {
   margin-top: 44px;
   .img {
     width: 100%;
-    z-index: 99999!important;
+    z-index: 99999 !important;
     background: white;
     height: 214px;
     img {
       width: 100%;
-      
     }
   }
   .tabs {

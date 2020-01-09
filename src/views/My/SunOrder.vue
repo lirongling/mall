@@ -17,7 +17,14 @@
         </div>
         <div class="sore flex">
           <div>商品评分</div>
-          <van-rate   allow-half v-model="sore" :size="22" color="#ee0a24" void-icon="star" void-color="#eee" />
+          <van-rate
+            allow-half
+            v-model="sore"
+            :size="22"
+            color="#ee0a24"
+            void-icon="star"
+            void-color="#eee"
+          />
         </div>
       </div>
       <!-- 分割线 -->
@@ -95,9 +102,9 @@ export default {
           id: this.goods.cid
         })
         .then(res => {
-          if(res.code===200){
-            this.$toast(res.msg)
-            this.$router.history.go(-1)
+          if (res.code === 200) {
+            this.$toast(res.msg);
+            this.$router.history.go(-1);
           }
           console.log(res);
         })
@@ -146,14 +153,14 @@ export default {
     }
   }
   .conten-center {
-    background: rgb(243, 244, 245);
+    background: rgb(255, 255, 255);
     margin-top: 10px;
     .addPic {
       margin-left: 10px;
     }
   }
   .content-bottom {
-    margin: 12px;
+    margin: 12pxrgb (253, 254, 255);
     font-size: 17px;
   }
 }

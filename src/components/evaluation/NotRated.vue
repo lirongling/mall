@@ -2,11 +2,11 @@
   <div>
     <div class="review-item" v-for="(item,index) in comment" :key="index">
       <div class="goods flex">
-        <div class="good-img flex">
+        <div class="good-img flex" @click=" jumpDeta(item.cid)">
           <img :src="item.image_path" />
         </div>
         <div class="good-de flex">
-          <div class="good-name">{{item.name}}</div>
+          <div class="good-name" @click=" jumpDeta(item.cid)">{{item.name}}</div>
           <div class="good-price flex">
             <div class="price">￥{{Number(item.present_price).toFixed(2)}}</div>
             <div class="btn">
@@ -46,8 +46,11 @@ export default {
   methods: {
     // 评论晒单
     sunOrder(item) {
-      
       this.$router.push({ name: "sunOrder", query: { goods: item } });
+    },
+    // 跳转到详情页
+    jumpDeta(id) {
+      this.$router.push({ name: "details", query: { goodsId: id } });
     }
   },
   mounted() {},

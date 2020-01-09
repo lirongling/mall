@@ -1,7 +1,16 @@
 <template>
-  <transition name="fade">
-    <router-view class="rou" />
-  </transition>
+  <div class="app">
+    <transition name="fade">
+      <router-view class="rou" />
+    </transition>
+    <div v-show="this.$store.state.isLoading" class="loading">
+      <van-overlay :show="this.$store.state.isLoading">
+        <div class="wrappersss">
+          <van-loading type="spinner" color="#1989fa" />
+        </div>
+      </van-overlay>
+    </div>
+  </div>
 </template>
 <script>
 import BScroll from "better-scroll";
@@ -29,8 +38,7 @@ export default {
         .catch(err => {
           console.log(err);
         });
-    },
-  
+    }
   },
   mounted() {
     this.getCar();
@@ -44,9 +52,23 @@ export default {
 </script>
 <style lang="scss">
 @import url("//at.alicdn.com/t/font_1588350_nmi5yoytq9.css");
+.app {
+  font-size: 16px;
+}
+.loading {
+  /deep/ .van-overlay {
+    background-color: rgba(155, 155, 155, 0.2);
+    z-index: 9999;
+    width: 100vw;
+    height: 100vh;
+  }
+}
 * {
   margin: 0;
   padding: 0;
+}
+.loading {
+  z-index: 99999999;
 }
 .flex {
   display: flex;
@@ -61,5 +83,11 @@ export default {
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+}
+.wrappersss {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 </style>

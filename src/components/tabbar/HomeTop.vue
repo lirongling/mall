@@ -1,7 +1,6 @@
 <template>
   <div>
-    {{this.$store.state.city}}
-    <div class="topBar flex">
+    <div class="topBar flex" :class="{topBar : showPop} ">
       <div class="return flex">
         <div slot="left" @click="changeCity">
           <span v-if="this.$store.state.city!==0">{{this.$store.state.city}}</span>
@@ -10,9 +9,20 @@
         </div>
       </div>
       <div class="title">
-        <van-search placeholder="请输入搜索关键词" v-model="searchText" @input="onInput" @click="turnPop" />
+        <!-- <van-search
+          placeholder="请输入搜索关键词"
+          v-model="$store.state.searchText"
+          @input="onInput"
+          @click="turnPop"
+        />-->
+        <van-search
+          v-model="$store.state.searchText"
+          placeholder="请输入搜索关键词"
+          :show-action="showPop"
+          @cancel="onCancel"
+          @click="turnPop"
+        />
       </div>
-      <div v-if="showPop" @click="onCancel" class="cancel">取消</div>
     </div>
   </div>
 </template>
@@ -63,6 +73,7 @@ export default {
       this.$parent.showPop = true;
     },
     onCancel() {
+      this.$store.state.searchText = "";
       this.$parent.showPop = false;
     }
   },
@@ -81,8 +92,9 @@ export default {
 <style scoped lang='scss'>
 .topBar {
   width: 100%;
-  z-index: 2;
-  position: fixed;
+  // z-index: 2;
+  // position: fixed;
+  position: absolute;
   background: white;
   font-size: 16px; // height: 10vh !important;
   // border:forestgreen 1px solid;
@@ -90,6 +102,10 @@ export default {
 }
 .ico {
   font-size: 14px;
+}
+.topBar {
+  z-index: 2;
+  // position: fixed;
 }
 .return {
   width: 80px !important;

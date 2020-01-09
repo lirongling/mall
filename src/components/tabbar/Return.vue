@@ -2,13 +2,15 @@
   <div>
     <div class="topBar flex">
       <div class="return flex">
-        <slot name="left"><van-icon name="arrow-left" size="22" @click="back"/></slot>
+        <slot name="left">
+          <van-icon name="arrow-left" @click="back" />
+        </slot>
       </div>
       <div class="title">
         <slot name="title"></slot>
       </div>
       <div>
-          <slot name="right"></slot>
+        <slot name="right"></slot>
       </div>
     </div>
   </div>
@@ -21,8 +23,8 @@ export default {
   },
   components: {},
   methods: {
-    back(){
-      this.$router.history.go(-1)
+    back() {
+      this.$router.history.go(-1);
     }
   },
   mounted() {},
@@ -32,6 +34,9 @@ export default {
 </script>
 
 <style scoped lang='scss'>
+/deep/ .van-icon {
+  font-size: 20px !important;
+}
 .topBar {
   width: 100%;
   height: 44px;
@@ -45,12 +50,14 @@ export default {
   display: flex;
   justify-content: center;
   font-size: 18px;
-
 }
 .topBar > div:nth-child(2) {
   flex: 4;
   text-align: center;
   font-size: 17px;
-  color: rgb(18, 18, 19)
+  color: rgb(18, 18, 19);
+}
+.return {
+  font-size: 20px;
 }
 </style>

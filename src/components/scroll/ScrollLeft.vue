@@ -18,14 +18,18 @@ export default {
     init() {
       this.bs = new BScroll(".wrappers", {
         scrollX: true,
-         scrollY: true,
-        // click: true,
+        scrollY: true,
+
         probeType: 3 // listening scroll hook
       });
     }
   },
   mounted() {
     this.init();
+    const options = {
+      tap: true
+    };
+    this.scroll = new BScroll(this.$refs.wrappers, options);
   },
   beforeDestroy() {},
   watch: {},
@@ -35,8 +39,7 @@ export default {
 
 <style lang='scss' >
 .core-containers {
-  display：inline
-  .wrappers {
+  display：inline .wrappers {
     // height: 200px;
     width: 110%;
     overflow: hidden;

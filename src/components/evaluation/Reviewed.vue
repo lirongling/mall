@@ -2,11 +2,11 @@
   <div>
     <div class="review-item" v-for="(item,index) in reviewed" :key="index">
       <div class="goods flex">
-        <div class="good-img flex">
+        <div class="good-img flex" @click="jumpDeta(item.cid)">
           <img :src="item.goods[0].image" />
         </div>
         <div class="good-de flex">
-          <div class="good-name">{{item.goods[0].name}}</div>
+          <div class="good-name" @click="jumpDeta(item.cid)">{{item.goods[0].name}}</div>
           <div class="good-price flex">
             <div class="price">
               <span>{{distanceTime(item.comment_time)}}评价</span>
@@ -34,7 +34,6 @@
 </template>
 
 <script>
-
 export default {
   data() {
     return {};
@@ -71,6 +70,10 @@ export default {
     // 查看详情
     orderDe(item) {
       this.$router.push({ name: "evaluationDetails", query: { goods: item } });
+    },
+    // 跳转到详情页
+    jumpDeta(id) {
+      this.$router.push({ name: "details", query: { goodsId: id } });
     }
   },
   mounted() {

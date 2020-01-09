@@ -14,7 +14,7 @@
                     <img :src="item.comment_avatar" />
                   </div>
                   <div v-else-if="item.user">
-                    <img :src="item.user[0].avatar">
+                    <img :src="item.user[0].avatar" />
                   </div>
                 </div>
                 <div class="content-user flex">

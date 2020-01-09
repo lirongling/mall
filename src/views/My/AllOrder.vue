@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="content">
-      <van-tabs v-model="active" animated swipeable>
+      <van-tabs v-model="$route.query.num" animated swipeable>
         <van-tab v-for="(item,index) in tabsName" :key="index" :title="item">
           <!-- 滚动 -->
           <Scroll class="wrapper">
@@ -67,7 +67,9 @@ export default {
   beforeMount() {
     this.getMyOrder();
   },
-  mounted() {},
+  mounted() {
+    console.log(this.$route.query.num);
+  },
   watch: {},
   computed: {}
 };
@@ -101,7 +103,7 @@ export default {
 .all {
   padding-bottom: 80px;
 }
-.comp{
+.comp {
   margin: 20px;
   font-size: 16px;
 }
