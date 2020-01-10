@@ -93,8 +93,8 @@ export default {
 .topBar {
   width: 100%;
   // z-index: 2;
-  // position: fixed;
-  position: absolute;
+  position: fixed;
+  // position: absolute;
   background: white;
   font-size: 16px; // height: 10vh !important;
   // border:forestgreen 1px solid;

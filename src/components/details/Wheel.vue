@@ -1,12 +1,12 @@
 <template>
   <div>
     <div class="top">
-      <van-swipe :autoplay="3000" @change="onChange">
-        <van-swipe-item v-for="(item,index) in images" :key="index">
-          <div class="img">
-            <img :src="item" @click="larageImg(index)" />
-          </div>
-        </van-swipe-item>
+      <van-swipe :autoplay="3000" @change="onChange"  @click="larageImg" :stop-propagation="propagation">
+          <van-swipe-item v-for="(item,index) in images" :key="index" >
+            <div class="img">
+              <img :src="item" @click="larageImg(index)"/>
+            </div>
+          </van-swipe-item>
         <div class="custom-indicator" slot="indicator">{{ current + 1 }}/{{images.length}}</div>
       </van-swipe>
     </div>
@@ -23,7 +23,8 @@ export default {
       current: 0,
       images: [],
       show: false,
-      index: 0
+      index: 0,
+      propagation: false
     };
   },
   props: {
@@ -40,12 +41,12 @@ export default {
     larageImg(index) {
       this.show = true;
       this.index = index;
+      
     },
     onChange1(index) {
       this.index = index;
     }
   },
-
 
   mounted() {},
   watch: {
@@ -60,7 +61,7 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-.top{
+.top {
   height: 375px;
 }
 .custom-indicator {

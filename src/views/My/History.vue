@@ -103,20 +103,46 @@ export default {
     },
     // 取消收藏
     cancelCollection(item, index) {
-      this.userHistory.goods.splice(index, 1);
-      this.historyShop.splice(this.userIndex, 1, this.userHistory);
-      localStorage.setItem("historyShops", JSON.stringify(this.historyShop));
-      this.$toast("删除完成");
+      this.$dialog
+        .confirm({
+          title: "提示",
+          message: "是否确认删除?"
+        })
+        .then(() => {
+          this.userHistory.goods.splice(index, 1);
+          this.historyShop.splice(this.userIndex, 1, this.userHistory);
+          localStorage.setItem(
+            "historyShops",
+            JSON.stringify(this.historyShop)
+          );
+          this.$toast("删除完成");
+        })
+        .catch(() => {
+          // on cancel
+        });
     },
     // 清空收藏
     removeAll() {
-      this.historyShops = [];
-      this.userHistory.goods = [];
-      this.historyShop.splice(this.userIndex, 1, this.userHistory);
-      localStorage.setItem("historyShops", JSON.stringify(this.historyShop));
-      if (this.userHistory.goods.length === 0) {
-        this.$toast("清空完成");
-      }
+      this.$dialog
+        .confirm({
+          title: "提示",
+          message: "是否确认清空收藏?"
+        })
+        .then(() => {
+          this.historyShops = [];
+          this.userHistory.goods = [];
+          this.historyShop.splice(this.userIndex, 1, this.userHistory);
+          localStorage.setItem(
+            "historyShops",
+            JSON.stringify(this.historyShop)
+          );
+          if (this.userHistory.goods.length === 0) {
+            this.$toast("清空完成");
+          }
+        })
+        .catch(() => {
+          // on cancel
+        });
     },
     // 去购物
     goShop() {

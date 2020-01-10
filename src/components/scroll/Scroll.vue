@@ -1,10 +1,9 @@
 <template>
-    <div  ref="wrapper">
-      <div class="scroll-content">
-        <slot class="height"></slot>
-      </div>
+  <div ref="wrapper">
+    <div class="scroll-content">
+      <slot class="height"></slot>
     </div>
- 
+  </div>
 </template>
 <script>
 import BScroll from "better-scroll";
@@ -19,24 +18,21 @@ export default {
       this.bs = new BScroll(".wrapper", {
         scrollY: true,
         scrollX: true,
-   
+
         probeType: 3 // listening scroll hook
       });
-      
     }
   },
   mounted() {
     this.init();
-     const options = {
+    const options = {
       click: true,
       tap: true
     };
     this.scroll = new BScroll(this.$refs.wrapper, options);
   },
   beforeDestroy() {},
-  watch: {
-    
-  },
+  watch: {},
   computed: {}
 };
 </script>

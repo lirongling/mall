@@ -4,7 +4,7 @@
     <ScrollLeft>
       <div class="recommend-content">
         <div v-for="(recommends,index) in recommend" :key="index" class="recommend-item">
-          <div class="recommend-img">
+          <div class="recommend-img" @click="jumpDeta(recommends)">
             <img :src="recommends.image" class="img" />
           </div>
           <div class="goodPrice">

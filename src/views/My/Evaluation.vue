@@ -24,10 +24,12 @@
       <Scroll class="wrapper">
         <div class="review">
           <div v-if="this.active==='notRated'">
-            <NotRated :comment="comment"></NotRated>
+            <div class="no-comment" v-if="comment.length===0">暂无数据~~</div>
+            <NotRated :comment="comment" v-else></NotRated>
           </div>
           <div v-else>
-            <Reviewed :reviewed="reviewed"></Reviewed>
+            <div class="no-comment" v-if="reviewed.length===0">暂无数据~~</div>
+            <Reviewed :reviewed="reviewed" v-else></Reviewed>
           </div>
         </div>
       </Scroll>
@@ -58,7 +60,7 @@ export default {
     // 切换tabs
     clickTabs(name, title) {
       // console.log(name,title);
-      console.log(this.active);
+
       if (this.active === "reviewed") {
         this.review = this.reviewed;
       } else {
@@ -158,5 +160,11 @@ export default {
   // margin-bottom: 65px;
   height: 56vh;
   overflow: hidden;
+}
+.no-comment {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
 }
 </style>

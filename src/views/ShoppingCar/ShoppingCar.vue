@@ -29,9 +29,10 @@
               合计:
               <span class="total-price">￥{{total.toFixed(2)}}</span>
             </div>
+
             <div class="top-operate flex">
-              <van-button size="small" type="warning" @click="del">删除</van-button>
-              <van-button size="small" type="primary" @click="settlement">结算</van-button>
+              <van-button size="small" type="warning" @click="del" v-show="total>0">删除</van-button>
+              <van-button size="small" type="primary" @click="settlement" v-show="total>0">结算</van-button>
             </div>
           </div>
         </div>
@@ -289,6 +290,7 @@ export default {
   }
   .top-operate {
     margin-top: 10px;
+    height: 30px;
     width: 90%;
   }
 }

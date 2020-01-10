@@ -3,12 +3,7 @@
     <div>
       <van-goods-action>
         <van-goods-action-icon icon="chat-o" text="客服" />
-        <van-goods-action-icon
-          icon="cart-o"
-          text="购物车"
-          :info="this.$store.state.shopListNumber"
-          @click="shopCar"
-        />
+        <van-goods-action-icon icon="cart-o" text="购物车" :info="shopListNumber" @click="shopCar" />
         <van-goods-action-icon icon="shop-o" text="店铺" info="12" />
         <van-goods-action-button type="warning" text="加入购物车" @click="addShop" />
         <van-goods-action-button type="danger" text="立即购买" @click="buyShop" />
@@ -106,13 +101,17 @@ export default {
     },
     // 购买
     buyGoods() {
-      this.good.count = this.amount;
-      // this.$store.state.shopListss = this.good;
-      // console.log(this.good);
-      this.$router.push({
-        name: "settlement",
-        query: { shopLists: JSON.stringify(this.good) }
-      });
+      if (!localStorage.getItem("loginMsg")) {
+        this.isLogin();
+      } else {
+        this.good.count = this.amount;
+        // this.$store.state.shopListss = this.good;
+        // console.log(this.good);
+        this.$router.push({
+          name: "settlement",
+          query: { shopLists: JSON.stringify(this.good) }
+        });
+      }
     },
     // 修改商品数量
     onChange(amount) {
@@ -126,7 +125,15 @@ export default {
 
   mounted() {},
   watch: {},
-  computed: {}
+  computed: {
+    shopListNumber() {
+      if (this.$store.state.shopListNumber > 0) {
+        return this.$store.state.shopListNumber;
+      } else {
+        return null;
+      }
+    }
+  }
 };
 </script>
 

@@ -8,9 +8,9 @@
           <span class="clean iconfont icon-Eliminate" @click="cleanSearch"></span>
         </div>
       </div>
-      <div class="split">
+      <!-- <div class="split">
         <van-divider />
-      </div>
+      </div>-->
       <div class="cityNa">
         <div class="nowCityName">
           <div v-for="(item,index) in searchHistoryss" :key="index">
@@ -21,51 +21,62 @@
       </div>
     </div>
     <!-- 搜索结果 -->
-    <div class="good-content">
-      <div class="goods" v-for="(good,index) in searchGoods" :key="index">
-        <div class="goodss" @click="jumpDeta(good)">
-          <div class="goods-left">
-            <img :src="good.image" class="img" />
-          </div>
-          <div class="goods-right">
-            <div v-html="keyWords(good.name,$store.state.searchText)"></div>
-            <div>
-              <div class="present_price">￥{{good.present_price}}</div>
-              <div class="orl_price">{{good.orl_price}}</div>
+
+    <div class="good-content" v-if="searchGoods.length>0">
+      <!-- 滚动 -->
+      <ScrollPullup class="wrapper" @func="searchItem">
+        <div class="goods" v-for="(good,index) in searchGoods" :key="index">
+          <div class="goodss" @click="jumpDeta(good)">
+            <div class="goods-left">
+              <img :src="good.image" class="img" />
+            </div>
+            <div class="goods-right">
+              <div v-html="keyWords(good.name,$store.state.searchText)"></div>
+              <div>
+                <div class="present_price">￥{{good.present_price}}</div>
+                <div class="orl_price">{{good.orl_price}}</div>
+              </div>
             </div>
           </div>
+          <div class="split">
+            <van-divider />
+          </div>
         </div>
-        <div class="split">
-          <van-divider />
-        </div>
-      </div>
+      </ScrollPullup>
     </div>
   </div>
 </template>
 
 <script>
 import util from "../../assets/js/util";
+import ScrollPullup from "../../components/scroll/ScrollPullup";
 export default {
   data() {
     return {
       searchGoods: [],
       keyWords: util.keyWord,
-      searchHistorys: []
+      searchHistorys: [],
+      page: 0,
+      noList: true
     };
   },
-  components: {},
+  components: {
+    ScrollPullup
+  },
   methods: {
     // 请求搜索结果数据
     searchItem() {
+      this.page++;
       this.$api
-        .search(this.$store.state.searchText, 1)
+        .search(this.$store.state.searchText, this.page)
         .then(res => {
           if (res.code === 200) {
-            this.searchGoods = res.data.list;
+            this.searchGoods = this.searchGoods.concat(res.data.list);
             if (res.data.list.length === 0) {
+              this.noList = false;
               this.$toast("暂无数据哟");
             } else {
-              this.$toast("搜索成功,共有" + res.data.list.length + "条");
+              // this.$toast("搜索成功,共有" + res.data.list.length + "条");
             }
             if (res.data.count > 0) {
               this.history();
@@ -82,6 +93,7 @@ export default {
     // 跳转到详情页
     jumpDeta(item) {
       // console.log(item);
+      this.$store.state.searchText = "";
       this.$router.push({ name: "details", query: { goodsId: item.id } });
     },
     // 清除搜索历史
@@ -168,9 +180,13 @@ export default {
   watch: {
     "$store.state.searchText": function() {
       // console.log(this.$store.state.searchText);
-      setTimeout(() => {
-        this.searchItem();
-      }, 200);
+      if (this.$store.state.searchText.trim() !== "") {
+        setTimeout(() => {
+          this.searchItem();
+        }, 200);
+      } else {
+        this.searchGoods = [];
+      }
 
       // this.$keyword.keyWord()
     }
@@ -195,14 +211,15 @@ export default {
   color: #c4221c;
 }
 .search {
-  margin-top: 30px;
+  // margin-top: 30px;
 }
 .split {
   width: 100%;
 }
 .good-content {
-  // height: 100%;
-  padding-bottom: 80px;
+  height: auto;
+  // margin-top: 30px;
+
   // margin-top: 50px;
   // height: auto;
   .goodss {
@@ -216,8 +233,8 @@ export default {
     width: 95%;
     margin: 10px auto;
 
-    // display: flex;
-    // flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
     .goods-left {
       flex: 1;
@@ -293,5 +310,9 @@ export default {
   // background: white;
   padding: 5px 20px;
   height: auto;
+}
+.wrapper {
+  height: 93vh;
+  // margin-top: 44px;
 }
 </style>

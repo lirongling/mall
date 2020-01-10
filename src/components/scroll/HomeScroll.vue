@@ -6,7 +6,7 @@
         <slot class="height"></slot>
       </div>
     </div>
-    <p class="more" v-if="showMore">加载更多...</p>
+    <!-- <p class="more" v-if="showMore">加载更多...</p> -->
   </div>
 </template>
  
@@ -37,6 +37,7 @@ export default {
           this.scroll = new BScroll(this.$refs.bscroll, {
             // click: true,
             scrollY: true,
+            // scrollX: true,
             probeType: 3
           });
         } else {
@@ -57,7 +58,7 @@ export default {
           // 下拉动作
           if (pos.y > 0) {
             this.$parent.getRecommend();
-            console.log(this.$parent);
+
             // console.log(this.$parent.fatherMethod());
             if (this.$parent.flage) {
               setTimeout(() => {
@@ -77,9 +78,9 @@ export default {
           if (this.scroll.maxScrollY + 30 < pos.y) {
             this.showMore = false;
           }
-          console.log(this.scroll.maxScrollY + "总距离----下拉的距离" + pos.y);
+          // console.log(this.scroll.maxScrollY + "总距离----下拉的距离" + pos.y);
         });
-        console.log(this.scroll.maxScrollY);
+        // console.log(this.scroll.maxScrollY);
       });
     }
   }
@@ -87,7 +88,7 @@ export default {
 </script>
  
  
-<style scoped>
+<style lang='scss' scoped>
 .rules {
   position: relative;
 }

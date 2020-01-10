@@ -16,8 +16,14 @@
         <van-button round plain hairline type="primary" @click="goShop">立即购物</van-button>
       </div>
     </div>
-    <Scroll class="wrapper" v-if="this.collection.length>0">
-      <div class="content">
+
+    <div class="content">
+      <ScrollPullup
+        class="wrapper"
+        v-if="this.collection.length>0"
+        @func="getCollection"
+        :noList="noList"
+      >
         <div class="content-item" v-for="(item,index) in collection" :key="index">
           <div class="goods flex">
             <div class="good-img flex" @click="jumpDeta(item.cid)">
@@ -39,35 +45,44 @@
             <van-divider />
           </div>
         </div>
-      </div>
-    </Scroll>
-    <div v-if="this.collection.length>0" class="bottom flex">
-      <van-button round size="large" plain hairline type="primary" @click="removeAll">全部移除</van-button>
+      </ScrollPullup>
     </div>
+
+    <!-- <div v-if="this.collection.length>0" class="bottom flex">
+      <van-button round size="large" plain hairline type="primary" @click="removeAll">全部移除</van-button>
+    </div>-->
   </div>
 </template>
 
 <script>
-import Scroll from "../../components/scroll/Scroll";
+import ScrollPullup from "../../components/scroll/ScrollPullup";
 export default {
   data() {
     return {
       collection: [],
       flage: true,
-      num: 0
+      num: 0,
+      page: 0,
+      noList: true
     };
   },
   components: {
-    Scroll
+    ScrollPullup
   },
   methods: {
     // 查询我的收藏
     getCollection() {
+      this.page++;
       this.$api
-        .getCollection()
+        .getCollection(this.page)
         .then(res => {
           if (res.code === 200) {
-            this.collection = res.data.list;
+            this.collection = this.collection.concat(res.data.list);
+            if (res.data.list.length === 0) {
+              this.noList = false;
+            } else {
+              this.noList = true;
+            }
           }
         })
         .catch(err => {
@@ -98,20 +113,30 @@ export default {
     // 取消收藏
     cancelCollection(item, index) {
       // console.log(this.good.id);
-      this.$api
-        .cancelCollection(item.cid)
-        .then(res => {
-          if (res.code === 200) {
-            if (this.flage) {
-              this.$toast(res.msg);
-              this.collection.splice(index, 1);
-            }
-            this.num++;
-          }
-          console.log(res);
+      this.$dialog
+        .confirm({
+          title: "提示",
+          message: "是否确认删除?"
         })
-        .catch(err => {
-          console.log(err);
+        .then(() => {
+          this.$api
+            .cancelCollection(item.cid)
+            .then(res => {
+              if (res.code === 200) {
+                if (this.flage) {
+                  this.$toast(res.msg);
+                  this.collection.splice(index, 1);
+                }
+                this.num++;
+              }
+              console.log(res);
+            })
+            .catch(err => {
+              console.log(err);
+            });
+        })
+        .catch(() => {
+          // on cancel
         });
     },
     // 清空收藏
@@ -182,9 +207,10 @@ export default {
 }
 
 .content {
-  margin-top: 70px;
+  margin-top: 44px;
+  // padding-top: 54px;
   .content-item {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     .goods {
       .good-img {
@@ -241,7 +267,6 @@ export default {
   transform: translateX(-50%);
 }
 .wrapper {
-  margin-bottom: 65px;
-  height: 76vh;
+  height: 93.1vh;
 }
 </style>

@@ -8,41 +8,55 @@
     <!-- 刷新 -->
     <!-- <van-pull-refresh v-model="isLoading" success-text="刷新成功" @refresh="onRefresh"> -->
     <!-- 滚动 -->
-    <HomeScroll class="wrapper">
-      <div>
-        <!-- 轮播图 -->
-        <div class="wheel">
-          <Wheel :slides.sync="recommend.slides"></Wheel>
-        </div>
-        <!-- 分类 -->
-        <div class="category">
-          <Category :category.sync="recommend.category"></Category>
-        </div>
+    <div v-if="!showPop">
+      <HomeScroll class="wrapper">
+        <div>
+          <!-- 轮播图 -->
+          <div class="wheel">
+            <Wheel :slides.sync="recommend.slides"></Wheel>
+          </div>
+          <!-- 分类 -->
+          <div class="category">
+            <Category :category.sync="recommend.category"></Category>
+          </div>
 
-        <!-- 广告 -->
-        <div class="advertising flex" v-if="recommend.advertesPicture">
-          <img :src="recommend.advertesPicture.PICTURE_ADDRESS" class="advertising-img" />
-        </div>
-        <!-- 推荐 -->
-        <div class="recommend">
-          <Recommend :recommend.sync="recommend.recommend"></Recommend>
-        </div>
+          <!-- 广告 -->
+          <div class="advertising flex" v-if="recommend.advertesPicture">
+            <img :src="recommend.advertesPicture.PICTURE_ADDRESS" class="advertising-img" />
+          </div>
+          <!-- 推荐 -->
+          <div class="recommend">
+            <Recommend :recommend.sync="recommend.recommend"></Recommend>
+          </div>
 
-        <!-- 楼层 -->
-        <div v-if="recommend.floorName">
-          <Floor :floor.sync="recommend.floor1" :num="'1'" :floorName="recommend.floorName.floor1"></Floor>
+          <!-- 楼层 -->
+          <div v-if="recommend.floorName">
+            <Floor
+              :floor.sync="recommend.floor1"
+              :num="'1'"
+              :floorName="recommend.floorName.floor1"
+            ></Floor>
+          </div>
+          <div v-if="recommend.floorName">
+            <Floor
+              :floor.sync="recommend.floor2"
+              :num="'2'"
+              :floorName="recommend.floorName.floor2"
+            ></Floor>
+          </div>
+          <div v-if="recommend.floorName" class>
+            <Floor
+              :floor.sync="recommend.floor3"
+              :num="'3'"
+              :floorName="recommend.floorName.floor3"
+            ></Floor>
+          </div>
+          <div class="hot recommend-bottom">
+            <Hot :hotGoods.sync="recommend.hotGoods"></Hot>
+          </div>
         </div>
-        <div v-if="recommend.floorName">
-          <Floor :floor.sync="recommend.floor2" :num="'2'" :floorName="recommend.floorName.floor2"></Floor>
-        </div>
-        <div v-if="recommend.floorName" class>
-          <Floor :floor.sync="recommend.floor3" :num="'3'" :floorName="recommend.floorName.floor3"></Floor>
-        </div>
-        <div class="hot recommend-bottom">
-          <Hot :hotGoods.sync="recommend.hotGoods"></Hot>
-        </div>
-      </div>
-    </HomeScroll>
+      </HomeScroll>
+    </div>
     <!-- </van-pull-refresh> -->
     <!-- pop弹出层 -->
     <div>
@@ -130,13 +144,14 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-// .topSearch {
-//   // display: flex;
-//   // top: 0;
-//   // left: 0;
-// }
+.topSearch {
+  margin: 0;
+  // display: flex;
+  // top: 0;
+  // left: 0;
+}
 .home {
-  height: 100%;
+  height: auto;
   background: #eeeeee;
   margin-top: -9px;
   .wheel {

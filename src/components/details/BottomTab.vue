@@ -5,7 +5,8 @@
         <div v-html="good.detail"></div>
       </van-tab>
       <van-tab title="商品评论">
-        <div class="comment">
+        <div class="no-comment" v-if="comment.length===0">暂无数据~~</div>
+        <div class="comment" v-else>
           <div class="comment-item" v-for="(item,index) in comment" :key="index">
             <div class="comment-content">
               <div class="content-top flex">
@@ -83,7 +84,7 @@ export default {
   components: {},
   methods: {
     onClick(name, title) {
-      this.$toast(title);
+      // this.$toast(title);
     },
     // 打开弹框
     chose() {
@@ -177,5 +178,11 @@ export default {
     width: 100%;
     // height: ;
   }
+}
+.no-comment {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
 }
 </style>

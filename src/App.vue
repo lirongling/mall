@@ -56,11 +56,23 @@ export default {
   font-size: 16px;
 }
 .loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 121;
+  width: 100%;
+  height: 100%;
+
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+
   /deep/ .van-overlay {
-    background-color: rgba(155, 155, 155, 0.2);
-    z-index: 9999;
+    background-color: hsla(0, 0%, 100%, 0.9);
+    z-index: 99999;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
   }
 }
 * {

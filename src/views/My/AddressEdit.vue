@@ -17,6 +17,7 @@
         show-delete
         show-set-default
         show-search-result
+        :save-button-text="saveText"
         :address-info="AddressInfo"
         @change-area="onChange"
         :search-result="searchResult"
@@ -40,7 +41,8 @@ export default {
       show: false,
       content: [],
       value: [],
-      AddressInfo: {}
+      AddressInfo: {},
+      saveText: "添加"
     };
   },
   components: {},
@@ -127,6 +129,7 @@ export default {
     if (this.$route.query.addressItem) {
       this.AddressInfo = this.$route.query.addressItem;
       this.show = true;
+      this.saveText = "确认修改";
     }
   },
   watch: {},
