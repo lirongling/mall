@@ -11,17 +11,32 @@
       </div>
     </div>
     <div class="content">
-      <van-tabs v-model="$route.query.num" animated swipeable>
+      <van-tabs v-model="active" animated swipeable>
         <van-tab v-for="(item,index) in tabsName" :key="index" :title="item">
           <!-- 滚动 -->
           <Scroll class="wrapper">
             <div class="all">
               <div v-if="active===0">
-                <div class="comp">已完成:</div>
+                <div class="comp">全部订单:</div>
                 <CompOrder :orderList.sync="orderList"></CompOrder>
+                <div class="no-list" v-if="orderList.length===0">暂无数据~~</div>
+              </div>
+              <div v-if="active===1">
+                <div class="comp">待支付订单:</div>
+                <div class="no-list">暂无数据~~</div>
+              </div>
+              <div v-if="active===2">
+                <div class="comp">待发货订单:</div>
+                <div class="no-list">暂无数据~~</div>
+              </div>
+              <div v-if="active===3">
+                <div class="comp">待收货订单:</div>
+                <div class="no-list">暂无数据~~</div>
               </div>
               <div v-if="active===4">
+                <div class="comp">已完成订单:</div>
                 <CompOrder :orderList.sync="orderList"></CompOrder>
+                <div class="no-list" v-if="orderList.length===0">暂无数据~~</div>
               </div>
             </div>
             <!-- <ShopCarList></ShopCarList> -->
@@ -40,7 +55,7 @@ export default {
   data() {
     return {
       tabsName: ["全部", "待支付", "待发货", "待收货", "已完成"],
-      active: 0,
+      active: this.$route.query.num,
       orderList: []
     };
   },
@@ -97,7 +112,7 @@ export default {
 }
 .wrapper {
   padding-bottom: 65px;
-  height: 73.9vh;
+  height: 72.9vh;
   // overflow: hidden;
 }
 .all {
@@ -106,5 +121,10 @@ export default {
 .comp {
   margin: 20px;
   font-size: 16px;
+}
+.no-list {
+  margin: 20px;
+  font-size: 16px;
+  text-align: center;
 }
 </style>

@@ -8,7 +8,7 @@
     <!-- 刷新 -->
     <!-- <van-pull-refresh v-model="isLoading" success-text="刷新成功" @refresh="onRefresh"> -->
     <!-- 滚动 -->
-    <div v-if="!showPop">
+    <div>
       <HomeScroll class="wrapper">
         <div>
           <!-- 轮播图 -->

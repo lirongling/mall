@@ -11,7 +11,7 @@
           <van-divider />
         </div>
         <div class="content-item" v-for="(item,index) in items.order_list" :key="index">
-          <div class="good flex">
+          <div class="good flex"  @click=" jumpDeta(item.cid)">
             <div class="good-img">
               <img :src="item.image_path" />
             </div>
@@ -57,12 +57,17 @@ export default {
   },
   components: {},
   methods: {
+    // 计算数量
     getMount(items) {
       let count = 0;
       items.map(item => {
         count += item.count;
       });
       return count;
+    },
+    // 跳转到详情页
+    jumpDeta(id) {
+      this.$router.push({ name: "details", query: { goodsId: id } });
     }
   },
   mounted() {},

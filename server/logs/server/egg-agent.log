@@ -1756,3 +1756,43 @@ hostname: LAPTOP-FKOQDFD9
 2020-01-10 15:14:30,335 INFO 15080 [egg-watcher] Start watching: "D:\\前端\\project\\mall\\server\\app.js"
 2020-01-10 15:14:30,335 INFO 15080 [egg-watcher:agent] watcher start success
 2020-01-10 15:14:30,360 INFO 15080 [egg:core] dump config after ready, 8ms
+2020-01-11 08:13:43,513 INFO 11404 [egg:logger] init all loggers with options: {"dir":"D:\\前端\\project\\mall\\server\\logs\\server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-01-11 08:13:43,523 INFO 11404 [egg:core] dump config after load, 5ms
+2020-01-11 08:13:43,926 INFO 11404 [egg-watcher] Start watching: ["D:\\前端\\project\\mall\\server\\app","D:\\前端\\project\\mall\\server\\config","D:\\前端\\project\\mall\\server\\mocks","D:\\前端\\project\\mall\\server\\mocks_proxy","D:\\前端\\project\\mall\\server\\app.js"]
+2020-01-11 08:13:43,926 INFO 11404 [egg-watcher] Start watching: "D:\\前端\\project\\mall\\server\\app"
+2020-01-11 08:13:43,927 INFO 11404 [egg-watcher] Start watching: "D:\\前端\\project\\mall\\server\\config"
+2020-01-11 08:13:43,927 INFO 11404 [egg-watcher] Start watching: "D:\\前端\\project\\mall\\server\\mocks"
+2020-01-11 08:13:43,927 INFO 11404 [egg-watcher] Start watching: "D:\\前端\\project\\mall\\server\\mocks_proxy"
+2020-01-11 08:13:43,927 INFO 11404 [egg-watcher] Start watching: "D:\\前端\\project\\mall\\server\\app.js"
+2020-01-11 08:13:43,928 INFO 11404 [egg-watcher:agent] watcher start success
+2020-01-11 08:13:43,949 INFO 11404 [egg:core] dump config after ready, 6ms
+2020-01-11 08:47:40,104 INFO 5088 [egg:logger] init all loggers with options: {"dir":"D:\\前端\\project\\mall\\server\\logs\\server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-01-11 08:47:40,115 INFO 5088 [egg:core] dump config after load, 5ms
+2020-01-11 08:47:40,249 INFO 5088 [egg-watcher] Start watching: ["D:\\前端\\project\\mall\\server\\app","D:\\前端\\project\\mall\\server\\config","D:\\前端\\project\\mall\\server\\mocks","D:\\前端\\project\\mall\\server\\mocks_proxy","D:\\前端\\project\\mall\\server\\app.js"]
+2020-01-11 08:47:40,249 INFO 5088 [egg-watcher] Start watching: "D:\\前端\\project\\mall\\server\\app"
+2020-01-11 08:47:40,249 INFO 5088 [egg-watcher] Start watching: "D:\\前端\\project\\mall\\server\\config"
+2020-01-11 08:47:40,250 INFO 5088 [egg-watcher] Start watching: "D:\\前端\\project\\mall\\server\\mocks"
+2020-01-11 08:47:40,250 INFO 5088 [egg-watcher] Start watching: "D:\\前端\\project\\mall\\server\\mocks_proxy"
+2020-01-11 08:47:40,250 INFO 5088 [egg-watcher] Start watching: "D:\\前端\\project\\mall\\server\\app.js"
+2020-01-11 08:47:40,251 INFO 5088 [egg-watcher:agent] watcher start success
+2020-01-11 08:47:40,272 INFO 5088 [egg:core] dump config after ready, 7ms
+2020-01-13 08:24:16,011 INFO 17352 [egg:logger] init all loggers with options: {"dir":"D:\\前端\\project\\mall\\server\\logs\\server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-01-13 08:24:16,037 INFO 17352 [egg:core] dump config after load, 21ms
+2020-01-13 08:24:16,780 INFO 17352 [egg-watcher] Start watching: ["D:\\前端\\project\\mall\\server\\app","D:\\前端\\project\\mall\\server\\config","D:\\前端\\project\\mall\\server\\mocks","D:\\前端\\project\\mall\\server\\mocks_proxy","D:\\前端\\project\\mall\\server\\app.js"]
+2020-01-13 08:24:16,780 INFO 17352 [egg-watcher] Start watching: "D:\\前端\\project\\mall\\server\\app"
+2020-01-13 08:24:16,781 INFO 17352 [egg-watcher] Start watching: "D:\\前端\\project\\mall\\server\\config"
+2020-01-13 08:24:16,781 INFO 17352 [egg-watcher] Start watching: "D:\\前端\\project\\mall\\server\\mocks"
+2020-01-13 08:24:16,781 INFO 17352 [egg-watcher] Start watching: "D:\\前端\\project\\mall\\server\\mocks_proxy"
+2020-01-13 08:24:16,781 INFO 17352 [egg-watcher] Start watching: "D:\\前端\\project\\mall\\server\\app.js"
+2020-01-13 08:24:16,782 INFO 17352 [egg-watcher:agent] watcher start success
+2020-01-13 08:24:16,806 INFO 17352 [egg:core] dump config after ready, 8ms
+2020-01-13 15:14:42,876 INFO 1752 [egg:logger] init all loggers with options: {"dir":"D:\\前端\\project\\mall\\server\\logs\\server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-01-13 15:14:42,886 INFO 1752 [egg:core] dump config after load, 6ms
+2020-01-13 15:14:44,153 INFO 1752 [egg-watcher] Start watching: ["D:\\前端\\project\\mall\\server\\app","D:\\前端\\project\\mall\\server\\config","D:\\前端\\project\\mall\\server\\mocks","D:\\前端\\project\\mall\\server\\mocks_proxy","D:\\前端\\project\\mall\\server\\app.js"]
+2020-01-13 15:14:44,153 INFO 1752 [egg-watcher] Start watching: "D:\\前端\\project\\mall\\server\\app"
+2020-01-13 15:14:44,154 INFO 1752 [egg-watcher] Start watching: "D:\\前端\\project\\mall\\server\\config"
+2020-01-13 15:14:44,154 INFO 1752 [egg-watcher] Start watching: "D:\\前端\\project\\mall\\server\\mocks"
+2020-01-13 15:14:44,155 INFO 1752 [egg-watcher] Start watching: "D:\\前端\\project\\mall\\server\\mocks_proxy"
+2020-01-13 15:14:44,155 INFO 1752 [egg-watcher] Start watching: "D:\\前端\\project\\mall\\server\\app.js"
+2020-01-13 15:14:44,155 INFO 1752 [egg-watcher:agent] watcher start success
+2020-01-13 15:14:44,196 INFO 1752 [egg:core] dump config after ready, 20ms

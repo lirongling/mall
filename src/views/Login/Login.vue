@@ -75,10 +75,10 @@ export default {
     nameBlur() {
       this.flageName = false;
       let a = /^[\u4e00-\u9fa5]{0,}$/;
-      if (this.user.username === "") {
+      if (this.user.username.trim() === "") {
         // 警告通知
         this.$notify({ type: "warning", message: "用户名不能为空" });
-      } else if (this.user.username.match(a)) {
+      } else if (a.test(this.user.username)) {
         this.$notify({ type: "warning", message: "用户名不能有中文" });
       } else {
         this.flageName = true;
@@ -87,7 +87,7 @@ export default {
     // 密码验证
     passBlur() {
       this.flagePass = false;
-      if (this.user.password === "") {
+      if (this.user.password.trim() === "") {
         // 警告通知
         this.$notify({ type: "warning", message: "密码不能为空" });
       } else if (this.user.password.length < 6) {
@@ -128,6 +128,9 @@ export default {
           });
       } else {
         this.$notify({ type: "warning", message: "请输入完整" });
+        this.user.username = "";
+        this.user.password = "";
+        this.user.code = "";
       }
     },
     register() {
@@ -177,8 +180,10 @@ export default {
             this.$store.state.userInfo = res.userInfo;
             this.history(res);
           } else if (res.code === -1) {
-            this.user = "";
-            this.afreshCode();
+            this.user.username = "";
+            this.user.password = "";
+            this.user.code = "";
+            // this.afreshCode();
           }
         })
         .catch(err => {

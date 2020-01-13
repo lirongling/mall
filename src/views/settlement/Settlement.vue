@@ -12,7 +12,7 @@
     </div>
     <!-- 地址选择 -->
     <div class="address">
-      <Address @send="send" ref="addressChild"></Address>
+      <Addresss @send="send" ref="addressChild"></Addresss>
     </div>
     <!-- 分割 -->
 
@@ -21,7 +21,7 @@
     <Scroll class="wrapper">
       <div class="content">
         <div class="content-item" v-for="(item,index) in shopLists" :key="index">
-          <div class="good flex">
+          <div class="good flex" @click=" jumpDeta(item.cid)">
             <div class="good-img">
               <img :src="item.image_path" />
             </div>
@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import Address from "../../components/settlement/Address";
+import Addresss from "../../components/settlement/Address";
 import Scroll from "../../components/scroll/Scroll";
 export default {
   data() {
@@ -63,7 +63,7 @@ export default {
     };
   },
   components: {
-    Address,
+    Addresss,
     Scroll
   },
   methods: {
@@ -111,6 +111,10 @@ export default {
           this.count += item.count;
         });
       }
+    },
+    // 跳转到详情页
+    jumpDetac(id) {
+      this.$router.push({ name: "details", query: { goodsId: id } });
     }
   },
   mounted() {

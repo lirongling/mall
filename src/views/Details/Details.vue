@@ -6,7 +6,7 @@
     </div>
     <Scroll class="wrapper">
       <div>
-        <Wheel :image="good.image"></Wheel>
+        <Wheel :images="images"></Wheel>
       </div>
       <div>
         <Contens :good.sync="good"></Contens>
@@ -31,7 +31,8 @@ export default {
   data() {
     return {
       good: {},
-      comment: []
+      comment: [],
+      images: []
     };
   },
   components: {
@@ -49,9 +50,17 @@ export default {
         .then(res => {
           console.log(res);
           if (res.code === 200) {
+            console.log(res);
             this.comment = res.goods.comment.reverse();
-            this.good = res.goods.goodsOne;
-            this.history();
+            if (res.goods.goodsOne) {
+              this.good = res.goods.goodsOne;
+              for (let i = 1; i <= 4; i++) {
+                this.images.push(this.good.image);
+              }
+              this.history();
+            } else {
+              this.$toast("暂无此数据");
+            }
 
             // console.log(this.good);
           }

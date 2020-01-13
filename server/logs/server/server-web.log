@@ -1443,3 +1443,41 @@ hostname: LAPTOP-FKOQDFD9
 pid: 5316
 hostname: LAPTOP-FKOQDFD9
 
+2020-01-13 16:14:20,157 ERROR 4064 [-/127.0.0.1/-/4ms POST /v1/collection] nodejs.TypeError: Cannot read property 'id' of null
+    at OperatingGoodsController.collection (D:\前端\project\mall\server\app\controller\api\operatingGoods.js:16:24)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async D:\前端\project\mall\server\app\middleware\isLogin.js:15:13
+    at async D:\前端\project\mall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (D:\前端\project\mall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (D:\前端\project\mall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (D:\前端\project\mall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (D:\前端\project\mall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (D:\前端\project\mall\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (D:\前端\project\mall\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async D:\前端\project\mall\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (D:\前端\project\mall\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (D:\前端\project\mall\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 4064
+hostname: LAPTOP-FKOQDFD9
+
+2020-01-13 16:14:20,915 ERROR 4064 [-/127.0.0.1/-/3ms POST /v1/collection] nodejs.TypeError: Cannot read property 'id' of null
+    at OperatingGoodsController.collection (D:\前端\project\mall\server\app\controller\api\operatingGoods.js:16:24)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async D:\前端\project\mall\server\app\middleware\isLogin.js:15:13
+    at async D:\前端\project\mall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (D:\前端\project\mall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (D:\前端\project\mall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (D:\前端\project\mall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (D:\前端\project\mall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (D:\前端\project\mall\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (D:\前端\project\mall\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async D:\前端\project\mall\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (D:\前端\project\mall\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (D:\前端\project\mall\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 4064
+hostname: LAPTOP-FKOQDFD9
+

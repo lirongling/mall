@@ -49,10 +49,12 @@ export default {
         .getAddress()
         .then(res => {
           if (res.code === 200) {
-            console.log(res);
-            this.$emit("send", this.address);
+            // this.$emit("send", this.address);
+
             this.defaultAddress = [];
-            this.defaultAddress.push(res.address[res.address.length - 1]);
+            if (res.address.length > 0) {
+              this.defaultAddress.push(res.address[res.address.length - 1]);
+            }
           }
         })
         .catch(err => {

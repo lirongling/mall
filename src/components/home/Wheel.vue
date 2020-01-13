@@ -1,8 +1,8 @@
 <template>
   <div class="wheel">
-    <van-swipe :autoplay="3000" indicator-color="white">
+    <van-swipe :autoplay="3000" indicator-color="white" :stop-propagation="propagation">
       <div v-for="(slide,index) in slides" :key="index">
-        <van-swipe-item>
+        <van-swipe-item @click="jumpDeta(slide)">
           <img :src="slide.image" class="img" />
         </van-swipe-item>
       </div>
@@ -13,7 +13,9 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      propagation: false
+    };
   },
   props: {
     slides: {
@@ -22,7 +24,12 @@ export default {
     }
   },
   components: {},
-  methods: {},
+  methods: {
+    // 跳转到详情页
+    jumpDeta(item) {
+      this.$router.push({ name: "details", query: { goodsId: item.goodsId } });
+    }
+  },
   mounted() {},
   watch: {},
   computed: {}

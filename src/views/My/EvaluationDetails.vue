@@ -22,6 +22,7 @@
               color="#ee0a24"
               void-icon="star"
               void-color="#eee"
+              readonly
             />
           </div>
         </div>

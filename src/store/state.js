@@ -13,5 +13,6 @@ export default {
         goods: [],
     }],
     userInfo: [],
-    isLoading: false
+    isLoading: false,
+    from: ''
 }

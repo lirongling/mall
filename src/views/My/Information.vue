@@ -151,6 +151,7 @@ export default {
             this.$toast("退出成功");
             localStorage.removeItem("loginMsg");
             this.$store.state.shopListNumber = 0;
+
             this.$store.state.userInfo = [];
             this.$router.history.go(-1);
           }

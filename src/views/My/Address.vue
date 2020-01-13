@@ -24,7 +24,7 @@
         default-tag-text="默认"
         @add="onAdd"
         @edit="onEdit"
-        @click-item="clickItem"
+        @select="clickItem"
       />
     </div>
   </div>
@@ -37,7 +37,8 @@ export default {
     return {
       address: [],
       chosenAddressId: "1",
-      addressDe: {}
+      addressDe: {},
+      from: ""
     };
   },
   components: {
@@ -51,7 +52,9 @@ export default {
         .then(res => {
           if (res.code === 200) {
             this.address = res.address;
-            this.chosenAddress();
+            if (this.address.length > 0) {
+              this.chosenAddress();
+            }
           }
           console.log(res);
         })
@@ -82,7 +85,9 @@ export default {
         }
       });
       if (flage === 0) {
-        this.address[this.address.length - 1].id = "1";
+        if (this.address.length > 0) {
+          this.address[this.address.length - 1].id = "1";
+        }
       }
     },
     //新增地址
@@ -93,6 +98,9 @@ export default {
     // 点击切换
     clickItem(item, index) {
       this.$store.state.defaultAddress = item;
+      if (this.$store.state.from === "settlement") {
+        this.$router.history.go(-1);
+      }
     },
     onAdd() {
       this.$router.push("/addressEdit");
@@ -104,8 +112,23 @@ export default {
   mounted() {
     this.getAddress();
   },
-  watch: {},
-  computed: {}
+  watch: {
+    address(val) {
+      if (val.length === 0) {
+        this.$store.state.defaultAddress = "";
+      }
+    }
+  },
+  computed: {},
+  beforeRouteEnter(to, from, next) {
+    // 注意，在路由进入之前，组件实例还未渲染，所以无法获取this实例，只能通过vm来访问组件实例
+    next(vm => {
+      console.log(from.name);
+      if (from.name === "settlement" || from.name === "my") {
+        vm.$store.state.from = from.name;
+      }
+    });
+  }
 };
 </script>
 

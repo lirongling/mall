@@ -24,25 +24,25 @@
 
     <div class="good-content" v-if="searchGoods.length>0">
       <!-- 滚动 -->
-      <ScrollPullup class="wrapper" @func="searchItem">
-        <div class="goods" v-for="(good,index) in searchGoods" :key="index">
-          <div class="goodss" @click="jumpDeta(good)">
-            <div class="goods-left">
-              <img :src="good.image" class="img" />
-            </div>
-            <div class="goods-right">
-              <div v-html="keyWords(good.name,$store.state.searchText)"></div>
-              <div>
-                <div class="present_price">￥{{good.present_price}}</div>
-                <div class="orl_price">{{good.orl_price}}</div>
-              </div>
-            </div>
+      <!-- <ScrollPullup class="wrapper" @func="searchItem"> -->
+      <div class="goods" v-for="(good,index) in searchGoods" :key="index">
+        <div class="goodss" @click="jumpDeta(good)">
+          <div class="goods-left">
+            <img :src="good.image" class="img" />
           </div>
-          <div class="split">
-            <van-divider />
+          <div class="goods-right">
+            <div v-html="keyWords(good.name,$store.state.searchText)"></div>
+            <div>
+              <div class="present_price">￥{{good.present_price}}</div>
+              <div class="orl_price">{{good.orl_price}}</div>
+            </div>
           </div>
         </div>
-      </ScrollPullup>
+        <div class="split">
+          <van-divider />
+        </div>
+      </div>
+      <!-- </ScrollPullup> -->
     </div>
   </div>
 </template>
@@ -79,7 +79,6 @@ export default {
               // this.$toast("搜索成功,共有" + res.data.list.length + "条");
             }
             if (res.data.count > 0) {
-              this.history();
             }
           } else if (res.code === -1) {
             this.searchGoods = [];
@@ -94,6 +93,7 @@ export default {
     jumpDeta(item) {
       // console.log(item);
       this.$store.state.searchText = "";
+      this.history();
       this.$router.push({ name: "details", query: { goodsId: item.id } });
     },
     // 清除搜索历史
@@ -137,6 +137,7 @@ export default {
       } else {
         if (JSON.parse(localStorage.getItem("tourists"))) {
           let tourists = JSON.parse(localStorage.getItem("tourists"));
+          console.log(tourists.includes(this.$store.state.searchText));
           if (!tourists.includes(this.$store.state.searchText)) {
             tourists.unshift(this.$store.state.searchText);
             this.searchHistorys.unshift(this.$store.state.searchText);
@@ -145,7 +146,7 @@ export default {
         } else {
           let tourists = [];
           tourists.push(this.$store.state.searchText);
-          this.searchHistorys.push(this.$store.state.searchText);
+          // this.searchHistorys.push(this.$store.state.searchText);
           localStorage.setItem("tourists", JSON.stringify(tourists));
         }
       }
@@ -179,6 +180,7 @@ export default {
   },
   watch: {
     "$store.state.searchText": function() {
+      this.page = 0;
       // console.log(this.$store.state.searchText);
       if (this.$store.state.searchText.trim() !== "") {
         setTimeout(() => {
